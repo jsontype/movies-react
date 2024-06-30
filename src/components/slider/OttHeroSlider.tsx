@@ -36,111 +36,107 @@ const OttHeroSlider = ({ movies }) => {
 
   const renderMiniSlide = movies.map(item => {
     return (
-      <div key={item.id}>
-        <SwiperSlide className="swiper-bg">
-          <div className="block-images position-relative">
-            <div className="img-box">
-              <Image
-                src={item.large_cover_image}
-                className="img-fluid"
-                alt=""
-                loading="lazy"
-                width={0}
-                height={0}
-                sizes="100vw"
-              />
-              <div className="block-description ps-3">
-                <h6 className="iq-title fw-500 mb-0">{item.title}</h6>
-                <span className="fs-12">2 hr 6 minute</span>
-              </div>
+      <SwiperSlide className="swiper-bg" key={item.id}>
+        <div className="block-images position-relative">
+          <div className="img-box">
+            <Image
+              src={item.large_cover_image}
+              className="img-fluid"
+              alt=""
+              loading="lazy"
+              width={0}
+              height={0}
+              sizes="100vw"
+            />
+            <div className="block-description ps-3">
+              <h6 className="iq-title fw-500 mb-0">{item.title}</h6>
+              <span className="fs-12">2 hr 6 minute</span>
             </div>
           </div>
-        </SwiperSlide>
-      </div>
+        </div>
+      </SwiperSlide>
     )
   })
 
   const renderHeroSlide = movies.map((item) => {
     return (
-      <div key={item.id}>
-        <SwiperSlide className="p-0">
-          <div className="slider--image block-images">
-            <Image
-              src={item.large_cover_image}
-              loading="lazy"
-              alt="banner"
-              width={0}
-              height={0}
-              sizes="100vw"
-            />
-          </div>
-          <div className="description">
-            <div className="row align-items-center h-100">
-              <div className="col-lg-6 col-md-12">
-                <div className="slider-content">
-                  <div className="d-flex align-items-center RightAnimate mb-3">
-                    <span className="badge rounded-0 text-dark text-uppercase px-3 py-2 me-3 bg-white mr-3">
-                      {item.rating}
-                    </span>
-                    <ul className="p-0 mb-0 list-inline d-flex flex-wrap align-items-center movie-tag">
-                      {item.genres.map((genre, index) => (
-                        <li
-                          key={index}
-                          className="position-relative text-capitalize font-size-14 letter-spacing-1"
-                        >
-                          <Link href="/view-all" className="text-decoration-none">
-                            {genre}
-                          </Link>
-                        </li>
-                      ))}
+      <SwiperSlide className="p-0" key={item.id}>
+        <div className="slider--image block-images">
+          <Image
+            src={item.large_cover_image}
+            loading="lazy"
+            alt="banner"
+            width={0}
+            height={0}
+            sizes="100vw"
+          />
+        </div>
+        <div className="description">
+          <div className="row align-items-center h-100">
+            <div className="col-lg-6 col-md-12">
+              <div className="slider-content">
+                <div className="d-flex align-items-center RightAnimate mb-3">
+                  <span className="badge rounded-0 text-dark text-uppercase px-3 py-2 me-3 bg-white mr-3">
+                    {item.rating}
+                  </span>
+                  <ul className="p-0 mb-0 list-inline d-flex flex-wrap align-items-center movie-tag">
+                    {item.genres.map((genre, index) => (
+                      <li
+                        key={index}
+                        className="position-relative text-capitalize font-size-14 letter-spacing-1"
+                      >
+                        <Link href="/view-all" className="text-decoration-none">
+                          {genre}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <h1 className="texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate-two">
+                  {item.title}
+                </h1>
+                <p className="line-count-3 RightAnimate-two">{item.summary}</p>
+                <div className="d-flex flex-wrap align-items-center gap-3 RightAnimate-three">
+                  <div className="slider-ratting d-flex align-items-center">
+                    <ul className="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                      <li>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                      </li>
                     </ul>
+                    <span className="text-white ms-2 font-size-14 fw-500">
+                      {item.rating}/10
+                    </span>
                   </div>
-                  <h1 className="texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate-two">
-                    {item.title}
-                  </h1>
-                  <p className="line-count-3 RightAnimate-two">{item.summary}</p>
-                  <div className="d-flex flex-wrap align-items-center gap-3 RightAnimate-three">
-                    <div className="slider-ratting d-flex align-items-center">
-                      <ul className="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
-                        <li>
-                          <i className="fa fa-star" aria-hidden="true"></i>
-                        </li>
-                      </ul>
-                      <span className="text-white ms-2 font-size-14 fw-500">
-                        {item.rating}/10
-                      </span>
-                    </div>
-                    <span className="font-size-14 fw-500">{item.duration}</span>
-                    <div className="text-primary font-size-14 fw-500 text-capitalize">
-                      genres:{" "}
-                      <Link
-                        href="/view-all"
-                        className="text-decoration-none ms-1"
-                      >
-                        {item.genres}
-                      </Link>
-                    </div>
-                    <div className="text-primary font-size-14 fw-500 text-capitalize">
-                      Runtime:{" "}
-                      <Link
-                        href="/cast/detail"
-                        className="text-decoration-none ms-1"
-                      >
-                        {item.runtime}mins
-                      </Link>
-                    </div>
+                  <span className="font-size-14 fw-500">{item.duration}</span>
+                  <div className="text-primary font-size-14 fw-500 text-capitalize">
+                    genres:{" "}
+                    <Link
+                      href="/view-all"
+                      className="text-decoration-none ms-1"
+                    >
+                      {item.genres}
+                    </Link>
+                  </div>
+                  <div className="text-primary font-size-14 fw-500 text-capitalize">
+                    Runtime:{" "}
+                    <Link
+                      href="/cast/detail"
+                      className="text-decoration-none ms-1"
+                    >
+                      {item.runtime}mins
+                    </Link>
                   </div>
                 </div>
-                <CustomButton
-                  buttonTitle="Stream Now "
-                  link="/movies/detail"
-                  linkButton="false"
-                />
               </div>
+              <CustomButton
+                buttonTitle="Stream Now "
+                link="/movies/detail"
+                linkButton="false"
+              />
             </div>
           </div>
-        </SwiperSlide>
-      </div>      
+        </div>
+      </SwiperSlide>
     )
   })
 
@@ -190,7 +186,6 @@ const OttHeroSlider = ({ movies }) => {
                     watchSlidesProgress={true}
                     className="swiper-horizontal swiper-container mb-0"
                   >
-
                     {renderMiniSlide}
                   </Swiper>
                   <div className="slider-prev swiper-button">
