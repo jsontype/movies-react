@@ -42,13 +42,15 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     "src/pages/form/form-validation.tsx",
     "src/pages/special-pages/billing.tsx",
     "src/components/DataTable.tsx",
     "src/pages/design-system/typography.tsx",
     "src/components/custom.d.ts",
     ".next/types/**/*.ts"
-  ],
+, "src/components/slider/OttHeroSlider.jsx"  ],
   "exclude": [
     "node_modules"
   ]

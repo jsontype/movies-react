@@ -21,8 +21,8 @@ import { theme_scheme_direction } from "../../store/setting/selectors";
 
 const OttHeroSlider = ({ movies }) => {
   const themeSchemeDirection = useSelector(theme_scheme_direction);
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
-  const [render, setRender] = useState(true)
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [_render, setRender] = useState(true)
 
   useEffect(() => {
     setRender(false)
@@ -49,9 +49,9 @@ const OttHeroSlider = ({ movies }) => {
   //   )
   // }) 
   
-  const renderMiniSlide = movies.map(item => {
+  const renderMiniSlide = movies.map((item, index) => {
     return (
-      <div key={item.id}>
+      <div key={index}>
         <SwiperSlide className="swiper-bg">
           <div className="block-images position-relative">
             <div className="img-box">
