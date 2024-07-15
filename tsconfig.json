@@ -38,6 +38,6 @@
     "src/components/custom.d.ts",
     ".next/types/**/*.ts",
     "src/components/blog/DetailMetaList.jsx"
-  ],
+, "src/StaticData/blogs.jsx"  ],
   "exclude": ["node_modules"]
 }
