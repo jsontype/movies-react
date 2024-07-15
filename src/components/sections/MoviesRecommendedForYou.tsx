@@ -1,4 +1,4 @@
-import { useState, Fragment, memo } from "react";
+import { useState, memo } from "react";
 
 //components
 import SectionSlider from "../slider/SectionSlider";

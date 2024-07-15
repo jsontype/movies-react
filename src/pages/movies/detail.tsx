@@ -9,10 +9,6 @@ import Link from 'next/link'
 //components
 import ReviewComponent from "@/components/ReviewComponent";
 import Sources from "@/components/Sources";
-import MoviesRecommendedForYou from "@/components/sections/MoviesRecommendedForYou";
-import RelatedVideos from "@/components/sections/RelatedVideos";
-import UpcomingMovies from "@/components/sections/UpcomingMovies";
-import RelatedMovies from "@/components/sections/RelatedMovies";
 import FsLightBox from "@/components/fslight-box";
 import RatingStar from "@/components/rating-star";
 import VideoJS from "@/components/plugins/VideoJs";
@@ -495,10 +491,6 @@ const MoviesDetail = memo(() => {
           </div>
         </Container>
       </div>
-      <MoviesRecommendedForYou />
-      <RelatedMovies />
-      <RelatedVideos />
-      <UpcomingMovies />
     </>
   );
 });
