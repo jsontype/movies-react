@@ -6,11 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "lint": "eslint ./src",
-    "lint:fix": "eslint --fix ./src"    
+    "lint:fix": "eslint --fix ./src"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
