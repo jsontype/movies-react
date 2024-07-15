@@ -2,17 +2,17 @@ import { blogsDetails } from './blog-details'
 
 import { generateImgPath } from './data'
 
-export const filterBlog = (slug: string) => blogsGrid.find(item => item.slug === slug)
+export const filterBlog = (slug) => blogsGrid.find(item => item.slug === slug)
 
-export const filterBlogDetail = (slug: string) =>
+export const filterBlogDetail = (slug) =>
   blogsDetails.find(item => item.slug === slug)?.detail
 
-export const dateWiseBlogs = (date: string) => blogs.filter(item => item.blogDate.includes(date))
+export const dateWiseBlogs = (date) => blogs.filter(item => item.blogDate.includes(date))
 
-export const categoryWiseBlogs = (category: string) =>
+export const categoryWiseBlogs = (category) =>
   blogs.filter(item => item.categories.includes(category))
 
-export const tagsWiseBlogs = (tag: string) => blogs.filter(item => item.tags.includes(tag))
+export const tagsWiseBlogs = (tag) => blogs.filter(item => item.tags.includes(tag))
 
 export const blogTags = [
   {
