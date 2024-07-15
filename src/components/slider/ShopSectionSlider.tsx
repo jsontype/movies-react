@@ -12,7 +12,7 @@ interface ShopSectionSliderProps {
 
 const ShopSectionSlider = memo((props:ShopSectionSliderProps) => {
   return (
-    <Fragment>
+    <>
       <div className="category-inner position-relative">
         <div className="category_image">
           <Link href={`/merchandise/shop`}>
@@ -25,7 +25,7 @@ const ShopSectionSlider = memo((props:ShopSectionSliderProps) => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

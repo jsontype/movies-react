@@ -9,7 +9,7 @@ import { useBreadcrumb } from "@/utilities/usePage";
 const PrivacyPolicy = memo(() => {
   useBreadcrumb('Privacy Policy')
   return (
-    <Fragment>
+    <>
       <div className="section-padding">
         <Container>
           <div className="title-box">
@@ -98,7 +98,7 @@ const PrivacyPolicy = memo(() => {
           </div>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

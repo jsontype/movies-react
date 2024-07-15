@@ -30,8 +30,8 @@ const FilterBlogBreadcrumb = memo(({ type }: { type: any }) => {
         }
     }, [type])
     return (
-        <Fragment>
-        </Fragment>
+        <>
+        </>
     )
 })
 

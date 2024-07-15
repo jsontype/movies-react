@@ -32,7 +32,7 @@ const LeftSidebarPage = memo(() => {
       break;
   }
   return (
-    <Fragment>
+    <>
       <SidebarBreadcrumb type={type} />
       <div className='section-padding'>
         <Container>
@@ -64,7 +64,7 @@ const LeftSidebarPage = memo(() => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

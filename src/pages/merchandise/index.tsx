@@ -36,7 +36,7 @@ const MerchandiseHome = () => {
     const themeSchemeDirection = useSelector(theme_scheme_direction);
 
     return (
-        <Fragment>
+        <>
         <Swiper
           key={String(themeSchemeDirection)}
           dir={String(themeSchemeDirection)}
@@ -514,7 +514,7 @@ const MerchandiseHome = () => {
             </Col>
           </Row>
         </div>
-      </Fragment>
+      </>
     );
 };
 

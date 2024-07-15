@@ -16,7 +16,7 @@ const imagePath = generateImgPath("/assets/images/pages/01.webp");
 const BreadCrumbWidget = memo(() => {
   const breadcrumb = useSelector(getBreadcrumb)
   return (
-    <Fragment>
+    <>
       {breadcrumb.show ?
         <div
           className="iq-breadcrumb"
@@ -41,7 +41,7 @@ const BreadCrumbWidget = memo(() => {
             </Row>
           </Container>
         </div> : ''}
-    </Fragment>
+    </>
   );
 });
 

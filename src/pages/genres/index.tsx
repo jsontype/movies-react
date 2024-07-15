@@ -18,7 +18,7 @@ import { useBreadcrumb } from "@/utilities/usePage";
 const GenresPage = memo(() => {
   useBreadcrumb('Genres')
   return (
-    <Fragment>
+    <>
       <section className="section-padding">
         <div className="container-fluid">
           <div className="d-flex align-items-center justify-content-between mb-4">
@@ -109,7 +109,7 @@ const GenresPage = memo(() => {
           </div>
         </div>
       </section>
-    </Fragment>
+    </>
   );
 });
 

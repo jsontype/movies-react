@@ -12,7 +12,7 @@ import Logo from '../../logo'
 const MerchandiseFooter = memo(() => {
     const currentYear = new Date().getFullYear();
     return (
-        <Fragment>
+        <>
             <footer className='footer-merchandise'>
                 <div className="footer-top">
                     <Container fluid>
@@ -129,7 +129,7 @@ const MerchandiseFooter = memo(() => {
                     </Container>
                 </div>
             </footer>
-        </Fragment>
+        </>
     )
 })
 

@@ -47,7 +47,7 @@ const HomeTrendingslider = () => {
   }, [inView]);
 
   return (
-    <Fragment>
+    <>
       <div ref={ref}>
 
         {trendingSlider.length === 0 ? (
@@ -340,7 +340,7 @@ const HomeTrendingslider = () => {
         )
         }
       </div>
-    </Fragment>
+    </>
   )
 }
 

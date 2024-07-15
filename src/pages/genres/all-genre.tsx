@@ -18,7 +18,7 @@ import { useBreadcrumb } from '@/utilities/usePage'
 const AllGenres = memo(() => {
   useBreadcrumb('View All')
   return (
-    <Fragment>
+    <>
       <section className="section-padding">
         <Container fluid>
           <Row>
@@ -42,7 +42,7 @@ const AllGenres = memo(() => {
           </Row>
         </Container>
       </section>
-    </Fragment>
+    </>
   )
 })
 

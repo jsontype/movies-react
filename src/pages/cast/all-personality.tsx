@@ -86,7 +86,7 @@ const AllPersonality = memo(() => {
   ]
   useBreadcrumb('View All')
   return (
-    <Fragment>
+    <>
       <div className='section-padding'>
         <Container fluid>
           <Row >
@@ -111,7 +111,7 @@ const AllPersonality = memo(() => {
           </div>
         </Container>
       </div>
-    </Fragment>
+    </>
   )
 })
 

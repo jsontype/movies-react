@@ -18,7 +18,7 @@ const HomeHeroSlider = memo(() => {
   const themeSchemeDirection = useSelector(theme_scheme_direction);
   const [toggler, setToggler] = useState(false);
   return (
-    <Fragment>
+    <>
       <Swiper
         key={String(themeSchemeDirection)}
         dir={String(themeSchemeDirection)}
@@ -527,7 +527,7 @@ const HomeHeroSlider = memo(() => {
         toggler={toggler}
         sources={["/assets/images/video/trailer.mp4"]}
       />
-    </Fragment>
+    </>
   );
 })
 

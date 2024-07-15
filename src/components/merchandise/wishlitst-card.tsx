@@ -14,7 +14,7 @@ interface Props {
 
 const WishlistCard = memo((props: Props) => {
   return (
-    <Fragment>
+    <>
       <tr>
         <td className="product-remove">
           <div>
@@ -52,7 +52,7 @@ const WishlistCard = memo((props: Props) => {
           </Link>
         </td>
       </tr>
-    </Fragment>
+    </>
   );
 });
 

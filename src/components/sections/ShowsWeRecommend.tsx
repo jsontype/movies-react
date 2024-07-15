@@ -4,17 +4,13 @@ import { useState, Fragment, memo } from "react";
 import SectionSlider from "../slider/SectionSlider";
 import CardStyle from "../cards/CardStyle";
 
-//static data
-import { recommendedforYou } from "../../StaticData/data";
-
 const ShowsWeRecommend = memo(() => {
   const [title] = useState("Shows We Recommend");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
-        list={recommendedforYou}
         className="recommended-block streamit-block"
       >
         {(data) => (
@@ -27,7 +23,7 @@ const ShowsWeRecommend = memo(() => {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 })
 

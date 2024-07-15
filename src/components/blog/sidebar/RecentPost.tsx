@@ -1,4 +1,4 @@
-import React, { Fragment, memo } from 'react'
+import React, { memo } from 'react'
 
 //react-router-dom
 import Link from "next/link";
@@ -13,11 +13,10 @@ interface post {
 }
 
 const RecentPost = memo(() => {
-
   const rescentPost: post[] = blogRecent as post[];
 
   return (
-    <Fragment>
+    <>
       <div className="widget iq-widget-blog">
         <h5 className="widget-title position-relative">Recent Post</h5>
         <ul className="list-inline p-0 m-0">
@@ -47,7 +46,7 @@ const RecentPost = memo(() => {
           }
         </ul>
       </div>
-    </Fragment>
+    </>
   )
 })
 

@@ -11,7 +11,7 @@ interface Props {
 
 const CastCard = memo((props: Props) => {
   return (
-    <Fragment>
+    <>
       <div className="iq-cast">
         <img src={props.image} alt={`cast-${props.title}`} loading="lazy" />
         <div className="card-img-overlay iq-cast-body">
@@ -21,7 +21,7 @@ const CastCard = memo((props: Props) => {
           <span className="cast-subtitle">{props.category}</span>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

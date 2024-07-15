@@ -13,7 +13,7 @@ interface ProductCartProps{
 
 const ProductCart = memo((props:ProductCartProps) => {
   return (
-    <Fragment>
+    <>
       <tr className="cart-form__cart-item cart_item">
         <td className="product-name" data-title="Product">
           <div className="product-thumbnail">
@@ -117,7 +117,7 @@ const ProductCart = memo((props:ProductCartProps) => {
           <input type="hidden" name="" defaultValue="" />
         </td>
       </tr>
-    </Fragment>
+    </>
   );
 });
 

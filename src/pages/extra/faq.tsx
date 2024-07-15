@@ -10,7 +10,7 @@ const FAQPage = memo(() => {
   const [faq, setfaq] = useState("1");
   useBreadcrumb('FAQ')
   return (
-    <Fragment>
+    <>
       <div className="section-padding">
         <Container>
           <Row>
@@ -190,7 +190,7 @@ const FAQPage = memo(() => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

@@ -17,7 +17,7 @@ interface Props {
   
 const CardBlogGrid = memo((props: Props) => {
     return (
-        <Fragment>
+        <>
             <div className="iq-blog-box">
                 <div className="iq-blog-image clearfix">
                     <Link href="/blogs/detail">
@@ -54,7 +54,7 @@ const CardBlogGrid = memo((props: Props) => {
                     </div>
                 </div>
             </div>
-        </Fragment>
+        </>
     )
 })
 

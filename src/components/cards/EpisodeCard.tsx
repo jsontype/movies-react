@@ -12,7 +12,7 @@ interface EpisodeCardProps {
 
 const EpisodeCard: FC<EpisodeCardProps> = memo(({ image, link, showEpisod, episodDate, episodTime, episodTitle }) => {
   return (
-    <Fragment>
+    <>
       <div className="episode-block">
         <div className="block-image position-relative">
           <Link href={link}>
@@ -42,7 +42,7 @@ const EpisodeCard: FC<EpisodeCardProps> = memo(({ image, link, showEpisod, episo
           </Link>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

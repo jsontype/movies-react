@@ -54,7 +54,7 @@ const CardShopGridView = memo((props:CardShopGridViewProps) => {
   const isSale = props.is_sale;
   const isNew = props.is_new;
   return (
-    <Fragment>
+    <>
           <div className="product-block">
             {isSale ? (
               <span className="onsale bg-primary">Sale!</span>
@@ -149,7 +149,7 @@ const CardShopGridView = memo((props:CardShopGridViewProps) => {
           </div>
           </div>
           <ProductModal show={show} handleClose={handleClose}/>
-    </Fragment>
+    </>
   );
 });
 

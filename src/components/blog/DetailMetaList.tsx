@@ -1,4 +1,4 @@
-import React, { Fragment, memo } from "react";
+import React, { memo } from "react";
 
 //router
 import Link from "next/link";
@@ -11,7 +11,7 @@ import FollowUs from "./sidebar/FollowUs";
 
 const DetailMetaList = memo(() => {
   return (
-    <Fragment>
+    <>
       <div className="widget-area">
         <div id="search-2" className="widget widget_search">
           <form
@@ -44,7 +44,7 @@ const DetailMetaList = memo(() => {
           </Link>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

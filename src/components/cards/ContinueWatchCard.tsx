@@ -16,7 +16,7 @@ interface ContinueWatchCardProps {
 const ContinueWatchCard: FC<ContinueWatchCardProps> = memo(
   ({ link, imagePath, dataLeftTime, progressValue }) => {
     return (
-      <Fragment>
+      <>
         <div className="iq-watching-block">
           <div className="block-images position-relative">
             <div className="iq-image-box overly-images">
@@ -36,7 +36,7 @@ const ContinueWatchCard: FC<ContinueWatchCardProps> = memo(
             </div>
           </div>
         </div>
-      </Fragment>
+      </>
     );
   }
 );

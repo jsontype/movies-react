@@ -31,7 +31,7 @@ const TemplatePage = memo(() => {
   const blog: BlogDetail | any = blogs.find((item) => item.slug === slug)
   useBreadcrumb('Scarlett Drops Out Of Playing a Transgender Man Following Backlash"')
   return (
-    <Fragment>
+    <>
       {blog !== undefined && blog !== null ? (
         <div className="section-padding">
           <Container>
@@ -126,7 +126,7 @@ const TemplatePage = memo(() => {
           </Container>
         </div>
       ) : ''}
-    </Fragment>
+    </>
   );
 });
 

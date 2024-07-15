@@ -45,7 +45,7 @@ const WatchlistDetail = memo(() => {
     },
   ]
   return (
-    <Fragment>
+    <>
       <section className="section-padding">
         <Container fluid>
           <Row >
@@ -100,7 +100,7 @@ const WatchlistDetail = memo(() => {
         toggler={toggler}
         sources={["/assets/images/video/trailer.mp4"]}
       />
-    </Fragment>
+    </>
   )
 })
 

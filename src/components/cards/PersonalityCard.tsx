@@ -12,7 +12,7 @@ interface Props {
 
 const PersonalityCard = memo((props: Props) => {
   return (
-    <Fragment>
+    <>
       <img
         src={props.image}
         alt="personality"
@@ -24,7 +24,7 @@ const PersonalityCard = memo((props: Props) => {
           </h6>
           <span className="cast-subtitle"> {props.category}</span>
           </div>
-    </Fragment>
+    </>
   );
 });
 

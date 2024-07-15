@@ -22,7 +22,7 @@ const SettingOffCanvas = memo(() => {
   const themeSchemeDirection = useSelector(SettingSelector.theme_scheme_direction);
   const themeColor = useSelector(SettingSelector.theme_color);
   return (
-    <Fragment>
+    <>
       <div className="rtl-box">
         <a
           className="btn btn-fixed-end btn-icon btn-setting"
@@ -99,7 +99,7 @@ const SettingOffCanvas = memo(() => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

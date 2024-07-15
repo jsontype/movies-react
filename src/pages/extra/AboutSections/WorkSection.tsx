@@ -5,7 +5,7 @@ import { Container, Col, Row } from "react-bootstrap"
 
 const WorkSection = memo(() => {
   return (
-    <Fragment>
+    <>
       <div className="section-padding">
         <Container>
           <h2 className="text-capitalize text-center">Work With the Best</h2>
@@ -136,7 +136,7 @@ const WorkSection = memo(() => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   )
 });
 

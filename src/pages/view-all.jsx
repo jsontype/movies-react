@@ -87,7 +87,7 @@ const ViewAll = memo(() => {
     },
   ];
   return (
-    <Fragment>
+    <>
       <div className="section-padding">
         <Container fluid>
           <div className="card-style-grid">
@@ -107,7 +107,7 @@ const ViewAll = memo(() => {
           </div>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

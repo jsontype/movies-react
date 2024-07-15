@@ -20,7 +20,7 @@ interface Props {
 
 const VerticalShimmer = memo((props:Props) => {
   return (
-    <Fragment>
+    <>
       <div className="container">
         <Placeholder as="p" animation="wave" style={{ width: "86em" }}>
           <Placeholder
@@ -128,7 +128,7 @@ const VerticalShimmer = memo((props:Props) => {
           </Placeholder>
         </Placeholder>
       </div>
-    </Fragment>
+    </>
   );
 });
 

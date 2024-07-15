@@ -61,7 +61,7 @@ const HeaderMerchandise = memo(() => {
 
   return (
     <>
-      <Fragment>
+      <>
         <header
           className="header-center-home header-merchandise "
           id="default-header"
@@ -737,7 +737,7 @@ const HeaderMerchandise = memo(() => {
             </div>
           </Offcanvas.Body>
         </Offcanvas>
-      </Fragment>
+      </>
     </>
   );
 });

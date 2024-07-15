@@ -15,7 +15,7 @@ import { useBreadcrumb } from "@/utilities/usePage";
 const AllProductPage = () => {
     useBreadcrumb('View All')
     return (
-        <Fragment>
+        <>
       <section className='section-padding'>
         <Container fluid>
           <Row md="3" lg="5" className='row-cols-2'>
@@ -54,7 +54,7 @@ const AllProductPage = () => {
           </Row>
         </Container>
       </section>
-    </Fragment>
+    </>
     );
 };
 

@@ -11,7 +11,7 @@ const SpecialsLatestVideos = memo(() => {
   const [title] = useState("Specials Latest Videos");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={latestMovie}
@@ -27,7 +27,7 @@ const SpecialsLatestVideos = memo(() => {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 })
 

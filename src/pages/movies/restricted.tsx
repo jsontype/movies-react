@@ -79,7 +79,7 @@ const RestrictedPage = memo(() => {
     date: "Nov 2020",
   };
   return (
-    <Fragment>
+    <>
       <div className="iq-main-slider site-video">
         <Container fluid>
           <div className="iq-content_restriction">
@@ -489,7 +489,7 @@ const RestrictedPage = memo(() => {
       <RelatedMovies />
       <RelatedVideos />
       <UpcomingMovies />
-    </Fragment>
+    </>
   );
 });
 

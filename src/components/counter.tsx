@@ -8,7 +8,7 @@ const Counter = memo(() => {
     const increase = () => setCount(counter + 1);
     const decrease = () => setCount(( counter > 0 ) ? counter - 1 : 0);
   return (
-    <Fragment>
+    <>
           <div className="btn-group iq-qty-btn border border-white rounded-0" data-qty="btn" role="group">
             <Button variant="btn-outline-light iq-quantity-minus text-white border-0" size="sm" onClick={decrease}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" viewBox="0 0 6 3" fill="none">
@@ -22,7 +22,7 @@ const Counter = memo(() => {
                 </svg>
             </Button>
         </div>
-    </Fragment>
+    </>
   )
 })
 

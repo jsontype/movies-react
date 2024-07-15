@@ -11,7 +11,7 @@ const SpecialsLatestMovies = memo(() => {
   const [title] = useState("Specials & Latest Movies");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={spacialLatestMovie}
@@ -27,7 +27,7 @@ const SpecialsLatestMovies = memo(() => {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 })
 

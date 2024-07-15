@@ -54,7 +54,7 @@ const HeaderDefault = memo(() => {
     };
   }, [location]);
   return (
-    <Fragment>
+    <>
       <header className="header-center-home header-default header-sticky">
         <Navbar
           expand="xl"
@@ -1214,7 +1214,7 @@ const HeaderDefault = memo(() => {
           </Container>
         </Navbar>
       </header>
-    </Fragment>
+    </>
   );
 });
 

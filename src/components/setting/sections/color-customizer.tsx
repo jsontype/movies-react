@@ -24,7 +24,7 @@ const ColorCustomizer = memo((props:Props) => {
   };
 
   return (
-    <Fragment>
+    <>
       <div className="mt-3">
         <div className="color-customizer mb-3">
           <h6 className="mb-0 title-customizer">Color Customizer</h6>
@@ -113,7 +113,7 @@ const ColorCustomizer = memo((props:Props) => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

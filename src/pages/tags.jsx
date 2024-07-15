@@ -18,7 +18,7 @@ import { useBreadcrumb } from "@/utilities/usePage";
 const TagsPage = memo(() => {
   useBreadcrumb('Tags')
   return (
-    <Fragment>
+    <>
       <section className="section-padding">
         <Container fluid>
           <div className="d-flex align-items-center justify-content-between mb-4">
@@ -100,7 +100,7 @@ const TagsPage = memo(() => {
           </div>
         </Container>
       </section>
-    </Fragment>
+    </>
   );
 });
 

@@ -33,7 +33,7 @@ const TeamSection = memo(() => {
     },
   ]);
   return (
-    <Fragment>
+    <>
       <section className="section-padding">
         <Container>
           <Row className="align-items-center">
@@ -62,7 +62,7 @@ const TeamSection = memo(() => {
           </Row>
         </Container>
       </section>
-    </Fragment>
+    </>
   );
 });
 

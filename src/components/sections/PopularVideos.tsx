@@ -11,7 +11,7 @@ const PopularVideos = memo(()=> {
   const [title] = useState("Popular Videos");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={populerSlider}
@@ -27,7 +27,7 @@ const PopularVideos = memo(()=> {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 })
 

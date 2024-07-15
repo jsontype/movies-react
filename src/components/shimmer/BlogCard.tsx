@@ -13,7 +13,7 @@ const shimmerCardStyle = {
 
 const CardBlogShimmer = memo((props:any) => {
   return (
-    <Fragment>
+    <>
       <div
         id="gallery-top"
         className=""
@@ -146,7 +146,7 @@ const CardBlogShimmer = memo((props:any) => {
           </Col>
         </Row>
       </div>
-    </Fragment>
+    </>
   );
 });
 

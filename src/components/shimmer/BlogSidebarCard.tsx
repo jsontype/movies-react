@@ -12,7 +12,7 @@ const shimmerCardStyle = {
 };
 const CardblogSidebarShimmer = memo((props) => {
   return (
-    <Fragment>
+    <>
       <div
         id="gallery-top"
         className=""
@@ -77,13 +77,13 @@ const CardblogSidebarShimmer = memo((props) => {
           </Col>
         </Row>
       </div>
-    </Fragment>
+    </>
   );
 });
 
 const RecentShimmer = memo((props) => {
     return (
-      <Fragment>
+      <>
         <div className="iq-blog-box pb-3">
         
           
@@ -113,7 +113,7 @@ const RecentShimmer = memo((props) => {
             
         
         </div>
-      </Fragment>
+      </>
     );
   });
   

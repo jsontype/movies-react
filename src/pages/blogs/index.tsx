@@ -17,7 +17,7 @@ const BLogs = memo(() => {
 
     useBreadcrumb('Blog List')
     return (
-        <Fragment>
+        <>
             <div className="section-padding">
                 <Container>
                     <Row>
@@ -43,7 +43,7 @@ const BLogs = memo(() => {
                     </Row>
                 </Container>
             </div>
-        </Fragment>
+        </>
     );
 });
 

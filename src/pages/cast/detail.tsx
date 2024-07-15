@@ -99,7 +99,7 @@ const DetailPage = memo(() => {
 
   useEnterExit()
   return (
-    <Fragment>
+    <>
       <div className="section-padding">
         <Container fluid>
           <Row>
@@ -252,7 +252,7 @@ const DetailPage = memo(() => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

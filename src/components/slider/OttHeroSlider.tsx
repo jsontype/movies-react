@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // next link
 import Link from "next/link";
@@ -19,7 +19,26 @@ SwiperCore.use([Navigation, Thumbs]);
 import { useSelector } from "react-redux";
 import { theme_scheme_direction } from "../../store/setting/selectors";
 
-const OttHeroSlider = ({ movies }) => {
+interface MoviesType {
+  moviesSortByYear: [{
+    id: number;
+    title: string;
+    rating: number;
+    genres: string[];
+    summary: string;
+    duration: string;
+    large_cover_image: string;
+    runtime: number;
+  }]
+}
+
+const convertRuntime = (minutes: number): string => {
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  return `${hours}hr ${remainingMinutes} minutes`;
+}
+
+const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
   const themeSchemeDirection = useSelector(theme_scheme_direction);
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
   const [_render, setRender] = useState(true)
@@ -32,11 +51,20 @@ const OttHeroSlider = ({ movies }) => {
     return () => { };
   }, []);
 
-  console.log('movies: ', movies)
+  // thumbsSwiper 설정 후 첫 슬라이드를 왼쪽으로 이동
+  useEffect(() => {
+    if (moviesSortByYear.length > 0 && thumbsSwiper && thumbsSwiper.initialized) {
+      for (let i = 0; i < 18; i++) {
+        thumbsSwiper.slideTo(moviesSortByYear.length - 1);
+      }
+    }
+  }, [thumbsSwiper, moviesSortByYear]);
 
-  const renderMiniSlide = movies.map(item => {
+  console.log('movies: ', moviesSortByYear);
+
+  const renderMiniSlide = moviesSortByYear.map((item, index) => {
     return (
-      <SwiperSlide className="swiper-bg" key={item.id}>
+      <SwiperSlide className="swiper-bg" key={index}>
         <div className="block-images position-relative">
           <div className="img-box">
             <Image
@@ -50,7 +78,9 @@ const OttHeroSlider = ({ movies }) => {
             />
             <div className="block-description ps-3">
               <h6 className="iq-title fw-500 mb-0">{item.title}</h6>
-              <span className="fs-12">2 hr 6 minute</span>
+              <span className="fs-12">
+                {item.runtime ? convertRuntime(item.runtime) : 'No Data For Runtime'}
+              </span>
             </div>
           </div>
         </div>
@@ -58,9 +88,9 @@ const OttHeroSlider = ({ movies }) => {
     )
   })
 
-  const renderHeroSlide = movies.map((item) => {
+  const renderHeroSlide = moviesSortByYear.map((item, index) => {
     return (
-      <SwiperSlide className="p-0" key={item.id}>
+      <SwiperSlide className="p-0" key={index}>
         <div className="slider--image block-images">
           <Image
             src={item.large_cover_image}
@@ -114,7 +144,7 @@ const OttHeroSlider = ({ movies }) => {
                       href="/view-all"
                       className="text-decoration-none ms-1"
                     >
-                      {item.genres}
+                      {item.genres.join(", ")}
                     </Link>
                   </div>
                   <div className="text-primary font-size-14 fw-500 text-capitalize">
@@ -123,7 +153,7 @@ const OttHeroSlider = ({ movies }) => {
                       href="/cast/detail"
                       className="text-decoration-none ms-1"
                     >
-                      {item.runtime}mins
+                      {item.runtime ? convertRuntime(item.runtime) : 'No Data For Runtime'}
                     </Link>
                   </div>
                 </div>
@@ -140,10 +170,8 @@ const OttHeroSlider = ({ movies }) => {
     )
   })
 
-
-
   return (
-    <Fragment>
+    <>
       <div className="iq-banner-thumb-slider">
         <div className="slider">
           <div className="position-relative slider-bg d-flex justify-content-end">
@@ -216,11 +244,10 @@ const OttHeroSlider = ({ movies }) => {
               </Swiper>
             </div>
             {/* ***! Hero Slide - End */}
-
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

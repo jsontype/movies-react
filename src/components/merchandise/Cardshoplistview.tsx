@@ -55,7 +55,7 @@ const CardShopListView = memo((props: CardShopListViewProps) => {
   const isNew = props.is_new;
 
   return (
-    <Fragment>
+    <>
       <Col>
         <div className="product-block product-list">
           <Row>
@@ -145,7 +145,7 @@ const CardShopListView = memo((props: CardShopListViewProps) => {
         </div>
       </Col>
       <ProductModal show={show} handleClose={handleClose} />
-    </Fragment>
+    </>
   );
 });
 

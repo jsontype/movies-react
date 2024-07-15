@@ -11,7 +11,7 @@ const RelatedVideos = memo(() => {
   const [title] = useState("Related Videos");
   const [RelatedVideos] = useState(sectionSliders);
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={RelatedVideos}
@@ -27,7 +27,7 @@ const RelatedVideos = memo(() => {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 });
 

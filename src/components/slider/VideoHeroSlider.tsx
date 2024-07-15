@@ -21,7 +21,7 @@ const VideoHeroSlider = memo(() => {
   const themeSchemeDirection = useSelector(theme_scheme_direction);
   const [toggler, setToggler] = useState(false);
   return (
-    <Fragment>
+    <>
       <section className="banner-container section-padding-bottom">
         <div className="movie-banner">
           <div id="banner-detail-slider" className="banner-container">
@@ -501,7 +501,7 @@ const VideoHeroSlider = memo(() => {
         toggler={toggler}
         sources={["/assets/images/video/trailer.mp4"]}
       />
-    </Fragment>
+    </>
   );
 });
 

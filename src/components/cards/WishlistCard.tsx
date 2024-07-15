@@ -12,7 +12,7 @@ interface Props {
 
 const WishlistCard = memo((props: Props) => {
     return (
-        <Fragment>
+        <>
 
             <div className="watchlist-warpper card-style-two">
                 <div className="block-images d-flex align-items-center flex-wrap gap-2 gap-md-3">
@@ -30,7 +30,7 @@ const WishlistCard = memo((props: Props) => {
                     </div>
                 </div>
             </div>
-        </Fragment>
+        </>
     )
 })
 

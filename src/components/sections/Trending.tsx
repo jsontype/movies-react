@@ -88,7 +88,7 @@ const Trending = memo(() => {
     },
   ]);
   return (
-    <Fragment>
+    <>
       <section className="tranding-tab-slider section-padding">
         <Container fluid>
           <Row className="m-0 p-0">
@@ -488,7 +488,7 @@ const Trending = memo(() => {
         toggler={toggler}
         sources={["/assets/images/video/trailer.mp4"]}
       />
-    </Fragment>
+    </>
   );
 })
 

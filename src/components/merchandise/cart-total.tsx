@@ -6,7 +6,7 @@ interface CartTotalProps{
 
 const CartTotal = memo((props:CartTotalProps) => {
   return (
-    <Fragment>
+    <>
       <tbody>
         <tr className="cart-subtotal">
           <th>Subtotal</th>
@@ -33,7 +33,7 @@ const CartTotal = memo((props:CartTotalProps) => {
           </td>
         </tr>
       </tbody>
-    </Fragment>
+    </>
   );
 });
 

@@ -77,13 +77,13 @@ const StarRating: React.FC<Props> = memo(function StarRating({
 
 const RatingStar = memo((props:Props) => {
   return (
-    <Fragment>
+    <>
       <StarRating
         count1={props.count1}
         count={props.count}
         starColor={props.starColor}
       />
-    </Fragment>
+    </>
   );
 });
 

@@ -35,7 +35,7 @@ const BlogGrid = memo((props) => {
             break;
     }
     return (
-        <Fragment>
+        <>
             <GridPageBreadCrumb type={type}></GridPageBreadCrumb>
             <div className="section-padding">
                 <Container>
@@ -51,7 +51,7 @@ const BlogGrid = memo((props) => {
                     </Row>
                 </Container>
             </div>
-        </Fragment>
+        </>
     );
 });
 

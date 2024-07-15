@@ -45,7 +45,7 @@ const HomeVerticalSlider = memo(() => {
   }, [inView]);
 
   return (
-    <Fragment>
+    <>
       <>
         {" "}
         <h4 className="main-title ms-3">Top 10 in United States</h4>
@@ -232,7 +232,7 @@ const HomeVerticalSlider = memo(() => {
           </Swiper>
         </div>
       </>
-    </Fragment>
+    </>
   );
 });
 export default HomeVerticalSlider;

@@ -97,7 +97,7 @@ const VideoDetail = memo(() => {
     date: "Nov 2020",
   };
   return (
-    <Fragment>
+    <>
       <div className="iq-main-slider site-video">
         <Container fluid>
           <Row>
@@ -323,7 +323,7 @@ const VideoDetail = memo(() => {
         </Container>
       </div>
       <UpcomingMovies />
-    </Fragment>
+    </>
   );
 });
 

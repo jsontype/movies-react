@@ -9,7 +9,7 @@ import { useBreadcrumb } from '@/utilities/usePage'
 const TermsofUse = memo(() => {
   useBreadcrumb('Terms Of Use')
   return (
-    <Fragment>
+    <>
       <div className="section-padding">
         <Container>
           <div className="title-box">
@@ -48,7 +48,7 @@ const TermsofUse = memo(() => {
           </div>
         </Container>
       </div>
-    </Fragment>
+    </>
   )
 })
 

@@ -19,7 +19,7 @@ const CardHero: React.FC<CardHeroProps> = memo(({ link, title, rating, certifica
   const [toggler, setToggler] = useState(false);
 
   return (
-    <Fragment>
+    <>
       <div className="shows-content h-100">
         <Row className="align-items-center h-100">
           <Col lg="7" md="12">
@@ -184,7 +184,7 @@ const CardHero: React.FC<CardHeroProps> = memo(({ link, title, rating, certifica
           </Col>
         </Row>
       </div>
-    </Fragment>
+    </>
   );
 });
 

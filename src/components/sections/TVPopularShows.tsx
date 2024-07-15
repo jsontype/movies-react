@@ -11,7 +11,7 @@ const TVPopularShows = memo(() => {
   const [title] = useState("TV Popular Shows");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={populerSlider}
@@ -27,7 +27,7 @@ const TVPopularShows = memo(() => {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 })
 

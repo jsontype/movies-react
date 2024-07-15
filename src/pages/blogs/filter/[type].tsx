@@ -15,7 +15,7 @@ const Filter = memo((props) => {
     const router = useRouter()
 
     return (
-        <Fragment>
+        <>
             <FilterBlogBreadcrumb type={router.query.type}></FilterBlogBreadcrumb>
             <div className="section-padding">
                 <Container>
@@ -42,7 +42,7 @@ const Filter = memo((props) => {
                     </Row>
                 </Container>
             </div>
-        </Fragment>
+        </>
     );
 });
 

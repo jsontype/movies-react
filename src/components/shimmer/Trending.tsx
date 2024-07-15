@@ -5,7 +5,7 @@ import { Container, Row, Col, Placeholder } from "react-bootstrap";
 
 const TrendingShimer = memo(() => {
   return (
-    <Fragment>
+    <>
       <Container fluid>
         <Row className="m-0 p-0">
           <div
@@ -174,7 +174,7 @@ const TrendingShimer = memo(() => {
           </div>
         </Row>
       </Container>
-    </Fragment>
+    </>
   );
 });
 

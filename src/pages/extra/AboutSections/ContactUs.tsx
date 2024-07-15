@@ -14,7 +14,7 @@ import CountUp from 'react-countup';
 
 const ContactUs = memo(() => {
   return (
-    <Fragment>
+    <>
       <section className="section-padding" style={{ backgroundColor: "var(--bs-gray-900)" }}>
         <Container>
           <Row className="about-us-row text-center align-items-center">
@@ -54,7 +54,7 @@ const ContactUs = memo(() => {
           </Row>
         </Container>
       </section>
-    </Fragment>
+    </>
   )
 });
 

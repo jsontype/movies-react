@@ -3,7 +3,6 @@ export const movieTags =(state:any) => state.media.moviestags;
 export const tvShowsTags =(state:any) => state.media.tvShowsTags;
 export const videoTags =(state:any) => state.media.videoTags;
 export const upcommmingMovies = (state:any) => state.media.upcommmingMovies;
-export const popularMovies = (state:any) => state.media.popularMovies;
 export const latestMovies = (state:any) => state.media.latestMovies;
 export const suggestedForYou = (state:any) => state.media.suggestedForYou;
 export const bigSlider = (state:any) => state.media.bigSlider;

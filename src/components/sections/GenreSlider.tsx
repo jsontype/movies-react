@@ -9,7 +9,7 @@ import { geners } from '../../StaticData/data'
 
 const GenreSlider = memo(() => {
   return (
-    <Fragment>
+    <>
         <SectionSlider className="movie-geners-block" title='Movie Geners' list={geners} slidesPerView={6} link="/genres/all-genre">
         {(data) => (
           <GenersCard
@@ -20,7 +20,7 @@ const GenreSlider = memo(() => {
         />
         )}
         </SectionSlider>
-    </Fragment>
+    </>
   )
 })
 

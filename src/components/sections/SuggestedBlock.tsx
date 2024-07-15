@@ -11,7 +11,7 @@ const SuggestedBlock = memo(() => {
   const [title] = useState("Suggested Block");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={suggested}
@@ -28,7 +28,7 @@ const SuggestedBlock = memo(() => {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 });
 

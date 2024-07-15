@@ -11,7 +11,7 @@ const BestOfInternationalShows = memo(()=> {
   const [title] = useState("Best Of InternationalShows");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={latestMovie}
@@ -27,7 +27,7 @@ const BestOfInternationalShows = memo(()=> {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 })
 

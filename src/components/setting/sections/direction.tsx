@@ -7,7 +7,7 @@ interface Props{
 
 const Direction = memo((props:Props) => {
   return (
-    <Fragment>
+    <>
       <div className="modes row row-cols-2 gx-2">
         <div className="col">
           <RadioBtn
@@ -34,7 +34,7 @@ const Direction = memo((props:Props) => {
           </RadioBtn>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

@@ -7,7 +7,7 @@ interface CheckOutProps{
 }
 const CheckoutCard = memo((props:CheckOutProps) => {
   return (
-    <Fragment>
+    <>
       <table className="shop_table">
         <tbody>
           <tr className="cart_item">
@@ -60,7 +60,7 @@ const CheckoutCard = memo((props:CheckOutProps) => {
           </tr>
         </tfoot>
       </table>
-    </Fragment>
+    </>
   );
 });
 

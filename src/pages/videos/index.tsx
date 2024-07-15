@@ -14,12 +14,12 @@ import { useEnterExit } from "@/utilities/usePage";
 const VideosPage = () => {
   useEnterExit()
   return (
-    <Fragment>
+    <>
       <VideoHeroSlider />
       <PopularVideos />
       <SpecialsLatestVideos />
       <VideosRecommendedForYou />
-    </Fragment>
+    </>
   );
 };
 

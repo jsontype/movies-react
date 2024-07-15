@@ -8,7 +8,7 @@ import { blogCategories } from '../../../StaticData/blogs'
 
 const CategoriesWidget = memo(() => {
     return (
-        <Fragment>
+        <>
             <div id="categories-2" className="widget widget_categories">
                 <h5 className="widget-title position-relative">Categories</h5>
                 <ul className='p-0 m-0 list-unstyled'>
@@ -22,7 +22,7 @@ const CategoriesWidget = memo(() => {
                     })}
                 </ul>
             </div>
-        </Fragment>
+        </>
     )
 })
 

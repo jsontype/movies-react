@@ -38,7 +38,7 @@ const CardblogPaginationShimmer = memo((props:Props) => {
   }
 
   return (
-    <Fragment>
+    <>
       <div className="iq-blog-box pb-3">
         <div className="iq-blog-image clearfix d-flex flex-column">
           <Placeholder as="p" animation="glow" className="mb-0">
@@ -56,7 +56,7 @@ const CardblogPaginationShimmer = memo((props:Props) => {
           </Placeholder>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

@@ -5,7 +5,7 @@ import { Button, Form, Row, Col } from 'react-bootstrap'
 
 const ReviewComponent = memo(() => {
   return (
-    <Fragment>
+    <>
         <div className="streamit-reviews">
             <div id="comments" className="comments-area validate-form">
                 <p className='masvideos-noreviews mt-3'>
@@ -58,7 +58,7 @@ const ReviewComponent = memo(() => {
                 </div>
             </div>
         </div>
-    </Fragment>
+    </>
   )
 })
 

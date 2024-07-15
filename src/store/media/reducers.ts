@@ -11,9 +11,6 @@ export const SettingMedia = createSlice({
         upcommming_movies: (state,action) =>{
             state.upcommmingMovies = action.payload
         },
-        popular_movies: (state,action) =>{
-            state.popularMovies = action.payload
-        },
         latest_movies: (state,action) =>{
             state.latestMovies = action.payload
         },

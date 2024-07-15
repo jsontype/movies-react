@@ -13,12 +13,12 @@ import { useEnterExit } from "@/utilities/usePage";
 const TvShows = memo(() => {
   useEnterExit()
   return (
-    <Fragment>
+    <>
       <TvShowHeroSlider />
       <TVPopularShows />
       <BestOfInternationalShows />
       <ShowsWeRecommend />
-    </Fragment>
+    </>
   );
 });
 

@@ -13,7 +13,7 @@ interface Props {
 
 const FormWidget = memo((props: Props) => {
     return (
-        <Fragment>
+        <>
             <Row className="blog-nav">
                 <Col lg="6" className='blog-prev-post mb-5 mb-lg-0 border-end'>
                     <Link href={props.prevLink ? `${props.prevLink}` : '/blogs/template'}>
@@ -57,7 +57,7 @@ const FormWidget = memo((props: Props) => {
                 </Row>
             </Form>
 
-        </Fragment>
+        </>
     )
 })
 

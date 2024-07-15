@@ -24,8 +24,8 @@ const SidebarBreadcrumb = memo(({ type }: { type: any }) => {
         }
     }, [type])
     return (
-        <Fragment>
-        </Fragment>
+        <>
+        </>
     )
 })
 

@@ -9,7 +9,7 @@ import LoaderImg from '../../public/assets/images/loader.gif'
 
 const Loader = memo(() => {
   return (
-    <Fragment>
+    <>
       <div className="loader simple-loader animate__animated animate__fadeOut">
         <div className="loader-body">
           <Image
@@ -20,7 +20,7 @@ const Loader = memo(() => {
           />
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

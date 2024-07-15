@@ -11,7 +11,7 @@ import { generateImgPath } from "../../StaticData/data";
 
 const ErrorPage2 = () => {
   return (
-    <Fragment>
+    <>
       <div
         className="section-padding vh-100 image-flip-rtl"
         style={{
@@ -53,7 +53,7 @@ const ErrorPage2 = () => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 };
 

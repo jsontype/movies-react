@@ -15,7 +15,7 @@ import { useBreadcrumb } from "@/utilities/usePage";
 const ContactPage = memo(() => {
   useBreadcrumb('Contact us')
   return (
-    <Fragment>
+    <>
       <div className="section-padding">
         <Container>
           <Row>
@@ -207,7 +207,7 @@ const ContactPage = memo(() => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

@@ -32,7 +32,7 @@ const BlogDetail = () => {
     const blog: BlogDetail | any = blogs.find((item) => item.slug === slug)
     useBreadcrumb('The Most Anticipated Movies')
     return (
-        <Fragment>
+        <>
             {blog !== undefined && blog !== null ? (
                 <div className='section-padding'>
                     <Container>
@@ -73,7 +73,7 @@ const BlogDetail = () => {
                     </Container>
                 </div>
             ) : ''}
-        </Fragment>
+        </>
     )
 }
 

@@ -23,7 +23,7 @@ interface Props {
 
 const CardShimmer = memo((props:Props) => {
   return (
-    <Fragment>
+    <>
       <Container fluid style={{ paddingBottom: "6.25rem" }}>
         <Row style={{ paddingBottom: "1.5em" }}>
           {/* <SectionHeader title={props.title} /> */}
@@ -118,7 +118,7 @@ const CardShimmer = memo((props:Props) => {
           </Col>
         </Row>
       </Container>
-    </Fragment>
+    </>
   );
 });
 

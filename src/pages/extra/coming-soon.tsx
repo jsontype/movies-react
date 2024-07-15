@@ -11,7 +11,7 @@ import { generateImgPath } from "../../StaticData/data";
 
 const CommingSoonPage = () => {
   return (
-    <Fragment>
+    <>
       <div
         className="section-padding height-auto-100 image-flip-rtl"
         style={{
@@ -112,7 +112,7 @@ const CommingSoonPage = () => {
           </div>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 };
 

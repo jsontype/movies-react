@@ -13,7 +13,7 @@ interface Props {
 
 const CardStyle = memo((props: Props) => {
   return (
-    <Fragment>
+    <>
       <div className="iq-card card-hover">
         <div className="block-images position-relative w-100">
           <div className="img-box w-100">
@@ -136,7 +136,7 @@ const CardStyle = memo((props: Props) => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

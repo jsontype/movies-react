@@ -4,7 +4,6 @@ import { memo } from "react"
 import HomeHeroSlider from "@/components/slider/HomeHeroSlider"
 
 // sections
-import ContinueWatching from "@/components/sections/ContinueWatching"
 import UpcomingMovies from "@/components/sections/UpcomingMovies"
 import LatestMovies from "@/components/sections/LatestMovies"
 import VerticalSectionSlider from "@/components/slider/VerticalSectionSlider"
@@ -23,7 +22,6 @@ const Home = memo(() => {
   return (
     <>
       <HomeHeroSlider />
-      <ContinueWatching />
       <UpcomingMovies />
       <LatestMovies />
       <VerticalSectionSlider sliderData={verticleLatestMovies} />

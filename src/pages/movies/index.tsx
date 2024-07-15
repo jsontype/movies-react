@@ -4,7 +4,6 @@ import { memo } from "react";
 import MovieHeroSlider from "@/components/slider/MovieHeroSlider";
 
 // section
-import PopularMovies from "@/components/sections/PopularMovies";
 import SpecialsLatestMovies from "@/components/sections/Specials&LatestMovies";
 import MoviesRecommendedForYou from "@/components/sections/MoviesRecommendedForYou";
 
@@ -16,7 +15,6 @@ const Movies = memo(() => {
         <>
 
             <MovieHeroSlider />
-            <PopularMovies />
             <SpecialsLatestMovies />
             <MoviesRecommendedForYou />
 

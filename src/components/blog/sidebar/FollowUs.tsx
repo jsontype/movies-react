@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const FollowUs = memo(() => {
     return (
-        <Fragment>
+        <>
             <div className='widget'>
                 <h5 className='widget-title position-relative'> Follow Us:</h5>
                 <ul className='p-0 m-0 list-unstyled widget_social_media'>
@@ -31,7 +31,7 @@ const FollowUs = memo(() => {
                     </li>
                 </ul>
             </div>
-        </Fragment>
+        </>
     )
 })
 

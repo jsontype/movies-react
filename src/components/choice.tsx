@@ -36,7 +36,7 @@ const ChoicesJs = memo((props: Props) => {
     }
   }, [isMultiple, single, props]);
   return (
-    <Fragment>
+    <>
       <select
         ref={single}
         id={random()}
@@ -52,7 +52,7 @@ const ChoicesJs = memo((props: Props) => {
           </option>
         ))}
       </select>
-    </Fragment>
+    </>
   );
 });
 ChoicesJs.displayName = "ChoicesJs";

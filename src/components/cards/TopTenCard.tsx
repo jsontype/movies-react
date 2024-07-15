@@ -1,4 +1,4 @@
-import { FC, Fragment, memo } from "react";
+import { FC, memo } from "react";
 import Link from 'next/link';
 
 interface TopTenCardProps {
@@ -7,9 +7,9 @@ interface TopTenCardProps {
   countValue: number;
 }
 
-const TopTenCard: FC<TopTenCardProps> = memo(({ link, imagePath, countValue }) => {
+const TopTenCard = memo(({ link, imagePath, countValue }: TopTenCardProps) => {
   return (
-    <Fragment>
+    <>
       <div className="iq-top-ten-block">
         <div className="block-image position-relative">
           <div className="img-box">
@@ -24,7 +24,7 @@ const TopTenCard: FC<TopTenCardProps> = memo(({ link, imagePath, countValue }) =
           </div>
         </div>
       </div>
-    </Fragment> 
+    </> 
   );
 });
 

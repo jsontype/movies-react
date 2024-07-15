@@ -67,7 +67,7 @@ const PlaylistPage = memo(() => {
     },
   ];
   return (
-    <Fragment>
+    <>
       <div className="section-padding-bottom">
         <div className="profile-box">
           <Container fluid>
@@ -426,7 +426,7 @@ const PlaylistPage = memo(() => {
 
         {/*  */}
       </div>
-    </Fragment>
+    </>
   );
 });
 

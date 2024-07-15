@@ -107,7 +107,7 @@ const RelatedPage = memo(() => {
     playerRef.current = player;
   };
   return (
-    <Fragment>
+    <>
       <div className="iq-main-slider site-video">
         <Container fluid>
           <Row>
@@ -579,7 +579,7 @@ const RelatedPage = memo(() => {
           </div>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

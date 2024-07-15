@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const BrandLogo = memo(() => {
   return (
-    <Fragment>
+    <>
       <div className="logo-default">
         <Link className="navbar-brand text-primary" href="/">
           <img
@@ -47,7 +47,7 @@ const BrandLogo = memo(() => {
           />
         </Link>
       </div>
-    </Fragment>
+    </>
   );
 });
 

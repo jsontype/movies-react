@@ -12,7 +12,7 @@ import { useBreadcrumb } from "@/utilities/usePage";
 const PricingPage = memo(() => {
   useBreadcrumb('Pricing Plan')
   return (
-    <Fragment>
+    <>
       <div className="section-padding">
         <Container>
           <Row>
@@ -138,7 +138,7 @@ const PricingPage = memo(() => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   )
 })
 

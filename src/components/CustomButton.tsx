@@ -11,7 +11,7 @@ interface props{
 
 const CustomButton = memo((props : props) => {
   return (
-    <Fragment>
+    <>
       {props.linkButton === "true" && (
         <div className="iq-button link-button">
           <Link
@@ -33,7 +33,7 @@ const CustomButton = memo((props : props) => {
           </Link>
         </div>
       )}
-    </Fragment>
+    </>
   );
 });
 

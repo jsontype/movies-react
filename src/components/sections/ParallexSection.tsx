@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ParallexSection =  memo(()=> {
   return (
-    <Fragment>
+    <>
       <section
         id="parallex"
         className="parallax-window bg-attachment-fixed"
@@ -88,7 +88,7 @@ const ParallexSection =  memo(()=> {
           </div>
         </div>
       </section>
-    </Fragment>
+    </>
   );
 })
 

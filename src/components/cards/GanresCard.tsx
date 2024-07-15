@@ -12,7 +12,7 @@ interface GenersCardProps{
 
 const GenersCard = memo((props:GenersCardProps) => {
   return (
-    <Fragment>
+    <>
       <div className="iq-card-geners card-hover-style-two">
       <div className="block-images position-relative w-100">
         <div className="img-box rounded position-relative">
@@ -36,7 +36,7 @@ const GenersCard = memo((props:GenersCardProps) => {
         </div>
       </div>
     </div>
-    </Fragment>
+    </>
   );
 });
 

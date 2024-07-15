@@ -18,7 +18,7 @@ import { useBreadcrumb } from "@/utilities/usePage";
 export const CastPage = memo(() => {
   useBreadcrumb('Cast')
   return (
-    <Fragment>
+    <>
       <section className="section-padding">
         <Container fluid>
           <Row className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6">
@@ -45,7 +45,7 @@ export const CastPage = memo(() => {
           </div>
         </Container>
       </section>
-    </Fragment>
+    </>
   );
 });
 

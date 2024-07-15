@@ -32,8 +32,8 @@ const GridPageBreadCrumb = memo(({ type }: { type: any }) => {
         }
     }, [type])
     return (
-        <Fragment>
-        </Fragment>
+        <>
+        </>
     )
 })
 

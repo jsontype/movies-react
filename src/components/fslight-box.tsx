@@ -15,7 +15,7 @@ interface Props {
 const FsLightBox = memo((props: Props) => {
   const [toggler, setToggler] = useState(false);
   return (
-    <Fragment>
+    <>
       <Col
         md="3"
         className="trailor-video  col-12 mt-lg-0 mt-4 mb-md-0 mb-1 text-lg-right"
@@ -44,7 +44,7 @@ const FsLightBox = memo((props: Props) => {
           sources={["https://www.youtube.com/watch?v=QCGq1epI9pQ"]}
         />
       </>
-    </Fragment>
+    </>
   );
 });
 FsLightBox.displayName = "FsLightBox";

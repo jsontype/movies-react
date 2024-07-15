@@ -108,7 +108,7 @@ const ShowsDetailPage = memo(() => {
   };
 
   return (
-    <Fragment>
+    <>
       <div className="tv-show-detail">
         <Container fluid>
           <div
@@ -546,7 +546,7 @@ const ShowsDetailPage = memo(() => {
           </div>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

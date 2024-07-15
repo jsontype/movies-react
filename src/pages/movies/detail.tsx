@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from "react";
+import React, { memo } from "react";
 
 //react-bootstrap
 import { Row, Col, Container, Nav, Tab, Form } from "react-bootstrap";
@@ -106,7 +106,7 @@ const MoviesDetail = memo(() => {
   };
 
   return (
-    <Fragment>
+    <>
       <div className="iq-main-slider site-video">
         <Container fluid>
           <Row>
@@ -499,7 +499,7 @@ const MoviesDetail = memo(() => {
       <RelatedMovies />
       <RelatedVideos />
       <UpcomingMovies />
-    </Fragment>
+    </>
   );
 });
 

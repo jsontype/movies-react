@@ -33,8 +33,8 @@ const SingleBlogBreadcrumb = memo(({ type }: { type: any }) => {
         }
     }, [type])
     return (
-        <Fragment>
-        </Fragment>
+        <>
+        </>
     )
 })
 

@@ -11,7 +11,7 @@ import { generateImgPath } from "../../StaticData/data";
 
 const ErrorPage1 = () => {
   return (
-    <Fragment>
+    <>
       <div className="section-padding vh-100">
         <Container className="">
           <Row className="h-100 align-items-center">
@@ -52,7 +52,7 @@ const ErrorPage1 = () => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 };
 

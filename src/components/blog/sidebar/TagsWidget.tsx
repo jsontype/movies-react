@@ -8,7 +8,7 @@ import { blogTags } from '../../../StaticData/blogs'
 
 const TagsWidget = memo(() => {
   return (
-    <Fragment>
+    <>
       <div id="tag_cloud-2" className="widget">
         <h5 className="widget-title position-relative">Tags</h5>
         <div className="tagcloud">
@@ -23,7 +23,7 @@ const TagsWidget = memo(() => {
           </ul>
         </div>
       </div>
-    </Fragment>
+    </>
   )
 })
 

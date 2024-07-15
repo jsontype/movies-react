@@ -77,7 +77,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
   };
 
   return (
-    <Fragment>
+    <>
       <div className="section-padding-top product-detail">
         <Container>
           <Row>
@@ -452,7 +452,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
           </div>
         </Container>
       </div>
-    </Fragment>
+    </>
   );
 });
 

@@ -33,7 +33,7 @@ const ProductModal = memo((props: Props) => {
     })
   }
   return (
-    <Fragment>
+    <>
       <Modal
         id="woosq-popup"
         show={props.show} onHide={props.handleClose}
@@ -90,7 +90,7 @@ const ProductModal = memo((props: Props) => {
           </Row>
         </Modal.Body>
       </Modal>
-    </Fragment>
+    </>
   )
 })
 

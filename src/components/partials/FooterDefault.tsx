@@ -41,7 +41,7 @@ const FooterMega = memo(() => {
   // }, [location.pathname]);
   return (
     <>
-      <Fragment>
+      <>
         <footer className="footer footer-default">
           <Container fluid>
             <div className="footer-top">
@@ -242,7 +242,7 @@ const FooterMega = memo(() => {
             <i className="fa-solid fa-chevron-up"></i>
           </Link>
         </div>
-      </Fragment>
+      </>
     </>
   );
 });

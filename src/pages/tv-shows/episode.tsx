@@ -175,7 +175,7 @@ const EpisodePage = memo(() => {
   };  
   
   return (
-    <Fragment>
+    <>
     <div className="iq-main-slider site-video">
       <Container fluid>
         <Row>
@@ -443,7 +443,7 @@ const EpisodePage = memo(() => {
         </div>
       </Container>
     </div>
-  </Fragment>
+  </>
   );
 });
 

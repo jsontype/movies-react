@@ -40,7 +40,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
   const isSale = props.is_sale;
   const isNew = props.is_new;
   return (
-    <Fragment>
+    <>
       <Container>
         <Row>
           <Col lg="6">
@@ -434,7 +434,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
           </div>
         </div>
       </Container>
-    </Fragment>
+    </>
   );
 });
 

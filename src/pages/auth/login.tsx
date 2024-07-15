@@ -12,7 +12,7 @@ import Logo from '../../components/logo'
 const Login = () => {
 
   return (
-    <Fragment>
+    <>
       <main className='main-content'>
         <div className='vh-100' style={{ backgroundImage: "url(/assets/images/pages/01.webp)", backgroundSize: 'cover', backgroundRepeat: "no-repeat", position: 'relative', minHeight: '500px' }}>
           <Container>
@@ -93,7 +93,7 @@ const Login = () => {
           </Container>
         </div>
       </main>
-    </Fragment>
+    </>
   );
 };
 

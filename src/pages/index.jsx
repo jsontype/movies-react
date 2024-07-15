@@ -4,20 +4,24 @@ import { memo, useState, useEffect } from "react"
 import OttHeroSlider from "@/components/slider/OttHeroSlider"
 
 // sections
-import ContinueWatching from "@/components/sections/ContinueWatching"
 import TopTenMoviesToWatch from "@/components/sections/TopTenMoviesToWatch"
-import VerticalSectionSlider from "@/components/slider/VerticalSectionSlider"
-import OnlyOnStreamit from "@/components/sections/OnlyOnStreamit"
-import YourFavouritePersonality from "@/components/sections/YourFavouritePersonality"
-import PopularMovies from "@/components/sections/PopularMovies"
-import TabSlider from "@/components/sections/TabSlider"
-import RecommendedForYou from "@/components/sections/RecommendedForYou"
-import TopPicsForYou from "@/components/sections/TopPicsForYou"
+// import VerticalSectionSlider from "@/components/slider/VerticalSectionSlider"
 import GenreSlider from "@/components/sections/GenreSlider"
-import { ottVerticleLatestMovies } from "@/StaticData/data"
 
 const OTT = memo(() => {
-  const [movies, setMovies] = useState([])
+  const [moviesSortByYear, setMoviesSortByYear] = useState([])
+  const [moviesSortByRating, setMoviesSortByRating] = useState([])
+  // const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+    fetch("https://yts.mx/api/v2/list_movies.json?sort_by=year")
+      .then((res) => {
+        return res.json()
+      })
+      .then((json) => {
+        setMoviesSortByYear(json.data.movies)
+      })
+  }, [])
 
   useEffect(() => {
     fetch("https://yts.mx/api/v2/list_movies.json?sort_by=rating")
@@ -25,23 +29,16 @@ const OTT = memo(() => {
         return res.json()
       })
       .then((json) => {
-        setMovies(json.data.movies)
+        setMoviesSortByRating(json.data.movies)
       })
-  }, [])
+  }, [])  
 
   return (
     <>
-      <OttHeroSlider movies={movies} />
-      <ContinueWatching />
-      <TopTenMoviesToWatch />
-      <OnlyOnStreamit />
-      <VerticalSectionSlider sliderData={ottVerticleLatestMovies} />
-      <YourFavouritePersonality />
-      <PopularMovies />
-      <TabSlider />
+      <OttHeroSlider moviesSortByYear={moviesSortByYear} />
+      <TopTenMoviesToWatch moviesSortByRating={moviesSortByRating} />
+      {/* <VerticalSectionSlider sliderData={ottVerticleLatestMovies} /> */}
       <GenreSlider />
-      <RecommendedForYou />
-      <TopPicsForYou />
     </>
   )
 })

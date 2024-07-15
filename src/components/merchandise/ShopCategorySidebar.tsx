@@ -13,7 +13,7 @@ interface ShopCategorySidebarProps{
 const ShopCategorySidebar = memo((props:ShopCategorySidebarProps) => {
   const [open, setOpen] = useState(false);
   return (
-    <Fragment>
+    <>
       <div className="shop-box">
           <h5 className="mb-4 text-uppercase">Product categories</h5>
           <ul className="list-unstyled p-0 m-0 shop-list-checkbox">
@@ -100,7 +100,7 @@ const ShopCategorySidebar = memo((props:ShopCategorySidebarProps) => {
 
       {props.children}
 </div>
-    </Fragment>
+    </>
   );
 });
 ShopCategorySidebar.displayName = "ShopCategorySidebar"

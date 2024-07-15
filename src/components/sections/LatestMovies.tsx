@@ -11,7 +11,7 @@ const LatestMovies = () => {
   const [title] = useState("Latest Movies");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={latestMovie}
@@ -28,7 +28,7 @@ const LatestMovies = () => {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 };
 

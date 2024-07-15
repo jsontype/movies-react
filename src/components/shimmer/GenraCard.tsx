@@ -11,7 +11,7 @@ const CardgenraShimmer = memo((props) => {
   
 
   return (
-    <Fragment>
+    <>
       <div className=" pb-3">
         <div className="iq-blog-image clearfix ">
         <Placeholder as="p" animation="glow">
@@ -42,7 +42,7 @@ const CardgenraShimmer = memo((props) => {
           
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

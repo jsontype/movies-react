@@ -11,11 +11,11 @@ import { useBreadcrumb } from "@/utilities/usePage";
 const AboutUs = memo(() => {
   useBreadcrumb('About us')
   return (
-    <Fragment>
+    <>
       <TeamSection></TeamSection>
       <ContactUs></ContactUs>
       <WorkSection></WorkSection>
-    </Fragment>
+    </>
   );
 });
 

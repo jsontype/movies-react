@@ -2,7 +2,6 @@ export const state = {
     // movies
     movies:[],
     upcommmingMovies: [],
-    popularMovies: [],
     latestMovies : [],
     suggestedForYou: [],
     bigSlider : [],
