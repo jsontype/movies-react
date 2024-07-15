@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
 
 // data
-import { geners } from "@/StaticData/data"
+import { geners } from '@/StaticData/data'
 
 //components
 import GenersCard from '@/components/cards/GanresCard'
@@ -22,7 +22,7 @@ const AllGenres = memo(() => {
       <section className="section-padding">
         <Container fluid>
           <Row>
-            <Col sm="12" className='my-4'>
+            <Col sm="12" className="my-4">
               <div className="d-flex align-items-center justify-content-between">
                 <h5 className="main-title text-capitalize mb-0">Geners</h5>
               </div>

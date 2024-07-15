@@ -1,14 +1,14 @@
-import { Fragment, memo, useState } from "react";
+import { Fragment, memo, useState } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //data
-import { upcommingMovie } from "../../StaticData/data";
+import { upcommingMovie } from '../../StaticData/data'
 
 const UpcomingMovies = memo(() => {
-  const [title] = useState("Upcoming Movies");
+  const [title] = useState('Upcoming Movies')
 
   return (
     <>
@@ -18,7 +18,7 @@ const UpcomingMovies = memo(() => {
         className="upcomimg-block streamit-block"
         slidesPerView={6}
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -29,8 +29,8 @@ const UpcomingMovies = memo(() => {
         )}
       </SectionSlider>
     </>
-  );
-});
+  )
+})
 
-UpcomingMovies.displayName = "UpcomingMovies"
-export default UpcomingMovies;
+UpcomingMovies.displayName = 'UpcomingMovies'
+export default UpcomingMovies

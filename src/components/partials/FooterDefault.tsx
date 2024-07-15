@@ -1,40 +1,37 @@
-import { memo, Fragment, useState, useEffect } from "react";
+import { memo, Fragment, useState, useEffect } from 'react'
 
-import Link from "next/link";
+import Link from 'next/link'
 
 // react-bootstrap
-import { Container, Row, Col } from "react-bootstrap";
-
-
+import { Container, Row, Col } from 'react-bootstrap'
 
 // components
-import Logo from "../logo";
-
+import Logo from '../logo'
 
 const FooterMega = memo(() => {
-  const [animationClass, setAnimationClass] = useState("animate__fadeIn");
+  const [animationClass, setAnimationClass] = useState('animate__fadeIn')
   // const location = useLocation();
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const handleScroll = () => {
     if (document.documentElement.scrollTop > 250) {
-      setAnimationClass("animate__fadeIn");
+      setAnimationClass('animate__fadeIn')
     } else {
-      setAnimationClass("animate__fadeOut");
+      setAnimationClass('animate__fadeOut')
     }
-  };
+  }
 
   useEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   // useEffect(() => {
   //   scrollToTop();
@@ -51,8 +48,7 @@ const FooterMega = memo(() => {
                     <Logo></Logo>
                   </div>
                   <p className="mb-4 font-size-14">
-                    Email us:{" "}
-                    <span className="text-white">customer@streamit.com</span>
+                    Email us: <span className="text-white">customer@streamit.com</span>
                   </p>
                   <p className="text-uppercase letter-spacing-1 font-size-14 mb-1">
                     customer services
@@ -135,11 +131,7 @@ const FooterMega = memo(() => {
                         aria-describedby="button-addon2"
                       />
                       <div className="iq-button">
-                        <button
-                          type="submit"
-                          className="btn btn-sm"
-                          id="button-addon2"
-                        >
+                        <button type="submit" className="btn btn-sm" id="button-addon2">
                           Subscribe
                         </button>
                       </div>
@@ -149,34 +141,22 @@ const FooterMega = memo(() => {
                     <span className="font-size-14 me-2">Follow Us:</span>
                     <ul className="p-0 m-0 list-unstyled widget_social_media">
                       <li className="">
-                        <Link
-                          href="https://www.facebook.com/"
-                          className="position-relative"
-                        >
+                        <Link href="https://www.facebook.com/" className="position-relative">
                           <i className="fab fa-facebook"></i>
                         </Link>
                       </li>
                       <li className="">
-                        <Link
-                          href="https://twitter.com/"
-                          className="position-relative"
-                        >
+                        <Link href="https://twitter.com/" className="position-relative">
                           <i className="fab fa-twitter"></i>
                         </Link>
                       </li>
                       <li className="">
-                        <Link
-                          href="https://github.com/"
-                          className="position-relative"
-                        >
+                        <Link href="https://github.com/" className="position-relative">
                           <i className="fab fa-github"></i>
                         </Link>
                       </li>
                       <li className="">
-                        <Link
-                          href="https://www.instagram.com/"
-                          className="position-relative"
-                        >
+                        <Link href="https://www.instagram.com/" className="position-relative">
                           <i className="fab fa-instagram"></i>
                         </Link>
                       </li>
@@ -203,12 +183,11 @@ const FooterMega = memo(() => {
                     </li>
                   </ul>
                   <p className="font-size-14">
-                    © <span className="currentYear">2023</span>{" "}
-                    <span className="text-primary">STREAMIT</span>. All Rights
-                    Reserved. All videos and shows on this platform are
-                    trademarks of, and all related images and content are the
-                    property of, Streamit Inc. Duplication and copy of this is
-                    strictly prohibited. All rights reserved.
+                    © <span className="currentYear">2023</span>{' '}
+                    <span className="text-primary">STREAMIT</span>. All Rights Reserved. All videos
+                    and shows on this platform are trademarks of, and all related images and content
+                    are the property of, Streamit Inc. Duplication and copy of this is strictly
+                    prohibited. All rights reserved.
                   </p>
                 </Col>
                 <Col md={3}></Col>
@@ -216,7 +195,11 @@ const FooterMega = memo(() => {
                   <h6 className="font-size-14 pb-1">Download Streamit Apps</h6>
                   <div className="d-flex align-items-center">
                     <Link className="app-image" href="#">
-                      <img src="/assets/images/footer/google-play.webp" loading="lazy" alt="play-store" />
+                      <img
+                        src="/assets/images/footer/google-play.webp"
+                        loading="lazy"
+                        alt="play-store"
+                      />
                     </Link>
                     <br />
                     <Link className="ms-3 app-image" href="#">
@@ -230,7 +213,7 @@ const FooterMega = memo(() => {
         </footer>
         <div
           id="back-to-top"
-          style={{ display: "none" }}
+          style={{ display: 'none' }}
           className={`animate__animated ${animationClass}`}
           onClick={scrollToTop}
         >
@@ -244,7 +227,7 @@ const FooterMega = memo(() => {
         </div>
       </>
     </>
-  );
-});
-FooterMega.displayName = "FooterMega";
-export default FooterMega;
+  )
+})
+FooterMega.displayName = 'FooterMega'
+export default FooterMega

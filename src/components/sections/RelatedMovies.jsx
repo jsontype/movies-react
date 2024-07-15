@@ -1,15 +1,15 @@
-import React, { Fragment, memo, useState } from "react";
+import React, { Fragment, memo, useState } from 'react'
 
 //component
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { sectionSliders } from "../../StaticData/data";
+import { sectionSliders } from '../../StaticData/data'
 
 const RelatedMovies = memo(() => {
-  const [title] = useState("Related Movies");
-  const [RelatedMovies] = useState(sectionSliders);
+  const [title] = useState('Related Movies')
+  const [RelatedMovies] = useState(sectionSliders)
   return (
     <>
       <SectionSlider
@@ -18,7 +18,7 @@ const RelatedMovies = memo(() => {
         className="related-movie-block"
         slidesPerView={5}
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -29,8 +29,8 @@ const RelatedMovies = memo(() => {
         )}
       </SectionSlider>
     </>
-  );
-});
+  )
+})
 
-RelatedMovies.displayName = "RelatedMovies";
-export default RelatedMovies;
+RelatedMovies.displayName = 'RelatedMovies'
+export default RelatedMovies

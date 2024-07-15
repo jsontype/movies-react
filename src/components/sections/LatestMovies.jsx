@@ -1,14 +1,14 @@
-import { useState, Fragment, memo } from "react";
+import { Fragment, useState } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '@/components/cards/CardStyle'
 
 //static data
-import { latestMovie } from "../../StaticData/data";
+import { latestMovie } from '@/StaticData/data'
 
-const SpecialsLatestVideos = memo(() => {
-  const [title] = useState("Specials Latest Videos");
+const LatestMovies = () => {
+  const [title] = useState('Latest Movies')
 
   return (
     <>
@@ -16,8 +16,9 @@ const SpecialsLatestVideos = memo(() => {
         title={title}
         list={latestMovie}
         className="latest-block streamit-block"
+        slidesPerView={6}
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -28,8 +29,8 @@ const SpecialsLatestVideos = memo(() => {
         )}
       </SectionSlider>
     </>
-  );
-})
+  )
+}
 
-SpecialsLatestVideos.displayName = 'SpecialsLatestVideos';
-export default SpecialsLatestVideos;
+LatestMovies.DisplayName = LatestMovies
+export default LatestMovies

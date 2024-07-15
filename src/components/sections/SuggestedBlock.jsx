@@ -1,14 +1,14 @@
-import { Fragment, memo, useState } from "react";
+import { Fragment, memo, useState } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { suggested } from "../../StaticData/data";
+import { suggested } from '../../StaticData/data'
 
 const SuggestedBlock = memo(() => {
-  const [title] = useState("Suggested Block");
+  const [title] = useState('Suggested Block')
 
   return (
     <>
@@ -18,7 +18,7 @@ const SuggestedBlock = memo(() => {
         className="suggested-block streamit-block"
         slidesPerView={6}
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -29,8 +29,8 @@ const SuggestedBlock = memo(() => {
         )}
       </SectionSlider>
     </>
-  );
-});
+  )
+})
 
-SuggestedBlock.displayName = 'SuggestedBlock';
-export default SuggestedBlock;
+SuggestedBlock.displayName = 'SuggestedBlock'
+export default SuggestedBlock

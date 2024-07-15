@@ -1,92 +1,89 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-bootstrap
-import { Row, Col, Container, Nav, Tab, Form } from "react-bootstrap";
+import { Row, Col, Container, Nav, Tab, Form } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //components
-import ReviewComponent from "../../components/ReviewComponent";
-import Sources from "../../components/Sources";
-import MoviesRecommendedForYou from "../../components/sections/MoviesRecommendedForYou";
-import RelatedVideos from "../../components/sections/RelatedVideos";
-import UpcomingMovies from "../../components/sections/UpcomingMovies";
-import RelatedMovies from "../../components/sections/RelatedMovies";
-import RatingStar from "../../components/rating-star";
-import FsLightBox from "../../components/fslight-box";
+import ReviewComponent from '../../components/ReviewComponent'
+import Sources from '../../components/Sources'
+import MoviesRecommendedForYou from '../../components/sections/MoviesRecommendedForYou'
+import RelatedVideos from '../../components/sections/RelatedVideos'
+import UpcomingMovies from '../../components/sections/UpcomingMovies'
+import RelatedMovies from '../../components/sections/RelatedMovies'
+import RatingStar from '../../components/rating-star'
+import FsLightBox from '../../components/fslight-box'
 
 //function
-import { generateImgPath } from "../../StaticData/data";
-
+import { generateImgPath } from '../../StaticData/data'
 
 //swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
 
 const RestrictedPage = memo(() => {
   // date, type
   const shows = {
     id: 1,
-    slug: "zombie-world",
-    thumbnail: generateImgPath("/assets/images/genre/01.webp"),
-    title: "Zombie World",
+    slug: 'zombie-world',
+    thumbnail: generateImgPath('/assets/images/genre/01.webp'),
+    title: 'Zombie World',
     detail:
       "Zombie Island is a 1998 direct-to-video animated comedy horror film based on Hanna-Barbera's Scooby-Doo Saturday-morning cartoons. In the film, Shaggy, Scooby, Fred, Velma, and Daphne reunite after a year-long hiatus from Mystery, Inc. to investigate a bayou island said to be haunted by the ghost of the pirate Morgan Moonscar. The film was directed by Jim Stenstrum, from a screenplay by Glenn Leopold.",
-    season_type: "2 Season",
-    certificate: "Adventure",
+    season_type: '2 Season',
+    certificate: 'Adventure',
     rating: 4.5,
     likes: 9,
-    rating_from: "Imdb",
-    geners: ["action", "adventure", "drama"],
-    tags: ["Action", "Adventure", "Drama"],
-    video_link: "",
-    video_type: "video",
+    rating_from: 'Imdb',
+    geners: ['action', 'adventure', 'drama'],
+    tags: ['Action', 'Adventure', 'Drama'],
+    video_link: '',
+    video_type: 'video',
     is_restricted: false,
 
     cast: [
       {
-        title: "James Chinlund",
-        thumbnail: generateImgPath("/assets/images/genre/g1.webp"),
-        as: "James",
+        title: 'James Chinlund',
+        thumbnail: generateImgPath('/assets/images/genre/g1.webp'),
+        as: 'James',
       },
       {
-        title: "James Earl Jones",
-        thumbnail: generateImgPath("/assets/images/genre/g2.webp"),
-        as: "Jones",
+        title: 'James Earl Jones',
+        thumbnail: generateImgPath('/assets/images/genre/g2.webp'),
+        as: 'Jones',
       },
     ],
     crew: [
       {
-        title: "Jeff Nathanson ",
-        thumbnail: generateImgPath("/assets/images/genre/g3.webp"),
-        as: "Writing",
+        title: 'Jeff Nathanson ',
+        thumbnail: generateImgPath('/assets/images/genre/g3.webp'),
+        as: 'Writing',
       },
       {
-        title: "Jeff Nathanson ",
-        thumbnail: generateImgPath("/assets/images/genre/g5.webp"),
-        as: "Writing",
+        title: 'Jeff Nathanson ',
+        thumbnail: generateImgPath('/assets/images/genre/g5.webp'),
+        as: 'Writing',
       },
       {
-        title: "Jeff Nathanson ",
-        thumbnail: generateImgPath("/assets/images/genre/g4.webp"),
-        as: "Production",
+        title: 'Jeff Nathanson ',
+        thumbnail: generateImgPath('/assets/images/genre/g4.webp'),
+        as: 'Production',
       },
     ],
-    created_by_username: "Admin",
-    created_at: "Feb 2017",
-    ranking: "#1 in Series Today ",
-    date: "Nov 2020",
-  };
+    created_by_username: 'Admin',
+    created_at: 'Feb 2017',
+    ranking: '#1 in Series Today ',
+    date: 'Nov 2020',
+  }
   return (
     <>
       <div className="iq-main-slider site-video">
         <Container fluid>
           <div className="iq-content_restriction">
             <div className="iq-restriction_box">
-              <span className="subscribe-text">
-                You must be logged in to view this content.
-              </span>
+              <span className="subscribe-text">You must be logged in to view this content.</span>
               <div className="iq-button">
                 <Link href="" className="btn text-uppercase position-relative">
                   <span className="button-text">Subscribe To Watch</span>
@@ -117,28 +114,25 @@ const RestrictedPage = memo(() => {
                       </h2>
                       <div className="slider-ratting d-flex align-items-center ms-lg-3 ms-0">
                         <RatingStar count="5" count1="0" starColor="text-warning" />
-                        <span className="text-white ms-2">{shows.rating} ({shows.rating_from})</span>
+                        <span className="text-white ms-2">
+                          {shows.rating} ({shows.rating_from})
+                        </span>
                       </div>
                     </div>
                     <ul className="p-0 mt-2 list-inline d-flex flex-wrap movie-tag">
                       {shows.geners.map((item, index) => {
                         return (
                           <li key={index} className="trending-list">
-                            <Link
-                              href="/view-all"
-                              className="text-primary text-capitalize"
-                            >
+                            <Link href="/view-all" className="text-primary text-capitalize">
                               {item}
                             </Link>
                           </li>
-                        );
+                        )
                       })}
                     </ul>
                     <div className="d-flex flex-wrap align-items-center text-white text-detail flex-wrap mb-4">
                       <span className="badge bg-secondary">Horror</span>
-                      <span className="ms-3 font-Weight-500 genres-info me-2">
-                        1hr : 48mins
-                      </span>
+                      <span className="ms-3 font-Weight-500 genres-info me-2">1hr : 48mins</span>
                       <span className="trending-year trending-year-list font-Weight-500 genres-info">
                         {shows.created_at}
                       </span>
@@ -208,20 +202,17 @@ const RestrictedPage = memo(() => {
                     </div>
                     <ul className="iq-blogtag list-unstyled d-flex flex-wrap align-items-center gap-3 p-0">
                       <li className="iq-tag-title text-primary mb-0">
-                        <i className="fa fa-tags" aria-hidden="true"></i>Tags:{" "}
+                        <i className="fa fa-tags" aria-hidden="true"></i>Tags:{' '}
                       </li>
                       {shows.tags.map((item, index) => {
                         return (
                           <li key={index}>
-                            <Link
-                              href="/view-all"
-                              className="title text-capitalize"
-                            >
+                            <Link href="/view-all" className="title text-capitalize">
                               {item}
                             </Link>
                             <span className="text-secondary">,</span>
                           </li>
-                        );
+                        )
                       })}
                     </ul>
                   </Col>
@@ -356,8 +347,8 @@ const RestrictedPage = memo(() => {
                   <Swiper
                     slidesPerView={5}
                     navigation={{
-                      prevEl: ".swiper-button-prev",
-                      nextEl: ".swiper-button-next",
+                      prevEl: '.swiper-button-prev',
+                      nextEl: '.swiper-button-next',
                     }}
                     loop={false}
                     modules={[Navigation]}
@@ -386,7 +377,7 @@ const RestrictedPage = memo(() => {
                       },
                     }}
                   >
-                    {shows.cast.map((item:any, index:any) => {
+                    {shows.cast.map((item: any, index: any) => {
                       return (
                         <SwiperSlide key={index}>
                           <Row className="cast-images m-0 align-items-center position-relative">
@@ -403,14 +394,12 @@ const RestrictedPage = memo(() => {
                                 <Link href="/cast/detail">{item.title}</Link>
                               </h6>
                               <div className="video-time d-flex align-items-center my-2">
-                                <small className="text-white">
-                                  As {item.as}
-                                </small>
+                                <small className="text-white">As {item.as}</small>
                               </div>
                             </div>
                           </Row>
                         </SwiperSlide>
-                      );
+                      )
                     })}
                   </Swiper>
                 </Tab.Pane>
@@ -424,8 +413,8 @@ const RestrictedPage = memo(() => {
                   <Swiper
                     slidesPerView={5}
                     navigation={{
-                      prevEl: ".swiper-button-prev",
-                      nextEl: ".swiper-button-next",
+                      prevEl: '.swiper-button-prev',
+                      nextEl: '.swiper-button-next',
                     }}
                     loop={false}
                     modules={[Navigation]}
@@ -454,7 +443,7 @@ const RestrictedPage = memo(() => {
                       },
                     }}
                   >
-                    {shows.crew.map((item:any, index:any) => {
+                    {shows.crew.map((item: any, index: any) => {
                       return (
                         <SwiperSlide key={index}>
                           <Row className="cast-images m-0 align-items-center position-relative">
@@ -476,7 +465,7 @@ const RestrictedPage = memo(() => {
                             </div>
                           </Row>
                         </SwiperSlide>
-                      );
+                      )
                     })}
                   </Swiper>
                 </Tab.Pane>
@@ -490,8 +479,8 @@ const RestrictedPage = memo(() => {
       <RelatedVideos />
       <UpcomingMovies />
     </>
-  );
-});
+  )
+})
 
-RestrictedPage.displayName = "RestrictedPage";
-export default RestrictedPage;
+RestrictedPage.displayName = 'RestrictedPage'
+export default RestrictedPage

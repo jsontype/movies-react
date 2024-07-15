@@ -52,7 +52,7 @@
       @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
     }
 
-    &:last-child  {
+    &:last-child {
       border-bottom-width: 0;
       @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
     }
@@ -80,7 +80,9 @@
 }
 
 .card-subtitle {
-  margin-top: calc(-.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
+  margin-top: calc(
+    -0.5 * var(--#{$prefix}card-title-spacer-y)
+  ); // stylelint-disable-line function-disallowed-list
   margin-bottom: 0;
   color: var(--#{$prefix}card-subtitle-color);
 }
@@ -111,7 +113,9 @@
   border-bottom: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
 
   &:first-child {
-    @include border-radius(var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) 0 0);
+    @include border-radius(
+      var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) 0 0
+    );
   }
 }
 
@@ -122,19 +126,26 @@
   border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
 
   &:last-child {
-    @include border-radius(0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
+    @include border-radius(
+      0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius)
+    );
   }
 }
-
 
 //
 // Header navs
 //
 
 .card-header-tabs {
-  margin-right: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-bottom: calc(-1 * var(--#{$prefix}card-cap-padding-y)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(
+    -0.5 * var(--#{$prefix}card-cap-padding-x)
+  ); // stylelint-disable-line function-disallowed-list
+  margin-bottom: calc(
+    -1 * var(--#{$prefix}card-cap-padding-y)
+  ); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(
+    -0.5 * var(--#{$prefix}card-cap-padding-x)
+  ); // stylelint-disable-line function-disallowed-list
   border-bottom: 0;
 
   .nav-link.active {
@@ -144,8 +155,12 @@
 }
 
 .card-header-pills {
-  margin-right: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(
+    -0.5 * var(--#{$prefix}card-cap-padding-x)
+  ); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(
+    -0.5 * var(--#{$prefix}card-cap-padding-x)
+  ); // stylelint-disable-line function-disallowed-list
 }
 
 // Card image
@@ -174,7 +189,6 @@
 .card-img-bottom {
   @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
 }
-
 
 //
 // Card groups

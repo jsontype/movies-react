@@ -29,10 +29,8 @@ header {
       top: 0;
       left: 0;
       right: 0;
-      -webkit-animation: header-slide-down 0.7s
-        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-      animation: header-slide-down 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-        both;
+      -webkit-animation: header-slide-down 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: header-slide-down 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
       animation-fill-mode: initial;
       transition: all 0.3s ease-out 0s;
     }
@@ -64,7 +62,9 @@ header {
                 font-weight: 400;
                 // padding-top: 0.9375rem;
                 padding: 1.375rem 0.9375rem;
-                transition: color 400ms ease, background 400ms ease;
+                transition:
+                  color 400ms ease,
+                  background 400ms ease;
               }
 
               &:hover {
@@ -198,7 +198,7 @@ sidebar cart
     overflow-y: auto;
   }
 
-  .offcanvas-body{
+  .offcanvas-body {
     background-color: var(--bs-gray-900);
   }
 }
@@ -345,14 +345,7 @@ Slide Down Animation
 }
 
 @media (min-width: 1200px) {
-  header
-    .mega-menu-content
-    .iq-nav-menu
-    li
-    ul.mega-menu-item
-    li
-    .nav-link
-    span {
+  header .mega-menu-content .iq-nav-menu li ul.mega-menu-item li .nav-link span {
     padding-bottom: 0;
   }
   header {
@@ -370,8 +363,7 @@ Slide Down Animation
                   }
 
                   img {
-                    box-shadow: 0px 0px 87.3px 2.7px
-                      rgba(var(--bs-black-rgb), 0.06);
+                    box-shadow: 0px 0px 87.3px 2.7px rgba(var(--bs-black-rgb), 0.06);
                     transition: all 0.3s ease-in-out;
                   }
 

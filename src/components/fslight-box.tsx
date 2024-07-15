@@ -1,25 +1,22 @@
-import React, { memo, Fragment, useState } from "react";
+import React, { memo, Fragment, useState } from 'react'
 
 // // react-bootstrap
-import { Col } from "react-bootstrap";
+import { Col } from 'react-bootstrap'
 
 // Next-Link
 import Link from 'next/link'
 
 //react fslight-box
-import FsLightbox from "fslightbox-react";
+import FsLightbox from 'fslightbox-react'
 
 interface Props {
   image: string
 }
 const FsLightBox = memo((props: Props) => {
-  const [toggler, setToggler] = useState(false);
+  const [toggler, setToggler] = useState(false)
   return (
     <>
-      <Col
-        md="3"
-        className="trailor-video  col-12 mt-lg-0 mt-4 mb-md-0 mb-1 text-lg-right"
-      >
+      <Col md="3" className="trailor-video  col-12 mt-lg-0 mt-4 mb-md-0 mb-1 text-lg-right">
         <Link
           href="#"
           className="video-open playbtn block-images position-relative playbtn_thumbnail"
@@ -41,11 +38,11 @@ const FsLightBox = memo((props: Props) => {
           maxYoutubeVideoDimensions={{ width: 700, height: 400 }}
           exitFullscreenOnClose={true}
           toggler={toggler}
-          sources={["https://www.youtube.com/watch?v=QCGq1epI9pQ"]}
+          sources={['https://www.youtube.com/watch?v=QCGq1epI9pQ']}
         />
       </>
     </>
-  );
-});
-FsLightBox.displayName = "FsLightBox";
-export default FsLightBox;
+  )
+})
+FsLightBox.displayName = 'FsLightBox'
+export default FsLightBox

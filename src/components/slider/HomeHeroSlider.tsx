@@ -1,30 +1,30 @@
-import { Fragment, memo, useState } from "react";
+import { Fragment, memo, useState } from 'react'
 
 // NExt-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 //swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
 
 //react fs-lightbox
-import FsLightbox from "fslightbox-react";
+import FsLightbox from 'fslightbox-react'
 
 // Redux Selector / Action
-import { useSelector } from "react-redux";
-import { theme_scheme_direction } from "../../store/setting/selectors";
+import { useSelector } from 'react-redux'
+import { theme_scheme_direction } from '../../store/setting/selectors'
 
 const HomeHeroSlider = memo(() => {
-  const themeSchemeDirection = useSelector(theme_scheme_direction);
-  const [toggler, setToggler] = useState(false);
+  const themeSchemeDirection = useSelector(theme_scheme_direction)
+  const [toggler, setToggler] = useState(false)
   return (
     <>
       <Swiper
         key={String(themeSchemeDirection)}
         dir={String(themeSchemeDirection)}
         navigation={{
-          prevEl: ".home-banner-slider-prev",
-          nextEl: ".home-banner-slider-next",
+          prevEl: '.home-banner-slider-prev',
+          nextEl: '.home-banner-slider-next',
         }}
         id="home-banner-slider"
         className="iq-main-slider banner-home-swiper overflow-hidden mb-0"
@@ -33,10 +33,7 @@ const HomeHeroSlider = memo(() => {
       >
         <SwiperSlide className="slide s-bg-1 p-0">
           <div className="banner-home-swiper-image">
-            <img
-              src="/assets/images/movies/banner1.webp"
-              alt="banner-home-swiper-image"
-            />
+            <img src="/assets/images/movies/banner1.webp" alt="banner-home-swiper-image" />
           </div>
           <div className="container-fluid position-relative h-100">
             <div className="slider-inner h-100">
@@ -64,9 +61,7 @@ const HomeHeroSlider = memo(() => {
                           <i className="fa fa-star-half" aria-hidden="true"></i>
                         </li>
                       </ul>
-                      <span className="text-white ms-2 font-size-14 fw-500">
-                        4.3/5
-                      </span>
+                      <span className="text-white ms-2 font-size-14 fw-500">4.3/5</span>
                       <span className="ms-2">
                         <img
                           src="/assets/images/movies/imdb-logo.svg"
@@ -78,15 +73,12 @@ const HomeHeroSlider = memo(() => {
                     <span className="badge rounded-0 text-white text-uppercase p-2 mx-3 bg-secondary">
                       action
                     </span>
-                    <span className="font-size-14 fw-500 time">
-                      2 Hr : 6 Mins
-                    </span>
+                    <span className="font-size-14 fw-500 time">2 Hr : 6 Mins</span>
                   </div>
                   <p className="line-count-3 RightAnimate-two">
-                    Piracy is an act of robbery or criminal violence by ship or
-                    boat-borne attackers upon another ship or a coastal area,
-                    typically with the goal of stealing cargo and other valuable
-                    items or properties.
+                    Piracy is an act of robbery or criminal violence by ship or boat-borne attackers
+                    upon another ship or a coastal area, typically with the goal of stealing cargo
+                    and other valuable items or properties.
                   </p>
                   <div className="trending-list RightAnimate-three">
                     <div className="text-primary genres fw-500">
@@ -95,8 +87,8 @@ const HomeHeroSlider = memo(() => {
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Action{" "}
+                        {' '}
+                        Action{' '}
                       </Link>
                     </div>
                     <div className="text-primary tag fw-500">
@@ -105,31 +97,28 @@ const HomeHeroSlider = memo(() => {
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Action,{" "}
+                        {' '}
+                        Action,{' '}
                       </Link>
                       <Link
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Adventure,{" "}
+                        {' '}
+                        Adventure,{' '}
                       </Link>
                       <Link
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Horror{" "}
+                        {' '}
+                        Horror{' '}
                       </Link>
                     </div>
                   </div>
                   <div className="RightAnimate-four">
                     <div className="iq-button">
-                      <Link
-                        href="/movies/detail"
-                        className="btn text-uppercase position-relative"
-                      >
+                      <Link href="/movies/detail" className="btn text-uppercase position-relative">
                         <span className="button-text">play now</span>
                         <i className="fa-solid fa-play"></i>
                       </Link>
@@ -172,10 +161,7 @@ const HomeHeroSlider = memo(() => {
                         r="103.3"
                       ></circle>
                     </svg>
-                    <span
-                      className="w-trailor text-uppercase"
-                      onClick={() => setToggler(!toggler)}
-                    >
+                    <span className="w-trailor text-uppercase" onClick={() => setToggler(!toggler)}>
                       WATCH TRAILER
                     </span>
                   </Link>
@@ -186,10 +172,7 @@ const HomeHeroSlider = memo(() => {
         </SwiperSlide>
         <SwiperSlide className="slide s-bg-1 p-0">
           <div className="banner-home-swiper-image">
-            <img
-              src="/assets/images/movies/banner2.webp"
-              alt="banner-home-swiper-image"
-            />
+            <img src="/assets/images/movies/banner2.webp" alt="banner-home-swiper-image" />
           </div>
           <div className="container-fluid position-relative h-100">
             <div className="slider-inner h-100">
@@ -217,9 +200,7 @@ const HomeHeroSlider = memo(() => {
                           <i className="fa fa-star-half" aria-hidden="true"></i>
                         </li>
                       </ul>
-                      <span className="text-white ms-2 font-size-14 fw-500">
-                        4.3/5
-                      </span>
+                      <span className="text-white ms-2 font-size-14 fw-500">4.3/5</span>
                       <span className="ms-2">
                         <img
                           src="/assets/images/movies/imdb-logo.svg"
@@ -231,14 +212,12 @@ const HomeHeroSlider = memo(() => {
                     <span className="badge rounded-0 text-white text-uppercase p-2 mx-3 bg-secondary">
                       action
                     </span>
-                    <span className="font-size-14 fw-500 time">
-                      2 Hr : 6 Mins
-                    </span>
+                    <span className="font-size-14 fw-500 time">2 Hr : 6 Mins</span>
                   </div>
                   <p className="line-count-3 RightAnimate-two">
-                    Optimus Prime sends Autobot scout B-127 to Earth to form a
-                    base where they can regroup. Later, the scout befriends a
-                    girl named Charlie, who names him Bumblebee.
+                    Optimus Prime sends Autobot scout B-127 to Earth to form a base where they can
+                    regroup. Later, the scout befriends a girl named Charlie, who names him
+                    Bumblebee.
                   </p>
                   <div className="trending-list RightAnimate-three">
                     <div className="text-primary genres fw-500">
@@ -247,8 +226,8 @@ const HomeHeroSlider = memo(() => {
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Action{" "}
+                        {' '}
+                        Action{' '}
                       </Link>
                     </div>
                     <div className="text-primary tag fw-500">
@@ -257,31 +236,28 @@ const HomeHeroSlider = memo(() => {
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Action,{" "}
+                        {' '}
+                        Action,{' '}
                       </Link>
                       <Link
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Adventure,{" "}
+                        {' '}
+                        Adventure,{' '}
                       </Link>
                       <Link
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Horror{" "}
+                        {' '}
+                        Horror{' '}
                       </Link>
                     </div>
                   </div>
                   <div className="RightAnimate-four">
                     <div className="iq-button">
-                      <Link
-                        href="/movies/detail"
-                        className="btn text-uppercase position-relative"
-                      >
+                      <Link href="/movies/detail" className="btn text-uppercase position-relative">
                         <span className="button-text">play now</span>
                         <i className="fa-solid fa-play"></i>
                       </Link>
@@ -324,10 +300,7 @@ const HomeHeroSlider = memo(() => {
                         r="103.3"
                       ></circle>
                     </svg>
-                    <span
-                      className="w-trailor text-uppercase"
-                      onClick={() => setToggler(!toggler)}
-                    >
+                    <span className="w-trailor text-uppercase" onClick={() => setToggler(!toggler)}>
                       Watch Trailer
                     </span>
                   </Link>
@@ -338,10 +311,7 @@ const HomeHeroSlider = memo(() => {
         </SwiperSlide>
         <SwiperSlide className="slide s-bg-1 p-0">
           <div className="banner-home-swiper-image">
-            <img
-              src="/assets/images/movies/banner3.webp"
-              alt="banner-home-swiper-image"
-            />
+            <img src="/assets/images/movies/banner3.webp" alt="banner-home-swiper-image" />
           </div>
           <div className="container-fluid position-relative h-100">
             <div className="slider-inner h-100">
@@ -369,9 +339,7 @@ const HomeHeroSlider = memo(() => {
                           <i className="fa fa-star-half" aria-hidden="true"></i>
                         </li>
                       </ul>
-                      <span className="text-white ms-2 font-size-14 fw-500">
-                        4.3/5
-                      </span>
+                      <span className="text-white ms-2 font-size-14 fw-500">4.3/5</span>
                       <span className="ms-2">
                         <img
                           src="/assets/images/movies/imdb-logo.svg"
@@ -383,15 +351,12 @@ const HomeHeroSlider = memo(() => {
                     <span className="badge rounded-0 text-white text-uppercase p-2 mx-3 bg-secondary">
                       action
                     </span>
-                    <span className="font-size-14 fw-500 time">
-                      2 Hr : 6 Mins
-                    </span>
+                    <span className="font-size-14 fw-500 time">2 Hr : 6 Mins</span>
                   </div>
                   <p className="line-count-3 RightAnimate-two">
-                    Piracy is an act of robbery or criminal violence by ship or
-                    boat-borne attackers upon another ship or a coastal area,
-                    typically with the goal of stealing cargo and other valuable
-                    items or properties.
+                    Piracy is an act of robbery or criminal violence by ship or boat-borne attackers
+                    upon another ship or a coastal area, typically with the goal of stealing cargo
+                    and other valuable items or properties.
                   </p>
                   <div className="trending-list RightAnimate-three">
                     <div className="text-primary genres fw-500">
@@ -400,8 +365,8 @@ const HomeHeroSlider = memo(() => {
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Action{" "}
+                        {' '}
+                        Action{' '}
                       </Link>
                     </div>
                     <div className="text-primary tag fw-500">
@@ -410,31 +375,28 @@ const HomeHeroSlider = memo(() => {
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Action,{" "}
+                        {' '}
+                        Action,{' '}
                       </Link>
                       <Link
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Adventure,{" "}
+                        {' '}
+                        Adventure,{' '}
                       </Link>
                       <Link
                         href="/view-all"
                         className="fw-normal text-white text-decoration-none ms-2"
                       >
-                        {" "}
-                        Horror{" "}
+                        {' '}
+                        Horror{' '}
                       </Link>
                     </div>
                   </div>
                   <div className="RightAnimate-four">
                     <div className="iq-button">
-                      <Link
-                        href="/movies/detail"
-                        className="btn text-uppercase position-relative"
-                      >
+                      <Link href="/movies/detail" className="btn text-uppercase position-relative">
                         <span className="button-text">play now</span>
                         <i className="fa-solid fa-play"></i>
                       </Link>
@@ -477,10 +439,7 @@ const HomeHeroSlider = memo(() => {
                         r="103.3"
                       ></circle>
                     </svg>
-                    <span
-                      className="w-trailor text-uppercase"
-                      onClick={() => setToggler(!toggler)}
-                    >
+                    <span className="w-trailor text-uppercase" onClick={() => setToggler(!toggler)}>
                       Watch Trailer
                     </span>
                   </Link>
@@ -523,13 +482,10 @@ const HomeHeroSlider = memo(() => {
           </svg>
         </div>
       </Swiper>
-      <FsLightbox
-        toggler={toggler}
-        sources={["/assets/images/video/trailer.mp4"]}
-      />
+      <FsLightbox toggler={toggler} sources={['/assets/images/video/trailer.mp4']} />
     </>
-  );
+  )
 })
 
-HomeHeroSlider.displayName = "HomeHeroSlider"
+HomeHeroSlider.displayName = 'HomeHeroSlider'
 export default HomeHeroSlider

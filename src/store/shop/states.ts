@@ -1,11 +1,11 @@
 export const state = {
-    // shop
-    heroSlider: [],
-    category: [],
-    products: [],
-    shopBannerSlider: [],
-    newProduct: [],
-    bestseller: [],
-    myWishlist: [],
-    myCart: []
+  // shop
+  heroSlider: [],
+  category: [],
+  products: [],
+  shopBannerSlider: [],
+  newProduct: [],
+  bestseller: [],
+  myWishlist: [],
+  myCart: [],
 }

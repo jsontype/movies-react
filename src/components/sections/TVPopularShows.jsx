@@ -1,14 +1,14 @@
-import { useState, Fragment, memo } from "react";
+import { useState, Fragment, memo } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { populerSlider } from "../../StaticData/data";
+import { populerSlider } from '../../StaticData/data'
 
-const PopularVideos = memo(()=> {
-  const [title] = useState("Popular Videos");
+const TVPopularShows = memo(() => {
+  const [title] = useState('TV Popular Shows')
 
   return (
     <>
@@ -17,7 +17,7 @@ const PopularVideos = memo(()=> {
         list={populerSlider}
         className="recommended-block section-top-spacing"
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -28,8 +28,8 @@ const PopularVideos = memo(()=> {
         )}
       </SectionSlider>
     </>
-  );
+  )
 })
 
-PopularVideos.displayName = 'PopularVideos';
-export default PopularVideos;
+TVPopularShows.displayName = 'TVPopularShows'
+export default TVPopularShows

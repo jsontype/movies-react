@@ -1,66 +1,68 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 
 // next link
-import Link from "next/link";
+import Link from 'next/link'
 
 // next image
-import Image from "next/image";
+import Image from 'next/image'
 
 // components
-import CustomButton from "../CustomButton";
+import CustomButton from '../CustomButton'
 
 // swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Thumbs } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Thumbs } from 'swiper'
 
-SwiperCore.use([Navigation, Thumbs]);
+SwiperCore.use([Navigation, Thumbs])
 
 // Redux Selector / Action
-import { useSelector } from "react-redux";
-import { theme_scheme_direction } from "../../store/setting/selectors";
+import { useSelector } from 'react-redux'
+import { theme_scheme_direction } from '../../store/setting/selectors'
 
 interface MoviesType {
-  moviesSortByYear: [{
-    id: number;
-    title: string;
-    rating: number;
-    genres: string[];
-    summary: string;
-    duration: string;
-    large_cover_image: string;
-    runtime: number;
-  }]
+  moviesSortByYear: [
+    {
+      id: number
+      title: string
+      rating: number
+      genres: string[]
+      summary: string
+      duration: string
+      large_cover_image: string
+      runtime: number
+    },
+  ]
 }
 
 const convertRuntime = (minutes: number): string => {
-  const hours = Math.floor(minutes / 60);
-  const remainingMinutes = minutes % 60;
-  return `${hours}hr ${remainingMinutes} minutes`;
+  const hours = Math.floor(minutes / 60)
+  const remainingMinutes = minutes % 60
+  return `${hours}hr ${remainingMinutes} minutes`
 }
 
 const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
-  const themeSchemeDirection = useSelector(theme_scheme_direction);
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
+  const themeSchemeDirection = useSelector(theme_scheme_direction)
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
   const [_render, setRender] = useState(true)
 
   useEffect(() => {
     setRender(false)
     setTimeout(() => {
       setRender(true)
-    }, 100);
-    return () => { };
-  }, []);
+    }, 100)
+    return () => {}
+  }, [])
 
   // thumbsSwiper 설정 후 첫 슬라이드를 왼쪽으로 이동
   useEffect(() => {
-    if (moviesSortByYear.length > 0 && thumbsSwiper && thumbsSwiper.initialized) {
+    if (moviesSortByYear.length > 0 && thumbsSwiper) {
       for (let i = 0; i < 18; i++) {
-        thumbsSwiper.slideTo(moviesSortByYear.length - 1);
+        thumbsSwiper.slideTo(moviesSortByYear.length - 1)
       }
     }
-  }, [thumbsSwiper, moviesSortByYear]);
+  }, [thumbsSwiper, moviesSortByYear])
 
-  console.log('movies: ', moviesSortByYear);
+  console.log('movies: ', moviesSortByYear)
 
   const renderMiniSlide = moviesSortByYear.map((item, index) => {
     return (
@@ -133,36 +135,24 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                         <i className="fa fa-star" aria-hidden="true"></i>
                       </li>
                     </ul>
-                    <span className="text-white ms-2 font-size-14 fw-500">
-                      {item.rating}/10
-                    </span>
+                    <span className="text-white ms-2 font-size-14 fw-500">{item.rating}/10</span>
                   </div>
                   <span className="font-size-14 fw-500">{item.duration}</span>
                   <div className="text-primary font-size-14 fw-500 text-capitalize">
-                    genres:{" "}
-                    <Link
-                      href="/view-all"
-                      className="text-decoration-none ms-1"
-                    >
-                      {item.genres.join(", ")}
+                    genres:{' '}
+                    <Link href="/view-all" className="text-decoration-none ms-1">
+                      {item.genres.join(', ')}
                     </Link>
                   </div>
                   <div className="text-primary font-size-14 fw-500 text-capitalize">
-                    Runtime:{" "}
-                    <Link
-                      href="/cast/detail"
-                      className="text-decoration-none ms-1"
-                    >
+                    Runtime:{' '}
+                    <Link href="/cast/detail" className="text-decoration-none ms-1">
                       {item.runtime ? convertRuntime(item.runtime) : 'No Data For Runtime'}
                     </Link>
                   </div>
                 </div>
               </div>
-              <CustomButton
-                buttonTitle="Stream Now "
-                link="/movies/detail"
-                linkButton="false"
-              />
+              <CustomButton buttonTitle="Stream Now " link="/movies/detail" linkButton="false" />
             </div>
           </div>
         </div>
@@ -175,39 +165,32 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
       <div className="iq-banner-thumb-slider">
         <div className="slider">
           <div className="position-relative slider-bg d-flex justify-content-end">
-
             {/* ***! Mini Slide On Right Side - Start */}
             <div className="position-relative my-auto">
-              <div
-                className="horizontal_thumb_slider"
-                data-swiper="slider-thumbs-ott"
-              >
+              <div className="horizontal_thumb_slider" data-swiper="slider-thumbs-ott">
                 <div className="banner-thumb-slider-nav">
                   <Swiper
                     key={String(themeSchemeDirection)}
                     dir={String(themeSchemeDirection)}
                     tag="ul"
                     thumbs={{
-                      swiper:
-                        thumbsSwiper && !thumbsSwiper.destroyed
-                          ? thumbsSwiper
-                          : null,
+                      swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
                     }}
                     direction="horizontal"
                     navigation={{
-                      prevEl: ".slider-prev",
-                      nextEl: ".slider-next",
+                      prevEl: '.slider-prev',
+                      nextEl: '.slider-next',
                     }}
                     spaceBetween={24}
                     loop={true}
                     slidesPerView={2}
                     breakpoints={{
                       0: {
-                        direction: "horizontal",
+                        direction: 'horizontal',
                         slidesPerView: 1,
                       },
                       768: {
-                        direction: "horizontal",
+                        direction: 'horizontal',
                         slidesPerView: 2,
                       },
                     }}
@@ -248,7 +231,7 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default OttHeroSlider;
+export default OttHeroSlider

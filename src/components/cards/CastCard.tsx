@@ -1,11 +1,11 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 interface Props {
-  image: string,
-  title: string,
+  image: string
+  title: string
   category: string
 }
 
@@ -22,8 +22,8 @@ const CastCard = memo((props: Props) => {
         </div>
       </div>
     </>
-  );
-});
+  )
+})
 
-CastCard.displayName = "CastCard";
-export default CastCard;
+CastCard.displayName = 'CastCard'
+export default CastCard

@@ -1,92 +1,92 @@
-import { Fragment, memo, useState } from "react";
+import { Fragment, memo, useState } from 'react'
 
 //react-bootstrap
-import { Container, Row, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Tab, Nav } from 'react-bootstrap'
 
 // Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 //componemts
-import EpisodeCard from "../cards/EpisodeCard";
+import EpisodeCard from '../cards/EpisodeCard'
 
 //function
-import { generateImgPath } from "../../StaticData/data";
+import { generateImgPath } from '../../StaticData/data'
 
 //swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Thumbs } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Thumbs } from 'swiper'
 
 //react fslight-box
-import FsLightbox from "fslightbox-react";
+import FsLightbox from 'fslightbox-react'
 
 const Trending = memo(() => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
+  const [thumbsSwiper, setThumbsSwiper] = (useState < SwiperCore) | (null > null)
 
-  const [toggler, setToggler] = useState(false);
+  const [toggler, setToggler] = useState(false)
 
   const [trendingSlider] = useState([
     {
-      image: generateImgPath("/assets/images/movies/ott1.webp"),
+      image: generateImgPath('/assets/images/movies/ott1.webp'),
     },
     {
-      image: generateImgPath("/assets/images/movies/ott2.webp"),
+      image: generateImgPath('/assets/images/movies/ott2.webp'),
     },
     {
-      image: generateImgPath("/assets/images/movies/ott3.webp"),
+      image: generateImgPath('/assets/images/movies/ott3.webp'),
     },
     {
-      image: generateImgPath("/assets/images/movies/banner1.webp"),
+      image: generateImgPath('/assets/images/movies/banner1.webp'),
     },
     {
-      image: generateImgPath("/assets/images/movies/banner2.webp"),
+      image: generateImgPath('/assets/images/movies/banner2.webp'),
     },
     {
-      image: generateImgPath("/assets/images/movies/banner3.webp"),
+      image: generateImgPath('/assets/images/movies/banner3.webp'),
     },
-  ]);
+  ])
 
   const [episode] = useState([
     {
-      image: "/assets/images/tv-show/episodes/01.webp",
-      showEpisod: "S01E01",
-      episodDate: "October 1, 2022",
-      episodTime: "45min",
-      episodTitle: "Episode 1",
-      link: ''
+      image: '/assets/images/tv-show/episodes/01.webp',
+      showEpisod: 'S01E01',
+      episodDate: 'October 1, 2022',
+      episodTime: '45min',
+      episodTitle: 'Episode 1',
+      link: '',
     },
     {
-      image: "/assets/images/tv-show/episodes/02.webp",
-      showEpisod: "S01E02",
-      episodDate: "October 8, 2022",
-      episodTime: "35min",
-      episodTitle: "Episode 2",
-      link: ''
+      image: '/assets/images/tv-show/episodes/02.webp',
+      showEpisod: 'S01E02',
+      episodDate: 'October 8, 2022',
+      episodTime: '35min',
+      episodTitle: 'Episode 2',
+      link: '',
     },
     {
-      image: "/assets/images/tv-show/episodes/03.webp",
-      showEpisod: "S01E03",
-      episodDate: "October 15, 2022",
-      episodTime: "36min",
-      episodTitle: "Episode 3",
-      link: ''
+      image: '/assets/images/tv-show/episodes/03.webp',
+      showEpisod: 'S01E03',
+      episodDate: 'October 15, 2022',
+      episodTime: '36min',
+      episodTitle: 'Episode 3',
+      link: '',
     },
     {
-      image: "/assets/images/tv-show/episodes/04.webp",
-      showEpisod: "S01E04",
-      episodDate: "October 22, 2022",
-      episodTime: "41min",
-      episodTitle: "Episode 4",
-      link: ''
+      image: '/assets/images/tv-show/episodes/04.webp',
+      showEpisod: 'S01E04',
+      episodDate: 'October 22, 2022',
+      episodTime: '41min',
+      episodTitle: 'Episode 4',
+      link: '',
     },
     {
-      image: "/assets/images/tv-show/episodes/05.webp",
-      showEpisod: "S01E05",
-      episodDate: "October 22, 2022",
-      episodTime: "41min",
-      episodTitle: "Episode 5",
-      link: ''
+      image: '/assets/images/tv-show/episodes/05.webp',
+      showEpisod: 'S01E05',
+      episodDate: 'October 22, 2022',
+      episodTime: '41min',
+      episodTitle: 'Episode 5',
+      link: '',
     },
-  ]);
+  ])
   return (
     <>
       <section className="tranding-tab-slider section-padding">
@@ -100,18 +100,11 @@ const Trending = memo(() => {
                 <h5 className="main-title text-capitalize mb-0">Trending</h5>
               </div>
               <div className="trending-contens position-relative">
-                <div
-                  id="gallery-top"
-                  className="swiper gallery-thumbs"
-                  data-swiper="gallery-top"
-                >
+                <div id="gallery-top" className="swiper gallery-thumbs" data-swiper="gallery-top">
                   <Swiper
                     slidesPerView={5}
                     thumbs={{
-                      swiper:
-                        thumbsSwiper && !thumbsSwiper.destroyed
-                          ? thumbsSwiper
-                          : null,
+                      swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
                     }}
                     modules={[Navigation, Thumbs]}
                     centeredSlides={true}
@@ -127,12 +120,8 @@ const Trending = memo(() => {
                     loop={true}
                     className="list-inline p-0 m-0 trending-slider-nav align-items-center"
                   >
-                    {trendingSlider.map((data) => (
-                      <SwiperSlide
-                        key={data.image + "thumb"}
-
-                        className="swiper-slide"
-                      >
+                    {trendingSlider.map(data => (
+                      <SwiperSlide key={data.image + 'thumb'} className="swiper-slide">
                         <Link href="#">
                           <div className="movie-swiper position-relative">
                             <img src={data.image} alt="img" />
@@ -150,17 +139,13 @@ const Trending = memo(() => {
                   loop={true}
                   allowTouchMove={false}
                   navigation={{
-                    prevEl: ".swiper-button-prev",
-                    nextEl: ".swiper-button-next",
+                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-button-next',
                   }}
                   className="list-inline p-0 m-0 d-flex align-items-center trending-slider trending-tab-slider"
                 >
-                  {trendingSlider.map((data) => (
-                    <SwiperSlide
-                      key={data.image + "main"}
-
-                      className="slider-big-img-1 p-0"
-                    >
+                  {trendingSlider.map(data => (
+                    <SwiperSlide key={data.image + 'main'} className="slider-big-img-1 p-0">
                       <div className="trending-tab-slider-image">
                         <img src={data.image} alt="trending-tab-slider-image" />
                       </div>
@@ -170,33 +155,22 @@ const Trending = memo(() => {
                             <div className="tranding-block position-relative">
                               <div className="trending-custom-tab">
                                 <div className="tab-title-info position-relative">
-                                  <Tab.Container
-                                    id="left-tabs-example"
-                                    defaultActiveKey="first"
-                                  >
+                                  <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                                     <Nav
                                       variant="pills"
                                       className="trending-pills iq-custom-tab d-flex nav nav-pills justify-content-center align-items-center text-center list-inline"
                                     >
                                       <Nav.Item>
-                                        <Nav.Link eventKey="first">
-                                          Overview
-                                        </Nav.Link>
+                                        <Nav.Link eventKey="first">Overview</Nav.Link>
                                       </Nav.Item>
                                       <Nav.Item>
-                                        <Nav.Link eventKey="second">
-                                          Episodes
-                                        </Nav.Link>
+                                        <Nav.Link eventKey="second">Episodes</Nav.Link>
                                       </Nav.Item>
                                       <Nav.Item>
-                                        <Nav.Link eventKey="three">
-                                          Trailers
-                                        </Nav.Link>
+                                        <Nav.Link eventKey="three">Trailers</Nav.Link>
                                       </Nav.Item>
                                       <Nav.Item>
-                                        <Nav.Link eventKey="four">
-                                          Similar Like This
-                                        </Nav.Link>
+                                        <Nav.Link eventKey="four">Similar Like This</Nav.Link>
                                       </Nav.Item>
                                     </Nav>
                                     <Tab.Content className="tab-content trending-content">
@@ -207,13 +181,11 @@ const Trending = memo(() => {
                                           </h1>
                                           <div className="d-flex align-items-center text-white text-detail flex-wrap">
                                             <span>3 Seasons</span>
-                                            <span className="trending-year">
-                                              2023
-                                            </span>
+                                            <span className="trending-year">2023</span>
                                           </div>
                                           <div className="d-flex align-items-center flex-wrap series mb-4 gap-3">
                                             {/* <router-link to="#"> */}
-                                            <Link href='#'>
+                                            <Link href="#">
                                               <img
                                                 src="/assets/images/movies/trending-label.webp"
                                                 className="img-fluid"
@@ -221,14 +193,11 @@ const Trending = memo(() => {
                                               />
                                             </Link>
                                             {/* </router-link> */}
-                                            <span className="text-gold">
-                                              #2 in Series Today
-                                            </span>
+                                            <span className="text-gold">#2 in Series Today</span>
                                           </div>
                                           <p className="trending-dec line-count-3">
-                                            The point of using Lorem Ipsum is
-                                            that it has a more-or-less normal
-                                            distribution of letters, as opposed
+                                            The point of using Lorem Ipsum is that it has a
+                                            more-or-less normal distribution of letters, as opposed
                                             to using 'Content here.
                                           </p>
                                           <div className="p-btns">
@@ -237,33 +206,27 @@ const Trending = memo(() => {
                                                 href="/movies/detail"
                                                 className="btn text-uppercase position-relative"
                                               >
-                                                <span className="button-text">
-                                                  Play Now
-                                                </span>
+                                                <span className="button-text">Play Now</span>
                                                 <i className="fa-solid fa-play"></i>
                                               </Link>
                                             </div>
                                           </div>
                                           <div className="trending-list mt-4">
                                             <div className="text-primary title">
-                                              Starring:{" "}
+                                              Starring:{' '}
                                               <span className="text-body">
-                                                Wagner Moura, Boyd Holbrook,
-                                                Joanna
+                                                Wagner Moura, Boyd Holbrook, Joanna
                                               </span>
                                             </div>
                                             <div className="text-primary title">
-                                              Genres:{" "}
+                                              Genres:{' '}
                                               <span className="text-body">
-                                                Crime, Action, Thriller,
-                                                Biography
+                                                Crime, Action, Thriller, Biography
                                               </span>
                                             </div>
                                             <div className="text-primary title">
-                                              This Is:{" "}
-                                              <span className="text-body">
-                                                Violent, Forceful
-                                              </span>
+                                              This Is:{' '}
+                                              <span className="text-body">Violent, Forceful</span>
                                             </div>
                                           </div>
                                         </div>
@@ -274,28 +237,17 @@ const Trending = memo(() => {
                                             the hero camp
                                           </h1>
                                           <div className="d-flex align-items-center text-white text-detail flex-wrap mb-4">
-                                            <span className="season_date ms-2">
-                                              {" "}
-                                              2 Seasons{" "}
-                                            </span>
-                                            <span className="trending-year">
-                                              Feb 2019
-                                            </span>
+                                            <span className="season_date ms-2"> 2 Seasons </span>
+                                            <span className="trending-year">Feb 2019</span>
                                           </div>
                                           <div className="iq-custom-select d-inline-block sea-epi mb-4">
                                             <select
                                               name="cars"
                                               className="form-control select2-basic-single js-states season-select"
                                             >
-                                              <option value="season1">
-                                                Season 1
-                                              </option>
-                                              <option value="season2">
-                                                Season 2
-                                              </option>
-                                              <option value="season3">
-                                                Season 3
-                                              </option>
+                                              <option value="season1">Season 1</option>
+                                              <option value="season2">Season 2</option>
+                                              <option value="season3">Season 3</option>
                                             </select>
                                           </div>
                                           <div
@@ -314,32 +266,20 @@ const Trending = memo(() => {
                                               className="p-0 m-0 list-inline"
                                               slidesPerView={4}
                                               navigation={{
-                                                prevEl: "#prev",
-                                                nextEl: "#next",
+                                                prevEl: '#prev',
+                                                nextEl: '#next',
                                               }}
                                               modules={[Navigation]}
                                             >
                                               {episode.map((edata, index) => (
-                                                <SwiperSlide
-
-                                                  key={index}
-                                                  className="swiper-slide"
-                                                >
+                                                <SwiperSlide key={index} className="swiper-slide">
                                                   <EpisodeCard
                                                     link={edata.link}
                                                     image={edata.image}
-                                                    showEpisod={
-                                                      edata.showEpisod
-                                                    }
-                                                    episodDate={
-                                                      edata.episodDate
-                                                    }
-                                                    episodTime={
-                                                      edata.episodTime
-                                                    }
-                                                    episodTitle={
-                                                      edata.episodTitle
-                                                    }
+                                                    showEpisod={edata.showEpisod}
+                                                    episodDate={edata.episodDate}
+                                                    episodTime={edata.episodTime}
+                                                    episodTitle={edata.episodTitle}
                                                   ></EpisodeCard>
                                                 </SwiperSlide>
                                               ))}
@@ -408,8 +348,8 @@ const Trending = memo(() => {
                                                     ></circle>
                                                   </svg>
                                                   <span className="w-trailor text-uppercase">
-                                                    {" "}
-                                                    Watch Trailer{" "}
+                                                    {' '}
+                                                    Watch Trailer{' '}
                                                   </span>
                                                 </Link>
                                               </div>
@@ -439,26 +379,14 @@ const Trending = memo(() => {
                                               slidesPerView={4}
                                             >
                                               {episode.map((eData, index) => (
-                                                <SwiperSlide
-
-                                                  key={index}
-                                                  className="swiper-slide"
-                                                >
+                                                <SwiperSlide key={index} className="swiper-slide">
                                                   <EpisodeCard
                                                     link={eData.link}
                                                     image={eData.image}
-                                                    showEpisod={
-                                                      eData.showEpisod
-                                                    }
-                                                    episodDate={
-                                                      eData.episodDate
-                                                    }
-                                                    episodTime={
-                                                      eData.episodTime
-                                                    }
-                                                    episodTitle={
-                                                      eData.episodTitle
-                                                    }
+                                                    showEpisod={eData.showEpisod}
+                                                    episodDate={eData.episodDate}
+                                                    episodTime={eData.episodTime}
+                                                    episodTitle={eData.episodTitle}
                                                   ></EpisodeCard>
                                                 </SwiperSlide>
                                               ))}
@@ -484,12 +412,9 @@ const Trending = memo(() => {
           </Row>
         </Container>
       </section>
-      <FsLightbox
-        toggler={toggler}
-        sources={["/assets/images/video/trailer.mp4"]}
-      />
+      <FsLightbox toggler={toggler} sources={['/assets/images/video/trailer.mp4']} />
     </>
-  );
+  )
 })
 
 Trending.displayName = 'Trending'

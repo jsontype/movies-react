@@ -1,7 +1,7 @@
-import React, { memo, Fragment } from "react";
+import React, { memo, Fragment } from 'react'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 const Logo = memo(() => {
   return (
@@ -47,8 +47,8 @@ const Logo = memo(() => {
         </Link>
       </div>
     </>
-  );
-});
+  )
+})
 
-Logo.displayName = "Logo";
-export default Logo;
+Logo.displayName = 'Logo'
+export default Logo

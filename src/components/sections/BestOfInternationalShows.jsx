@@ -1,14 +1,14 @@
-import { useState, Fragment, memo } from "react";
+import { useState, Fragment, memo } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { latestMovie } from "../../StaticData/data";
+import { latestMovie } from '../../StaticData/data'
 
-const BestOfInternationalShows = memo(()=> {
-  const [title] = useState("Best Of InternationalShows");
+const BestOfInternationalShows = memo(() => {
+  const [title] = useState('Best Of InternationalShows')
 
   return (
     <>
@@ -17,7 +17,7 @@ const BestOfInternationalShows = memo(()=> {
         list={latestMovie}
         className="recommended-block section-top-spacing streamit-block"
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -28,8 +28,8 @@ const BestOfInternationalShows = memo(()=> {
         )}
       </SectionSlider>
     </>
-  );
+  )
 })
 
-BestOfInternationalShows.displayName = 'BestOfInternationalShows';
-export default BestOfInternationalShows;
+BestOfInternationalShows.displayName = 'BestOfInternationalShows'
+export default BestOfInternationalShows

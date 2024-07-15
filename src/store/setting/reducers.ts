@@ -1,15 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { initialState, defaultState } from './state';
-import { updateHtmlAttr, updateStorage, updateDomValueBySetting, getStorage,updateTitle } from '@/utilities/setting'
+import { createSlice } from '@reduxjs/toolkit'
+import { initialState, defaultState } from './state'
+import {
+  updateHtmlAttr,
+  updateStorage,
+  updateDomValueBySetting,
+  getStorage,
+  updateTitle,
+} from '@/utilities/setting'
 import _ from 'lodash'
-import { WritableDraft } from 'immer/dist/internal';
-import { SettingState } from './interface';
+import { WritableDraft } from 'immer/dist/internal'
+import { SettingState } from './interface'
 
 const createSettingObj = (state: WritableDraft<SettingState>) => {
   return {
     saveLocal: state.saveLocal,
     storeKey: state.storeKey,
-    setting: _.cloneDeep(state.setting)
+    setting: _.cloneDeep(state.setting),
   }
 }
 
@@ -18,7 +24,7 @@ export const settingSlice = createSlice({
   initialState,
   reducers: {
     setSetting: (state, action) => {
-      const json = getStorage(state.storeKey);
+      const json = getStorage(state.storeKey)
       if (json === 'none') state.saveLocal = 'none'
       if (json !== null && json !== 'none') {
         state.saveLocal = json.saveLocal
@@ -39,12 +45,12 @@ export const settingSlice = createSlice({
       const settingObj = {
         saveLocal: state.saveLocal,
         storeKey: state.storeKey,
-        setting: _.cloneDeep(state.setting)
+        setting: _.cloneDeep(state.setting),
       }
       updateStorage(state.saveLocal, state.storeKey, settingObj)
     },
     app_name: (state, action) => {
-      if(typeof action.payload !== typeof undefined) {
+      if (typeof action.payload !== typeof undefined) {
         state.setting.app_name.value = action.payload
       }
       updateTitle(state.setting.app_name.value)
@@ -63,8 +69,8 @@ export const settingSlice = createSlice({
       }
       updateHtmlAttr({ prop: 'data-bs-theme', value: state.setting.theme_color.value })
       updateStorage(state.saveLocal, state.storeKey, createSettingObj(state))
-    }
+    },
   },
-});
+})
 
-export default settingSlice.reducer;
+export default settingSlice.reducer

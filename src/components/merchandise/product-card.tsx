@@ -1,30 +1,28 @@
-import { memo, useState } from "react";
+import { memo, useState } from 'react'
 
 // react-router-link
 // import { Link } from "react-router-dom";
-import Link from "next/link";
-
+import Link from 'next/link'
 
 //components
-import RatingStar from "../rating-star";
-import ProductModal from "./ProductModal";
+import RatingStar from '../rating-star'
+import ProductModal from './ProductModal'
 
-//sweetalert2 
+//sweetalert2
 import Swal from 'sweetalert2'
 import 'sweetalert2/src/sweetalert2.scss'
 
 interface Props {
-  thumbnail?: string,
-  is_sale?: boolean,
-  is_new?: boolean,
-  product_name: string,
-  price: string,
-  final_price: string,
-  rating: string,
-  count1: string,
-  slug?:string
+  thumbnail?: string
+  is_sale?: boolean
+  is_new?: boolean
+  product_name: string
+  price: string
+  final_price: string
+  rating: string
+  count1: string
+  slug?: string
 }
-
 
 const ProductCard = memo((props: Props) => {
   const showSwal = () => {
@@ -33,8 +31,8 @@ const ProductCard = memo((props: Props) => {
       text: 'Your item has been added to the wishlist.',
       icon: 'success',
       confirmButtonText: 'Ok',
-      background: "#141314",
-      color: "#ffffff"
+      background: '#141314',
+      color: '#ffffff',
     })
   }
   const cartSwal = () => {
@@ -43,18 +41,18 @@ const ProductCard = memo((props: Props) => {
       text: 'Your item has been added to the cart.',
       icon: 'success',
       confirmButtonText: 'Ok',
-      background: "#141314",
-      color: "#ffffff"
+      background: '#141314',
+      color: '#ffffff',
     })
   }
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
-  const isSale = props.is_sale;
-  const isNew = props.is_new;
+  const isSale = props.is_sale
+  const isNew = props.is_new
   return (
     <>
       <div className="product-block">
@@ -63,18 +61,13 @@ const ProductCard = memo((props: Props) => {
         ) : isNew ? (
           <span className="onsale bg-primary">New!</span>
         ) : (
-          ""
+          ''
         )}
 
         <div className="image-wrap">
-          <Link href='/merchandise/product-detail'>
+          <Link href="/merchandise/product-detail">
             <div className="product-image">
-              <img
-                src={props.thumbnail}
-                className="img-fluid w-100"
-                alt=""
-                loading="lazy"
-              />
+              <img src={props.thumbnail} className="img-fluid w-100" alt="" loading="lazy" />
             </div>
           </Link>
           <div className="buttons-holder">
@@ -128,10 +121,7 @@ const ProductCard = memo((props: Props) => {
         </div>
         <div className="product-caption">
           <h5 className="product__title">
-            <Link
-              href='/merchandise/product-detail'
-              className="title-link"
-            >
+            <Link href="/merchandise/product-detail" className="title-link">
               {props.product_name}
             </Link>
           </h5>
@@ -151,8 +141,8 @@ const ProductCard = memo((props: Props) => {
 
       <ProductModal show={show} handleClose={handleClose} />
     </>
-  );
-});
+  )
+})
 
-ProductCard.displayName = "ProductCard";
-export default ProductCard;
+ProductCard.displayName = 'ProductCard'
+export default ProductCard

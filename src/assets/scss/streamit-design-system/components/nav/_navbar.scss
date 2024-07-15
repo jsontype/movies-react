@@ -55,7 +55,7 @@ header {
         > a {
           &::before {
             position: absolute;
-            content: "";
+            content: '';
             background: var(--bs-primary);
             top: 0;
             bottom: 0;
@@ -69,7 +69,7 @@ header {
 
           &::after {
             position: absolute;
-            content: "";
+            content: '';
             background: transparent -webkit-gradient(linear, right top, left top, from(rgba(var(--bs-primary-rgb), 0)), to(rgba(var(--bs-primary-rgb), 0.3)));
             top: 0;
             bottom: 0;
@@ -157,8 +157,7 @@ header {
 
   .search-box {
     .form-group {
-      animation: scale-out-hor-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-        both;
+      animation: scale-out-hor-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     }
 
     .iq-search-bar {
@@ -203,7 +202,7 @@ header {
 
         &::after,
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           transition: all 0.2s;
@@ -223,7 +222,7 @@ header {
       }
     }
 
-    &[aria-expanded="true"] {
+    &[aria-expanded='true'] {
       .navbar-toggler-btn {
         .navbar-toggler-icon {
           background-color: transparent;
@@ -300,7 +299,8 @@ header {
         display: none;
         margin: 0;
         background: $white;
-        animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
+        animation:
+          menu-sub-dropdown-animation-fade-in 0.3s ease 1,
           menu-sub-dropdown-animation-move-up 0.3s ease 1;
 
         ul {
@@ -316,9 +316,7 @@ header {
           a {
             transition: var(--sidebar-transition);
             transition-duration: var(--sidebar-transition-duration);
-            transition-timing-function: var(
-              --sidebar-transition-function-ease-in-out
-            );
+            transition-timing-function: var(--sidebar-transition-function-ease-in-out);
             padding: 0.5rem 1.25rem 0.5rem 1.25rem;
           }
 
@@ -336,9 +334,7 @@ header {
               font-weight: 500;
               transition: var(--sidebar-transition);
               transition-duration: var(--sidebar-transition-duration);
-              transition-timing-function: var(
-                --sidebar-transition-function-ease-in-out
-              );
+              transition-timing-function: var(--sidebar-transition-function-ease-in-out);
             }
           }
         }
@@ -460,7 +456,7 @@ header {
         }
 
         &:not(.collapsed) {
-          &[aria-expanded="true"] {
+          &[aria-expanded='true'] {
             color: var(--bs-primary);
 
             .right-icon {
@@ -498,7 +494,9 @@ header {
       z-index: 1200;
       overflow-y: scroll;
       overflow-x: hidden;
-      transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out,
+      transition:
+        visibility 0.3s ease-in-out,
+        transform 0.3s ease-in-out,
         -webkit-transform 0.3s ease-in-out;
 
       .sub-nav {
@@ -628,7 +626,7 @@ header {
 
           > a::before {
             position: absolute;
-            content: "";
+            content: '';
             background: var(--bs-primary);
             top: 0;
             bottom: 0;
@@ -651,7 +649,7 @@ header {
 
           > a::after {
             position: absolute;
-            content: "";
+            content: '';
             background: transparent -webkit-gradient(linear, right top, left top, from(rgba(var(--bs-primary-rgb), 0)), to(rgba(var(--bs-primary-rgb), 0.3)));
             top: 0;
             bottom: 0;
@@ -727,7 +725,7 @@ header {
       margin-right: 0;
     }
 
-    a[aria-expanded="true"] {
+    a[aria-expanded='true'] {
       .arrow-active {
         opacity: 0;
         display: none;
@@ -759,7 +757,7 @@ header {
 }
 
 .iq-nav-menu li a .arrow-hover,
-.iq-nav-menu li a[aria-expanded="true"] .arrow-active {
+.iq-nav-menu li a[aria-expanded='true'] .arrow-active {
   opacity: 0;
   display: none;
   font-size: 0.75em;
@@ -881,7 +879,7 @@ header {
 .nav-link:focus {
   color: var(--bs-primary);
 
-  &:focus-visible{
+  &:focus-visible {
     box-shadow: none;
   }
 }
@@ -922,9 +920,11 @@ header {
         &:hover {
           & > .sub-menu {
             display: block !important;
-            -webkit-animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
+            -webkit-animation:
+              menu-sub-dropdown-animation-fade-in 0.3s ease 1,
               menu-sub-dropdown-animation-move-up 0.3s ease 1;
-            animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
+            animation:
+              menu-sub-dropdown-animation-fade-in 0.3s ease 1,
               menu-sub-dropdown-animation-move-up 0.3s ease 1;
           }
         }
@@ -948,7 +948,8 @@ header {
         margin: 0;
         background: var(--bs-gray-900);
         box-shadow: 0 0.625rem 1.875rem rgb(0 0 0 / 10%);
-        animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
+        animation:
+          menu-sub-dropdown-animation-fade-in 0.3s ease 1,
           menu-sub-dropdown-animation-move-up 0.3s ease 1;
 
         li {

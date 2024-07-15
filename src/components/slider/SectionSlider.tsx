@@ -1,30 +1,30 @@
-import { memo, useRef, FC } from "react";
+import { memo, useRef, FC } from 'react'
 
 // react-bootstrap
-import { Container } from "react-bootstrap";
+import { Container } from 'react-bootstrap'
 
 //  Next-Link
-import Link from "next/link";
+import Link from 'next/link'
 
 // Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation } from 'swiper'
 
 // Redux Selector / Action
-import { useSelector } from "react-redux";
-import { theme_scheme_direction } from "../../store/setting/selectors";
+import { useSelector } from 'react-redux'
+import { theme_scheme_direction } from '../../store/setting/selectors'
 
-const modules = [Autoplay, Navigation];
+const modules = [Autoplay, Navigation]
 
 interface SectionSliderProps {
-  children: (data: any) => React.ReactNode;
-  title: string;
-  list: any[];
-  slidesPerView?: number;
-  loop?: boolean;
-  spaceBetween?: number;
-  className?: string;
-  link?: string;
+  children: (data: any) => React.ReactNode
+  title: string
+  list: any[]
+  slidesPerView?: number
+  loop?: boolean
+  spaceBetween?: number
+  className?: string
+  link?: string
 }
 
 const SectionSlider: FC<SectionSliderProps> = memo(
@@ -35,36 +35,34 @@ const SectionSlider: FC<SectionSliderProps> = memo(
     slidesPerView = 6,
     loop = false,
     spaceBetween = 0,
-    className = "",
+    className = '',
     link,
   }) => {
-    const themeSchemeDirection = useSelector(theme_scheme_direction);
+    const themeSchemeDirection = useSelector(theme_scheme_direction)
 
-    const slider = useRef<HTMLDivElement>(null);
+    const slider = useRef<HTMLDivElement>(null)
 
     const initSwiper = (swiper: typeof Swiper) => {
-      addCustomClassToVisibleSlides(swiper);
-    };
+      addCustomClassToVisibleSlides(swiper)
+    }
 
     const addCustomClassToVisibleSlides = (swiper: typeof Swiper | null) => {
       if (slider.current && swiper) {
         slider.current
-          .querySelectorAll(".swiper-slide")
-          .forEach((separateSlide) => separateSlide.classList.remove("last"));
+          .querySelectorAll('.swiper-slide')
+          .forEach(separateSlide => separateSlide.classList.remove('last'))
 
-        const swiperSlide = slider.current.querySelectorAll(
-          ".swiper-slide-visible"
-        );
+        const swiperSlide = slider.current.querySelectorAll('.swiper-slide-visible')
 
-        const lastVisibleSlide = swiperSlide[swiperSlide.length - 1];
+        const lastVisibleSlide = swiperSlide[swiperSlide.length - 1]
 
         setTimeout(() => {
           if (lastVisibleSlide) {
-            lastVisibleSlide.classList.add("swiper-active", "last");
+            lastVisibleSlide.classList.add('swiper-active', 'last')
           }
-        }, 0);
+        }, 0)
       }
-    };
+    }
 
     return (
       <div className={className}>
@@ -73,7 +71,7 @@ const SectionSlider: FC<SectionSliderProps> = memo(
             <div className="d-flex align-items-center justify-content-between px-3 my-4">
               <h5 className="main-title text-capitalize mb-0">{title}</h5>
               <Link
-                href={link ? link : "/view-all"}
+                href={link ? link : '/view-all'}
                 className="text-primary iq-view-all text-decoration-none"
               >
                 View All
@@ -88,8 +86,8 @@ const SectionSlider: FC<SectionSliderProps> = memo(
               watchSlidesProgress
               spaceBetween={spaceBetween}
               navigation={{
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next",
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
               }}
               breakpoints={{
                 0: {
@@ -118,7 +116,7 @@ const SectionSlider: FC<SectionSliderProps> = memo(
               modules={modules}
             >
               {list.map((data, index) => (
-                <SwiperSlide tag="li" key={index + "slider"}>
+                <SwiperSlide tag="li" key={index + 'slider'}>
                   {children(data)}
                 </SwiperSlide>
               ))}
@@ -128,10 +126,10 @@ const SectionSlider: FC<SectionSliderProps> = memo(
           </div>
         </Container>
       </div>
-    );
-  }
-);
+    )
+  },
+)
 
-SectionSlider.displayName = "SectionSlider";
+SectionSlider.displayName = 'SectionSlider'
 
-export default SectionSlider;
+export default SectionSlider

@@ -1,44 +1,43 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-bbotstrap
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav } from 'react-bootstrap'
 
 //react-router-dom
 // import { Link } from "react-router-dom";
-import Link from "next/link";
+import Link from 'next/link'
 
 //sweetalert2
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2'
 
-interface ProductDetailCardProps{
-  additional_info: any;
-  tags: any;
-  category: any;
-  is_sale?:boolean
-  is_new?:boolean
-  thumbnail?:any
-  productName?:string
-  product_name?:string
-  price?:string
-  final_price?:string
-  description?:string
-  sku?:any
-  
+interface ProductDetailCardProps {
+  additional_info: any
+  tags: any
+  category: any
+  is_sale?: boolean
+  is_new?: boolean
+  thumbnail?: any
+  productName?: string
+  product_name?: string
+  price?: string
+  final_price?: string
+  description?: string
+  sku?: any
 }
 
-const ProductDetailCard = memo((props:ProductDetailCardProps) => {
+const ProductDetailCard = memo((props: ProductDetailCardProps) => {
   const showSwal = () => {
     Swal.fire({
-      title: "Added!",
-      text: "Your item has been added to the cart.",
-      icon: "success",
-      confirmButtonText: "Ok",
-      background: "#141314",
-      color: "#ffffff",
-    });
-  };
-  const isSale = props.is_sale;
-  const isNew = props.is_new;
+      title: 'Added!',
+      text: 'Your item has been added to the cart.',
+      icon: 'success',
+      confirmButtonText: 'Ok',
+      background: '#141314',
+      color: '#ffffff',
+    })
+  }
+  const isSale = props.is_sale
+  const isNew = props.is_new
   return (
     <>
       <Container>
@@ -51,20 +50,13 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                 ) : isNew ? (
                   <span className="onsale bg-dark">New!</span>
                 ) : (
-                  ""
+                  ''
                 )}
                 <Link href="#">
-                  <i
-                    className="fa fa-search fa-1x imagesearch"
-                    aria-hidden="true"
-                  ></i>
+                  <i className="fa fa-search fa-1x imagesearch" aria-hidden="true"></i>
                 </Link>
                 <div className="image-wrap">
-                  <img
-                    src={props.thumbnail}
-                    className="img-fluid w-100 img-zoom"
-                    alt=""
-                  />
+                  <img src={props.thumbnail} className="img-fluid w-100 img-zoom" alt="" />
                 </div>
               </div>
             </div>
@@ -99,10 +91,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
               <form className="cart mb-4" method="post">
                 <div className="cart-btn-wrapper">
                   <div className="quantity">
-                    <label
-                      className="screen-reader-text"
-                      htmlFor="quantity1"
-                    ></label>
+                    <label className="screen-reader-text" htmlFor="quantity1"></label>
                     <button type="button" className="minus">
                       <i className="fa fa-minus" aria-hidden="true"></i>
                     </button>
@@ -133,13 +122,9 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                       {/* <!-- COUNT TEXT --> */}
                     </div>
                   </div>
-                  <Link
-                    className="iq-button btn btn-hover"
-                    href=""
-                    onClick={showSwal}
-                  >
-                    {" "}
-                    Add to cart{" "}
+                  <Link className="iq-button btn btn-hover" href="" onClick={showSwal}>
+                    {' '}
+                    Add to cart{' '}
                   </Link>
                 </div>
               </form>
@@ -149,32 +134,24 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
               </div>
               <br />
               <div className="mb-3">
-                Categories :{" "}
-                {props.category.map((item:any, index:any) => {
+                Categories :{' '}
+                {props.category.map((item: any, index: any) => {
                   return (
-                    <Link
-                      href="/shop"
-                      className="text-primary ms-2 text-capitalize"
-                      key={index}
-                    >
-                      {" "}
-                      {item},{" "}
+                    <Link href="/shop" className="text-primary ms-2 text-capitalize" key={index}>
+                      {' '}
+                      {item},{' '}
                     </Link>
-                  );
+                  )
                 })}
               </div>
               <div className="">
                 Tags :
-                {props.tags.map((item:any, index:any) => {
+                {props.tags.map((item: any, index: any) => {
                   return (
-                    <Link
-                      href="/shop"
-                      className="text-primary text-capitalize ms-2"
-                      key={index}
-                    >
+                    <Link href="/shop" className="text-primary text-capitalize ms-2" key={index}>
                       {item},
                     </Link>
-                  );
+                  )
                 })}
               </div>
             </div>
@@ -251,25 +228,21 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                           <tr>
                             <th className="thwidth">Size</th>
                             <td className="bordertd">
-                              {props.additional_info.map((item:any, index:any) => {
+                              {props.additional_info.map((item: any, index: any) => {
                                 return (
                                   <Link href="#" rel="color" key={index}>
-                                    {item.size.map((size:any, index:any) => {
+                                    {item.size.map((size: any, index: any) => {
                                       return (
-                                        <Link
-                                          href="#"
-                                          className="ms-2"
-                                          key={index}
-                                        >
+                                        <Link href="#" className="ms-2" key={index}>
                                           {size},
                                         </Link>
-                                      );
+                                      )
                                     })}
                                     <Link href="#" className="ms-2">
                                       {item.color}
                                     </Link>
                                   </Link>
-                                );
+                                )
                               })}
                             </td>
                           </tr>
@@ -297,22 +270,13 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                   data-attibute="sources"
                   data-options="infinite_scroll"
                 >
-                  <div
-                    id="reviews"
-                    className="streamit-reviews"
-                    style={{ fontSize: "1.1em" }}
-                  >
+                  <div id="reviews" className="streamit-reviews" style={{ fontSize: '1.1em' }}>
                     <h2>Reviews</h2>
-                    <p className="masvideos-noreviews mt-3">
-                      There are no reviews yet.
-                    </p>
+                    <p className="masvideos-noreviews mt-3">There are no reviews yet.</p>
                     <div id="review_form_wrapper">
                       <div id="review_form">
                         <div id="respond" className="comment-respond">
-                          <p
-                            id="reply-title"
-                            className="comment-reply-title mt-0 mb-0"
-                          >
+                          <p id="reply-title" className="comment-reply-title mt-0 mb-0">
                             Be the first to review “{props.product_name}”
                           </p>
                           <form className="comment-form">
@@ -320,11 +284,8 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                               <span id="email-notes">
                                 Your email address will not be published.
                               </span>
-                              <span
-                                className="required-field-message"
-                                aria-hidden="true"
-                              >
-                                Required fields are marked{" "}
+                              <span className="required-field-message" aria-hidden="true">
+                                Required fields are marked{' '}
                                 <span className="required" aria-hidden="true">
                                   *
                                 </span>
@@ -396,13 +357,10 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                                 type="checkbox"
                                 name="check1"
                               />
-                              <label
-                                className="form-check-label"
-                                htmlFor="check11"
-                              >
-                                {" "}
-                                Save my name, email, and website in this browser
-                                for the next time I comment.{" "}
+                              <label className="form-check-label" htmlFor="check11">
+                                {' '}
+                                Save my name, email, and website in this browser for the next time I
+                                comment.{' '}
                               </label>
                             </p>
                             <p className="form-submit">
@@ -415,10 +373,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                               >
                                 Submit
                                 <span>
-                                  <i
-                                    className="fas fa-angle-right"
-                                    aria-hidden="true"
-                                  ></i>
+                                  <i className="fas fa-angle-right" aria-hidden="true"></i>
                                 </span>
                               </button>
                             </p>
@@ -435,8 +390,8 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
         </div>
       </Container>
     </>
-  );
-});
+  )
+})
 
-ProductDetailCard.displayName = "ProductDetailCard";
-export default ProductDetailCard;
+ProductDetailCard.displayName = 'ProductDetailCard'
+export default ProductDetailCard

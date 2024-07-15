@@ -1,13 +1,13 @@
-import { Fragment, memo } from "react";
+import { Fragment, memo } from 'react'
 
 //react-router-dom
 import Link from 'next/link'
 
 interface Props {
-  link: string,
-  watchlistLink: string,
-  image: string,
-  title: string,
+  link: string
+  watchlistLink: string
+  image: string
+  title: string
   movieTime: string
 }
 
@@ -137,8 +137,8 @@ const CardStyle = memo((props: Props) => {
         </div>
       </div>
     </>
-  );
-});
+  )
+})
 
-CardStyle.displayName = "CardStyle";
-export default CardStyle;
+CardStyle.displayName = 'CardStyle'
+export default CardStyle

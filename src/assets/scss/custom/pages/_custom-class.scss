@@ -35,7 +35,7 @@
 }
 
 .font-size-20 {
-  font-size: 1.250rem;
+  font-size: 1.25rem;
 }
 
 .line-count-1 {
@@ -114,13 +114,19 @@
 
 .border-gredient-left {
   border-left: 0.25em solid var(--bs-primary);
-  background: rgba(0, 0, 0, 0) linear-gradient(270deg, rgba(var(--bs-primary-rgb), 0), rgba(var(--bs-primary-rgb), 0.3));
+  background: rgba(0, 0, 0, 0)
+    linear-gradient(270deg, rgba(var(--bs-primary-rgb), 0), rgba(var(--bs-primary-rgb), 0.3));
 }
 
 .border-gredient-center {
   border: solid;
   border-width: 0 0 0.063em;
-  border-image-source: linear-gradient(270deg, rgba(var(--bs-secondary-rgb), 0), rgba(var(--bs-secondary-rgb), 0.6), rgba(var(--bs-secondary-rgb), 0));
+  border-image-source: linear-gradient(
+    270deg,
+    rgba(var(--bs-secondary-rgb), 0),
+    rgba(var(--bs-secondary-rgb), 0.6),
+    rgba(var(--bs-secondary-rgb), 0)
+  );
   border-image-slice: 1;
 }
 
@@ -145,7 +151,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   line-height: normal;
-  background-image: url("/assets/images/pages/texure.webp");
+  background-image: url('/assets/images/pages/texure.webp');
 }
 
 .big-font-5 {
@@ -207,7 +213,7 @@
 
   .swiper-wrapper {
     .swiper-slide {
-      padding: 0 .4687rem;
+      padding: 0 0.4687rem;
     }
   }
 }

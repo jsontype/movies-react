@@ -1,33 +1,33 @@
-import React, { RefObject, createRef } from "react";
-import videojs from "video.js";
-import "videojs-youtube/dist/Youtube.min.js";
-import "video.js/dist/video-js.css";
+import React, { RefObject, createRef } from 'react'
+import videojs from 'video.js'
+import 'videojs-youtube/dist/Youtube.min.js'
+import 'video.js/dist/video-js.css'
 
-import Player from "video.js/dist/types/player";
+import Player from 'video.js/dist/types/player'
 
 export const VideoJS = (props: { options: any; onReady: any }) => {
-  const videoRef = React.useRef(null);
+  const videoRef = React.useRef(null)
   // #OLD
   // const playerRef = React.useRef(null);
 
   // #NEW
-  const playerRef: RefObject<Player | null> = createRef();
-  const { options, onReady } = props;
+  const playerRef: RefObject<Player | null> = createRef()
+  const { options, onReady } = props
 
   React.useEffect(() => {
     // Make sure Video.js player is only initialized once
     if (!playerRef.current) {
       // The Video.js player needs to be _inside_ the component el for React 18 Strict Mode.
-      const videoElement = document.createElement("video-js");
+      const videoElement = document.createElement('video-js')
 
-      videoElement.classList.add("vjs-big-play-centered");
-      
+      videoElement.classList.add('vjs-big-play-centered')
+
       // @OLD
       // videoRef.current?.appendChild(videoElement);
 
       // #NEW
       if (videoRef.current !== null) {
-        (videoRef.current as HTMLDivElement).appendChild(videoElement);
+        ;(videoRef.current as HTMLDivElement).appendChild(videoElement)
       }
 
       // #OLD
@@ -38,24 +38,24 @@ export const VideoJS = (props: { options: any; onReady: any }) => {
 
       // #NEW
       const player = videojs(videoElement, options, () => {
-        videojs.log("player is ready");
-        onReady && onReady(player);
-      });
+        videojs.log('player is ready')
+        onReady && onReady(player)
+      })
 
       return () => {
-        player.dispose();
-      };
+        player.dispose()
+      }
     } else {
-      const player = playerRef.current;
+      const player = playerRef.current
 
-      player.autoplay(options.autoplay);
-      player.src(options.sources);
+      player.autoplay(options.autoplay)
+      player.src(options.sources)
     }
-  }, [options, videoRef]);
+  }, [options, videoRef])
 
   // Dispose the Video.js player when the functional component unmounts
   React.useEffect(() => {
-    const player = playerRef.current;
+    const player = playerRef.current
 
     // #OLD
     // return () => {
@@ -68,17 +68,17 @@ export const VideoJS = (props: { options: any; onReady: any }) => {
     // #New
     return () => {
       if (playerRef.current && !playerRef.current.isDisposed()) {
-        playerRef.current.dispose();
-        (playerRef.current as any) = null;
+        playerRef.current.dispose()
+        ;(playerRef.current as any) = null
       }
-    };
-  }, [playerRef]);
+    }
+  }, [playerRef])
 
   return (
     <div data-vjs-player>
       <div ref={videoRef} />
     </div>
-  );
-};
+  )
+}
 
-export default VideoJS;
+export default VideoJS

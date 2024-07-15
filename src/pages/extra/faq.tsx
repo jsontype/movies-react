@@ -1,13 +1,13 @@
-import { Fragment, memo, useState } from "react";
+import { Fragment, memo, useState } from 'react'
 
 //react bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap'
 
 //custom hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const FAQPage = memo(() => {
-  const [faq, setfaq] = useState("1");
+  const [faq, setfaq] = useState('1')
   useBreadcrumb('FAQ')
   return (
     <>
@@ -17,11 +17,9 @@ const FAQPage = memo(() => {
             <Col lg="12" sm="12">
               <div className="iq-accordian iq-accordian-square">
                 <div
-                  className={`iq-accordian-block ${
-                    faq === "1" ? "iq-active" : ""
-                  }`}
+                  className={`iq-accordian-block ${faq === '1' ? 'iq-active' : ''}`}
                   onClick={() => {
-                    setfaq("1");
+                    setfaq('1')
                   }}
                 >
                   <div className="iq-accordian-title">
@@ -29,33 +27,23 @@ const FAQPage = memo(() => {
                       <i aria-hidden="true" className="fa fa-minus active"></i>
                       <i aria-hidden="true" className="fa fa-plus inactive"></i>
                     </div>
-                    <h4 className="mb-0 accordian-title iq-heading-title">
-                      What Is Streamit?
-                    </h4>
+                    <h4 className="mb-0 accordian-title iq-heading-title">What Is Streamit?</h4>
                   </div>
-                  <div
-                    className={`iq-accordian-details ${
-                      faq === "1" ? "d-block" : "d-none"
-                    }`}
-                  >
+                  <div className={`iq-accordian-details ${faq === '1' ? 'd-block' : 'd-none'}`}>
                     <p className="mb-0">
-                      {" "}
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout. The point of using Lorem Ipsum is that it
-                      has a more-or-less normal distribution of letters, as
-                      opposed to using ‘Content here, content here’, making it
-                      look like readable English.{" "}
+                      {' '}
+                      It is a long established fact that a reader will be distracted by the readable
+                      content of a page when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal distribution of letters, as opposed to
+                      using ‘Content here, content here’, making it look like readable English.{' '}
                     </p>
                   </div>
                 </div>
 
                 <div
-                  className={`iq-accordian-block 2  ${
-                    faq === "2" ? "iq-active" : ""
-                  }`}
+                  className={`iq-accordian-block 2  ${faq === '2' ? 'iq-active' : ''}`}
                   onClick={() => {
-                    setfaq("2");
+                    setfaq('2')
                   }}
                 >
                   <div className="iq-accordian-title">
@@ -67,29 +55,21 @@ const FAQPage = memo(() => {
                       Will My Account Work Outside My Country?
                     </h4>
                   </div>
-                  <div
-                    className={`iq-accordian-details ${
-                      faq === "2" ? "d-block" : "d-none"
-                    }`}
-                  >
+                  <div className={`iq-accordian-details ${faq === '2' ? 'd-block' : 'd-none'}`}>
                     <p className="mb-0">
-                      {" "}
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout. The point of using Lorem Ipsum is that it
-                      has a more-or-less normal distribution of letters, as
-                      opposed to using ‘Content here, content here’, making it
-                      look like readable English.{" "}
+                      {' '}
+                      It is a long established fact that a reader will be distracted by the readable
+                      content of a page when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal distribution of letters, as opposed to
+                      using ‘Content here, content here’, making it look like readable English.{' '}
                     </p>
                   </div>
                 </div>
 
                 <div
-                  className={`iq-accordian-block 3  ${
-                    faq === "3" ? "iq-active" : ""
-                  }`}
+                  className={`iq-accordian-block 3  ${faq === '3' ? 'iq-active' : ''}`}
                   onClick={() => {
-                    setfaq("3");
+                    setfaq('3')
                   }}
                 >
                   <div className="iq-accordian-title">
@@ -101,29 +81,21 @@ const FAQPage = memo(() => {
                       I Am Facing Video Playback Issues. What Do I Do?
                     </h4>
                   </div>
-                  <div
-                    className={`iq-accordian-details ${
-                      faq === "3" ? "d-block" : "d-none"
-                    }`}
-                  >
+                  <div className={`iq-accordian-details ${faq === '3' ? 'd-block' : 'd-none'}`}>
                     <p className="mb-0">
-                      {" "}
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout. The point of using Lorem Ipsum is that it
-                      has a more-or-less normal distribution of letters, as
-                      opposed to using ‘Content here, content here’, making it
-                      look like readable English.{" "}
+                      {' '}
+                      It is a long established fact that a reader will be distracted by the readable
+                      content of a page when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal distribution of letters, as opposed to
+                      using ‘Content here, content here’, making it look like readable English.{' '}
                     </p>
                   </div>
                 </div>
 
                 <div
-                  className={`iq-accordian-block 4 ${
-                    faq === "4" ? "iq-active" : ""
-                  }`}
+                  className={`iq-accordian-block 4 ${faq === '4' ? 'iq-active' : ''}`}
                   onClick={() => {
-                    setfaq("4");
+                    setfaq('4')
                   }}
                 >
                   <div className="iq-accordian-title">
@@ -135,29 +107,21 @@ const FAQPage = memo(() => {
                       How Can I Manage Notifications?
                     </h4>
                   </div>
-                  <div
-                    className={`iq-accordian-details ${
-                      faq === "4" ? "d-block" : "d-none"
-                    }`}
-                  >
+                  <div className={`iq-accordian-details ${faq === '4' ? 'd-block' : 'd-none'}`}>
                     <p className="mb-0">
-                      {" "}
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout. The point of using Lorem Ipsum is that it
-                      has a more-or-less normal distribution of letters, as
-                      opposed to using ‘Content here, content here’, making it
-                      look like readable English.{" "}
+                      {' '}
+                      It is a long established fact that a reader will be distracted by the readable
+                      content of a page when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal distribution of letters, as opposed to
+                      using ‘Content here, content here’, making it look like readable English.{' '}
                     </p>
                   </div>
                 </div>
 
                 <div
-                  className={`iq-accordian-block 5 ${
-                    faq === "5" ? "iq-active" : ""
-                  }`}
+                  className={`iq-accordian-block 5 ${faq === '5' ? 'iq-active' : ''}`}
                   onClick={() => {
-                    setfaq("5");
+                    setfaq('5')
                   }}
                 >
                   <div className="iq-accordian-title">
@@ -169,19 +133,13 @@ const FAQPage = memo(() => {
                       What Benefits Do I Get With The Packs?
                     </h4>
                   </div>
-                  <div
-                    className={`iq-accordian-details ${
-                      faq === "5" ? "d-block" : "d-none"
-                    }`}
-                  >
+                  <div className={`iq-accordian-details ${faq === '5' ? 'd-block' : 'd-none'}`}>
                     <p className="mb-0">
-                      {" "}
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout. The point of using Lorem Ipsum is that it
-                      has a more-or-less normal distribution of letters, as
-                      opposed to using ‘Content here, content here’, making it
-                      look like readable English.{" "}
+                      {' '}
+                      It is a long established fact that a reader will be distracted by the readable
+                      content of a page when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal distribution of letters, as opposed to
+                      using ‘Content here, content here’, making it look like readable English.{' '}
                     </p>
                   </div>
                 </div>
@@ -191,8 +149,8 @@ const FAQPage = memo(() => {
         </Container>
       </div>
     </>
-  );
-});
+  )
+})
 
-FAQPage.displayName = "FAQPage";
-export default FAQPage;
+FAQPage.displayName = 'FAQPage'
+export default FAQPage

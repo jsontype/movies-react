@@ -1,27 +1,27 @@
-import { memo, Fragment } from "react";
+import { memo, Fragment } from 'react'
 
-import _ from "lodash";
+import _ from 'lodash'
 
 //react-bootstrap
-import { Tooltip, OverlayTrigger } from "react-bootstrap";
+import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 
-import { useDispatch } from "react-redux";
-import { theme_color } from "../../../store/setting/actions";
+import { useDispatch } from 'react-redux'
+import { theme_color } from '../../../store/setting/actions'
 
 // Images
 
-interface Props{
-  themeColor?:any
+interface Props {
+  themeColor?: any
 }
 
-const ColorCustomizer = memo((props:Props) => {
-  const dispatch = useDispatch();
+const ColorCustomizer = memo((props: Props) => {
+  const dispatch = useDispatch()
 
-  const colorValue = props.themeColor;
+  const colorValue = props.themeColor
 
-  const colorChange = (colorClassName:any) => {
-    dispatch(theme_color(colorClassName));
-  };
+  const colorChange = (colorClassName: any) => {
+    dispatch(theme_color(colorClassName))
+  }
 
   return (
     <>
@@ -37,13 +37,10 @@ const ColorCustomizer = memo((props:Props) => {
               className="btn-check"
               name="theme_color"
               id="netflix"
-              onClick={() => colorChange("dark")}
-              defaultChecked={colorValue.value === "dark"}
+              onClick={() => colorChange('dark')}
+              defaultChecked={colorValue.value === 'dark'}
             />
-            <label
-              className={`btn dir-btn cutomizer-button w-100`}
-              htmlFor="netflix"
-            >
+            <label className={`btn dir-btn cutomizer-button w-100`} htmlFor="netflix">
               Netflix
             </label>
           </div>
@@ -54,8 +51,8 @@ const ColorCustomizer = memo((props:Props) => {
               className="btn-check"
               name="theme_color"
               id="hotstar"
-              onClick={() => colorChange("hotstar")}
-              defaultChecked={colorValue.value === "hotstar"}
+              onClick={() => colorChange('hotstar')}
+              defaultChecked={colorValue.value === 'hotstar'}
             />
             <label
               className={` btn dir-btn cutomizer-button w-100`}
@@ -75,9 +72,9 @@ const ColorCustomizer = memo((props:Props) => {
               name="theme_color"
               id="amezonprime"
               onClick={() => {
-                colorChange("amazonprime");
+                colorChange('amazonprime')
               }}
-              defaultChecked={colorValue.value === "amazonprime"}
+              defaultChecked={colorValue.value === 'amazonprime'}
             />
             <label
               className={` btn dir-btn cutomizer-button w-100`}
@@ -97,9 +94,9 @@ const ColorCustomizer = memo((props:Props) => {
               name="theme_color"
               id="hulu"
               onClick={() => {
-                colorChange("hulu");
+                colorChange('hulu')
               }}
-              defaultChecked={colorValue.value === "hulu"}
+              defaultChecked={colorValue.value === 'hulu'}
             />
             <label
               className={` btn dir-btn cutomizer-button w-100`}
@@ -114,8 +111,8 @@ const ColorCustomizer = memo((props:Props) => {
         </div>
       </div>
     </>
-  );
-});
+  )
+})
 
-ColorCustomizer.displayName = "ColorCustomizer";
-export default ColorCustomizer;
+ColorCustomizer.displayName = 'ColorCustomizer'
+export default ColorCustomizer

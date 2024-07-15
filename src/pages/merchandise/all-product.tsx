@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect, Fragment } from 'react'
 
 //react-bootstrap
 import { Col, Container, Row } from 'react-bootstrap'
@@ -10,19 +10,20 @@ import ProductCard from '@/components/merchandise/product-card'
 import { newProduct } from '@/StaticData/shop'
 
 // Custom Hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const AllProductPage = () => {
-    useBreadcrumb('View All')
-    return (
-        <>
-      <section className='section-padding'>
+  useBreadcrumb('View All')
+  return (
+    <>
+      <section className="section-padding">
         <Container fluid>
-          <Row md="3" lg="5" className='row-cols-2'>
-            {newProduct.slice(0, 5).map((item:any, index:any) => {
+          <Row md="3" lg="5" className="row-cols-2">
+            {newProduct.slice(0, 5).map((item: any, index: any) => {
               return (
-                <Col className='mb-5' key={index}>
-                  <ProductCard thumbnail={item.thumbnail}
+                <Col className="mb-5" key={index}>
+                  <ProductCard
+                    thumbnail={item.thumbnail}
                     product_name={item.product_name}
                     price={item.price}
                     final_price={item.final_price}
@@ -35,10 +36,11 @@ const AllProductPage = () => {
                 </Col>
               )
             })}
-            {newProduct.slice(0, 5).map((item:any, index:any) => {
+            {newProduct.slice(0, 5).map((item: any, index: any) => {
               return (
-                <Col className='mb-5' key={index}>
-                  <ProductCard thumbnail={item.thumbnail}
+                <Col className="mb-5" key={index}>
+                  <ProductCard
+                    thumbnail={item.thumbnail}
                     product_name={item.product_name}
                     price={item.price}
                     final_price={item.final_price}
@@ -55,8 +57,8 @@ const AllProductPage = () => {
         </Container>
       </section>
     </>
-    );
-};
+  )
+}
 
-AllProductPage.displayName = "AllProductPage";
-export default AllProductPage;
+AllProductPage.displayName = 'AllProductPage'
+export default AllProductPage

@@ -1,8 +1,8 @@
 export const blogsDetails = [
-   {
-      id: 1,
-      slug: "simple-blog",
-      detail: `<p className="text-white"><strong>Praesent iaculis, purus ac vehicula mattis, arcu lorem blandit nisl, non laoreet dui
+  {
+    id: 1,
+    slug: 'simple-blog',
+    detail: `<p className="text-white"><strong>Praesent iaculis, purus ac vehicula mattis, arcu lorem blandit nisl, non laoreet dui
                               mi eget elit. Donec porttitor ex vel augue maximus luctus. Vivamus finibus nibh eu nunc
                               volutpat suscipit.</strong></p>
                         <p>Nam vulputate libero quis nisi euismod rhoncus. Sed eu euismod felis. Aenean ullamcorper
@@ -28,23 +28,23 @@ export const blogsDetails = [
                      <p>Potenti fusce himenaeos hac aenean quis donec vivamus aliquet, wprdpress integer inceptos curae
                         sollicitudin in class sociosqu netus, euismod tempus fermentum odio gravida eleifend viverra
                         pulvinar inceptos ligula consectetur. Potenti ante porttitor tristique curae scelerisque
-                        tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>`
-      //    <div>
-      //       <iframe title="Lauren Cohan opens up about her ‘Walking Dead’ salary dispute" width="525"
-      //          height="295" src="https://www.youtube.com/embed/bPh0kfMRIFA?feature=oembed"
-      //          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      //          allowfullscreen=""></iframe>
-      //    </div>
-      // </div>
-      // <p>Potenti fusce himenaeos hac aenean quis donec vivamus aliquet, wprdpress integer inceptos curae
-      //    sollicitudin in class sociosqu netus, euismod tempus fermentum odio gravida eleifend viverra
-      //    pulvinar inceptos ligula consectetur. Potenti ante porttitor tristique curae scelerisque
-      //    tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>`,
-   },
-   {
-      id: 2,
-      slug: "audio-blog",
-      detail: `<div className="blog-content">
+                        tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>`,
+    //    <div>
+    //       <iframe title="Lauren Cohan opens up about her ‘Walking Dead’ salary dispute" width="525"
+    //          height="295" src="https://www.youtube.com/embed/bPh0kfMRIFA?feature=oembed"
+    //          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    //          allowfullscreen=""></iframe>
+    //    </div>
+    // </div>
+    // <p>Potenti fusce himenaeos hac aenean quis donec vivamus aliquet, wprdpress integer inceptos curae
+    //    sollicitudin in class sociosqu netus, euismod tempus fermentum odio gravida eleifend viverra
+    //    pulvinar inceptos ligula consectetur. Potenti ante porttitor tristique curae scelerisque
+    //    tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>`,
+  },
+  {
+    id: 2,
+    slug: 'audio-blog',
+    detail: `<div className="blog-content">
     <img src="/assets/images/blog/audio.webp" className="img-fluid mb-5" alt="01">
                         <p><strong>Praesent iaculis, purus ac vehicula mattis, arcu lorem blandit nisl, non laoreet dui
                               mi eget elit. Donec porttitor ex vel augue maximus luctus. Vivamus finibus nibh eu nunc
@@ -82,11 +82,11 @@ export const blogsDetails = [
                         sollicitudin in class sociosqu netus, euismod tempus fermentum odio gravida eleifend viverra
                         pulvinar inceptos ligula consectetur. Potenti ante porttitor tristique curae scelerisque
                         tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>`,
-   },
-   {
-      id: 3,
-      slug: "video-blog",
-      detail: `<div className="blog-content">
+  },
+  {
+    id: 3,
+    slug: 'video-blog',
+    detail: `<div className="blog-content">
       <div className="ytp-cued-thumbnail-overlay" data-layer="4" style=""><div className="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://i.ytimg.com/vi_webp/QCGq1epI9pQ/maxresdefault.webp&quot;);"></div><button className="ytp-large-play-button ytp-button ytp-large-play-button-red-bg" aria-label="Play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path className="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></button></div>
       <p><strong>Praesent iaculis, purus ac vehicula mattis, arcu lorem blandit nisl, non laoreet dui
                               mi eget elit. Donec porttitor ex vel augue maximus luctus. Vivamus finibus nibh eu nunc
@@ -125,12 +125,12 @@ export const blogsDetails = [
                         pulvinar inceptos ligula consectetur. Potenti ante porttitor tristique curae scelerisque
                         tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>
    `,
-   },
+  },
 
-   {
-      id: 5,
-      slug: "link-blog",
-      detail: `<div className="blog-content">
+  {
+    id: 5,
+    slug: 'link-blog',
+    detail: `<div className="blog-content">
     <div className="blog-single-icon mt-0">
                 <a className="link-icon" href="https://iqonic.design">
                     <i aria-hidden="true" className="fas fa-link mb-2"></i>
@@ -172,11 +172,11 @@ export const blogsDetails = [
                         sollicitudin in class sociosqu netus, euismod tempus fermentum odio gravida eleifend viverra
                         pulvinar inceptos ligula consectetur. Potenti ante porttitor tristique curae scelerisque
                         tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>`,
-   },
-   {
-      id: 6,
-      slug: "quote-blog",
-      detail: `<div className="blog-content">
+  },
+  {
+    id: 6,
+    slug: 'quote-blog',
+    detail: `<div className="blog-content">
     <img src="/assets/images/blog/audio.webp" className="img-fluid mb-5" alt="01">
                         <p><strong>Praesent iaculis, purus ac vehicula mattis, arcu lorem blandit nisl, non laoreet dui
                               mi eget elit. Donec porttitor ex vel augue maximus luctus. Vivamus finibus nibh eu nunc
@@ -214,11 +214,11 @@ export const blogsDetails = [
                         sollicitudin in class sociosqu netus, euismod tempus fermentum odio gravida eleifend viverra
                         pulvinar inceptos ligula consectetur. Potenti ante porttitor tristique curae scelerisque
                         tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>`,
-   },
-   {
-      id: 2,
-      slug: "gallery-blog",
-      detail: `<div className="blog-content">
+  },
+  {
+    id: 2,
+    slug: 'gallery-blog',
+    detail: `<div className="blog-content">
       <ul className="row row-cols-1 row-cols-sm-2 row-cols-md-3 list-unstyled">
     <li className="col mb-4">
       <a data-fslightbox="gallery" href="/assets/images/blog/1.webp">
@@ -295,11 +295,11 @@ export const blogsDetails = [
                         tristique, dictum eu donec conubia sit rutrum duis viverra in commodo.</p>
   
   `,
-   },
-   {
-      id: 8,
-      slug: 'blog-template',
-      detail: `<p class="pb-4">Integer volutpat ex scelerisque neque convallis tempus. Fusce eu rutrum leo. Curabitur
+  },
+  {
+    id: 8,
+    slug: 'blog-template',
+    detail: `<p class="pb-4">Integer volutpat ex scelerisque neque convallis tempus. Fusce eu rutrum leo. Curabitur
       pellentesque nisl at mattis ornare. Morbi odio nisl, cursus eget eleifend a, molestie eu orci. Quisque aliquam
       blandit libero vitae vestibulum. Aenean <span class="text-primary fw-bold">“rutrum nisi at lectus”</span>
       posuere placerat. Nunc bibendum vitae enim quis. Mauris at efficitur tortor, vel euismod est. There are many
@@ -353,6 +353,6 @@ export const blogsDetails = [
         </ul>
         <p>Quisque suscipit, enim a venenatis vestibulum, lectus elit fermentum dolor, sed fringilla erat augue vel
           felis. Maecenas bibendum ac dolor quis mollis. Integer ornare varius leo sed pellentesque. Sed quis urna
-          lorem. Donec at varius massa. Donec in nisi eget dui</p>`
-   }
-];
+          lorem. Donec at varius massa. Donec in nisi eget dui</p>`,
+  },
+]

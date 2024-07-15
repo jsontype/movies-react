@@ -1,6 +1,6 @@
 interface InitialState {
   breadcrumb: {
-    show: boolean,
+    show: boolean
     name: string
   }
 }
@@ -8,6 +8,6 @@ interface InitialState {
 export const initialState: InitialState = {
   breadcrumb: {
     show: false,
-    name: ''
-  }
-};
+    name: '',
+  },
+}

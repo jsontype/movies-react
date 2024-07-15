@@ -1,37 +1,36 @@
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 //react bootstrap
-import { Col, Container, Row, Tab, Nav } from "react-bootstrap";
+import { Col, Container, Row, Tab, Nav } from 'react-bootstrap'
 
 // Next-link
 import Link from 'next/link'
 
 //components
 import ShopCategorySidebar from '@/components/merchandise/ShopCategorySidebar'
-import CardShopListView from "@/components/merchandise/Cardshoplistview";
-import CardShopGridView from "@/components/merchandise/Cardshowgridview";
+import CardShopListView from '@/components/merchandise/Cardshoplistview'
+import CardShopGridView from '@/components/merchandise/Cardshowgridview'
 
 //static data
-import { products } from "@/StaticData/shop";
-import { newProduct } from "@/StaticData/shop";
+import { products } from '@/StaticData/shop'
+import { newProduct } from '@/StaticData/shop'
 
 // redux
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux'
 
-import { getnewProductAsync } from "@/store/shop/actions";
+import { getnewProductAsync } from '@/store/shop/actions'
 
 // Import selectors & action from setting store
-import * as SettingSelector from "@/store/shop/selectors";
-import { AnyAction } from "@reduxjs/toolkit";
-
+import * as SettingSelector from '@/store/shop/selectors'
+import { AnyAction } from '@reduxjs/toolkit'
 
 const ShopPage = () => {
   useBreadcrumb('Shop')
 
   // selector
-  const newProduct = useSelector(SettingSelector.newProduct);
+  const newProduct = useSelector(SettingSelector.newProduct)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getnewProductAsync() as unknown as AnyAction)
@@ -44,7 +43,7 @@ const ShopPage = () => {
         <Row>
           <Col lg="3">
             <ShopCategorySidebar>
-              {newProduct.map((item:any, index:any) => {
+              {newProduct.map((item: any, index: any) => {
                 return (
                   <span key={index}>
                     <ul className="list-unstyled m-0 p-0 shop-product">
@@ -63,16 +62,14 @@ const ShopPage = () => {
                       </li>
                     </ul>
                   </span>
-                );
+                )
               })}
             </ShopCategorySidebar>
           </Col>
           <Col xl="9">
             <Tab.Container defaultActiveKey="third">
               <div className="d-flex align-items-center justify-content-between mb-5 shop-filter flex-wrap">
-                <p>
-                  Showing 1–10 of 31 results{" "}
-                </p>
+                <p>Showing 1–10 of 31 results </p>
                 <div className="d-flex align-items-center">
                   <div className="product-view-button">
                     <Nav
@@ -81,11 +78,7 @@ const ShopPage = () => {
                       className="nav_shop nav d-flex nav-pills mb-0 iq-product-filter d-flex bg-transparent align-items-center list-inline"
                       role="tablist"
                     >
-                      <Nav.Item
-                        as="li"
-                        className="nav-item"
-                        role="presentation"
-                      >
+                      <Nav.Item as="li" className="nav-item" role="presentation">
                         <Nav.Link
                           id="list-view-tab"
                           className="btn-sm btn-icon rounded-pill p-0"
@@ -105,49 +98,23 @@ const ShopPage = () => {
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <g clipPath="url(#clip0_1379_355)">
-                                <path
-                                  d="M3.42857 0H0V3.42857H3.42857V0Z"
-                                  fill=""
-                                ></path>
-                                <path
-                                  d="M18 0.857422H6V2.57171H18V0.857422Z"
-                                  fill=""
-                                ></path>
-                                <path
-                                  d="M3.42857 6H0V9.42857H3.42857V6Z"
-                                  fill=""
-                                ></path>
-                                <path
-                                  d="M18 6.85742H6V8.57171H18V6.85742Z"
-                                  fill=""
-                                ></path>
-                                <path
-                                  d="M3.42857 12H0V15.4286H3.42857V12Z"
-                                  fill=""
-                                ></path>
-                                <path
-                                  d="M18 12.8574H6V14.5717H18V12.8574Z"
-                                  fill=""
-                                ></path>
+                                <path d="M3.42857 0H0V3.42857H3.42857V0Z" fill=""></path>
+                                <path d="M18 0.857422H6V2.57171H18V0.857422Z" fill=""></path>
+                                <path d="M3.42857 6H0V9.42857H3.42857V6Z" fill=""></path>
+                                <path d="M18 6.85742H6V8.57171H18V6.85742Z" fill=""></path>
+                                <path d="M3.42857 12H0V15.4286H3.42857V12Z" fill=""></path>
+                                <path d="M18 12.8574H6V14.5717H18V12.8574Z" fill=""></path>
                               </g>
                               <defs>
                                 <clipPath id="clip0_1379_355">
-                                  <rect
-                                    width="18"
-                                    height="15.4286"
-                                    fill=""
-                                  ></rect>
+                                  <rect width="18" height="15.4286" fill=""></rect>
                                 </clipPath>
                               </defs>
                             </svg>
                           </span>
                         </Nav.Link>
                       </Nav.Item>
-                      <Nav.Item
-                        as="li"
-                        className="nav-item ms-2"
-                        role="presentation"
-                      >
+                      <Nav.Item as="li" className="nav-item ms-2" role="presentation">
                         <Nav.Link
                           id="grid-view-tab"
                           className="nav-link btn-sm btn-icon rounded-pill p-0"
@@ -166,18 +133,9 @@ const ShopPage = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M8.57143 0H0V8.57143H8.57143V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M17.9999 0H9.42847V8.57143H17.9999V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M8.57143 9.42871H0V18.0001H8.57143V9.42871Z"
-                                fill=""
-                              ></path>
+                              <path d="M8.57143 0H0V8.57143H8.57143V0Z" fill=""></path>
+                              <path d="M17.9999 0H9.42847V8.57143H17.9999V0Z" fill=""></path>
+                              <path d="M8.57143 9.42871H0V18.0001H8.57143V9.42871Z" fill=""></path>
                               <path
                                 d="M17.9999 9.42871H9.42847V18.0001H17.9999V9.42871Z"
                                 fill=""
@@ -186,11 +144,7 @@ const ShopPage = () => {
                           </span>
                         </Nav.Link>
                       </Nav.Item>
-                      <Nav.Item
-                        as="li"
-                        className="nav-item ms-2"
-                        role="presentation"
-                      >
+                      <Nav.Item as="li" className="nav-item ms-2" role="presentation">
                         <Nav.Link
                           id="grid-three-view-tab"
                           className="nav-link btn-sm btn-icon rounded-pill p-0"
@@ -209,22 +163,10 @@ const ShopPage = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M4.90909 0H0V4.90909H4.90909V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M11.4545 0H6.54541V4.90909H11.4545V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M17.9999 0H13.0908V4.90909H17.9999V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M4.90909 6.5459H0V11.455H4.90909V6.5459Z"
-                                fill=""
-                              ></path>
+                              <path d="M4.90909 0H0V4.90909H4.90909V0Z" fill=""></path>
+                              <path d="M11.4545 0H6.54541V4.90909H11.4545V0Z" fill=""></path>
+                              <path d="M17.9999 0H13.0908V4.90909H17.9999V0Z" fill=""></path>
+                              <path d="M4.90909 6.5459H0V11.455H4.90909V6.5459Z" fill=""></path>
                               <path
                                 d="M11.4545 6.5459H6.54541V11.455H11.4545V6.5459Z"
                                 fill=""
@@ -233,10 +175,7 @@ const ShopPage = () => {
                                 d="M17.9999 6.5459H13.0908V11.455H17.9999V6.5459Z"
                                 fill=""
                               ></path>
-                              <path
-                                d="M4.90909 13.0908H0V17.9999H4.90909V13.0908Z"
-                                fill=""
-                              ></path>
+                              <path d="M4.90909 13.0908H0V17.9999H4.90909V13.0908Z" fill=""></path>
                               <path
                                 d="M11.4545 13.0908H6.54541V17.9999H11.4545V13.0908Z"
                                 fill=""
@@ -249,11 +188,7 @@ const ShopPage = () => {
                           </span>
                         </Nav.Link>
                       </Nav.Item>
-                      <Nav.Item
-                        as="li"
-                        className="nav-item ms-2"
-                        role="presentation"
-                      >
+                      <Nav.Item as="li" className="nav-item ms-2" role="presentation">
                         <Nav.Link
                           id="grid-four-view-tab"
                           className="nav-link btn-sm btn-icon rounded-pill p-0"
@@ -272,26 +207,11 @@ const ShopPage = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M3.85714 0H0V3.85714H3.85714V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M8.5715 0H4.71436V3.85714H8.5715V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M13.2856 0H9.42847V3.85714H13.2856V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M18 0H14.1428V3.85714H18V0Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M3.85714 4.71387H0V8.57101H3.85714V4.71387Z"
-                                fill=""
-                              ></path>
+                              <path d="M3.85714 0H0V3.85714H3.85714V0Z" fill=""></path>
+                              <path d="M8.5715 0H4.71436V3.85714H8.5715V0Z" fill=""></path>
+                              <path d="M13.2856 0H9.42847V3.85714H13.2856V0Z" fill=""></path>
+                              <path d="M18 0H14.1428V3.85714H18V0Z" fill=""></path>
+                              <path d="M3.85714 4.71387H0V8.57101H3.85714V4.71387Z" fill=""></path>
                               <path
                                 d="M8.5715 4.71387H4.71436V8.57101H8.5715V4.71387Z"
                                 fill=""
@@ -300,14 +220,8 @@ const ShopPage = () => {
                                 d="M13.2856 4.71387H9.42847V8.57101H13.2856V4.71387Z"
                                 fill=""
                               ></path>
-                              <path
-                                d="M18 4.71387H14.1428V8.57101H18V4.71387Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M3.85714 9.42871H0V13.2859H3.85714V9.42871Z"
-                                fill=""
-                              ></path>
+                              <path d="M18 4.71387H14.1428V8.57101H18V4.71387Z" fill=""></path>
+                              <path d="M3.85714 9.42871H0V13.2859H3.85714V9.42871Z" fill=""></path>
                               <path
                                 d="M8.5715 9.42871H4.71436V13.2859H8.5715V9.42871Z"
                                 fill=""
@@ -316,14 +230,8 @@ const ShopPage = () => {
                                 d="M13.2856 9.42871H9.42847V13.2859H13.2856V9.42871Z"
                                 fill=""
                               ></path>
-                              <path
-                                d="M18 9.42871H14.1428V13.2859H18V9.42871Z"
-                                fill=""
-                              ></path>
-                              <path
-                                d="M3.85714 14.1426H0V17.9997H3.85714V14.1426Z"
-                                fill=""
-                              ></path>
+                              <path d="M18 9.42871H14.1428V13.2859H18V9.42871Z" fill=""></path>
+                              <path d="M3.85714 14.1426H0V17.9997H3.85714V14.1426Z" fill=""></path>
                               <path
                                 d="M8.5715 14.1426H4.71436V17.9997H8.5715V14.1426Z"
                                 fill=""
@@ -332,10 +240,7 @@ const ShopPage = () => {
                                 d="M13.2856 14.1426H9.42847V17.9997H13.2856V14.1426Z"
                                 fill=""
                               ></path>
-                              <path
-                                d="M18 14.1426H14.1428V17.9997H18V14.1426Z"
-                                fill=""
-                              ></path>
+                              <path d="M18 14.1426H14.1428V17.9997H18V14.1426Z" fill=""></path>
                             </svg>
                           </span>
                         </Nav.Link>
@@ -343,10 +248,7 @@ const ShopPage = () => {
                     </Nav>
                   </div>
                   <div className="iq-custom-select d-inline-block shop-select">
-                    <select
-                      name="cars"
-                      className="form-select season-select"
-                    >
+                    <select name="cars" className="form-select season-select">
                       <option value="season1">Default sorting</option>
                       <option>Sort by popularity</option>
                       <option>Sort by average rating</option>
@@ -357,7 +259,7 @@ const ShopPage = () => {
                   </div>
                 </div>
               </div>
-              <Tab.Content >
+              <Tab.Content>
                 {/* <!-- List View --> */}
                 <Tab.Pane
                   id="pills-list-view"
@@ -381,7 +283,7 @@ const ShopPage = () => {
                           count1="1"
                         />
                       </Row>
-                    );
+                    )
                   })}
                 </Tab.Pane>
 
@@ -410,7 +312,7 @@ const ShopPage = () => {
                             count1="0"
                           />
                         </Col>
-                      );
+                      )
                     })}
                   </Row>
                 </Tab.Pane>
@@ -436,7 +338,7 @@ const ShopPage = () => {
                             final_price={item.final_price}
                           />
                         </Col>
-                      );
+                      )
                     })}
                   </Row>
                 </Tab.Pane>
@@ -462,7 +364,7 @@ const ShopPage = () => {
                             final_price={item.final_price}
                           />
                         </Col>
-                      );
+                      )
                     })}
                   </Row>
                 </Tab.Pane>
@@ -472,8 +374,8 @@ const ShopPage = () => {
         </Row>
       </Container>
     </>
-  );
-};
+  )
+}
 
-ShopPage.layout = "Merchandise";
-export default ShopPage;
+ShopPage.layout = 'Merchandise'
+export default ShopPage

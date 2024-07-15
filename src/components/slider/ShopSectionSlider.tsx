@@ -1,16 +1,16 @@
-import { Fragment, memo } from "react";
+import { Fragment, memo } from 'react'
 
 //react-router-dom
 // import { Link } from "react-router-dom";
-import Link from "next/link";
+import Link from 'next/link'
 
 interface ShopSectionSliderProps {
-  shopsellingImg: any;
-  shopsellingText: string | undefined;
-  slug: string | undefined;
+  shopsellingImg: any
+  shopsellingText: string | undefined
+  slug: string | undefined
 }
 
-const ShopSectionSlider = memo((props:ShopSectionSliderProps) => {
+const ShopSectionSlider = memo((props: ShopSectionSliderProps) => {
   return (
     <>
       <div className="category-inner position-relative">
@@ -26,8 +26,8 @@ const ShopSectionSlider = memo((props:ShopSectionSliderProps) => {
         </div>
       </div>
     </>
-  );
-});
+  )
+})
 
-ShopSectionSlider.displayName = "ShopSectionSlider";
-export default ShopSectionSlider;
+ShopSectionSlider.displayName = 'ShopSectionSlider'
+export default ShopSectionSlider

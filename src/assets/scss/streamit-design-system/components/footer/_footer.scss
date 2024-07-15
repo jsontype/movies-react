@@ -1,6 +1,6 @@
 footer {
   .footer-menu {
-    >li {
+    > li {
       position: relative;
 
       a {
@@ -15,8 +15,8 @@ footer {
       }
 
       &::before {
-        content: "\f054";
-        font-family: "Font Awesome 5 Free";
+        content: '\f054';
+        font-family: 'Font Awesome 5 Free';
         font-weight: 900;
         position: absolute;
         left: 0;
@@ -36,7 +36,7 @@ footer {
 
       a {
         color: var(--bs-body-color);
-        font-size: .875rem;
+        font-size: 0.875rem;
 
         &:hover {
           color: var(--bs-primary);
@@ -126,7 +126,6 @@ footer {
 
 @media (max-width: 767.98px) {
   .footer-default {
-
     .footer-top,
     .footer-bottom {
       padding: 2rem 0;

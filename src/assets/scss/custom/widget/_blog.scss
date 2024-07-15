@@ -3,7 +3,12 @@
   padding-bottom: 2.5em;
   border: solid;
   border-width: 0 0 0.063em;
-  border-image-source: linear-gradient(270deg, rgba(38, 37, 37, 0) -1.25%, #6c757d 43.69%, rgba(38, 37, 37, 0) 99.08%);
+  border-image-source: linear-gradient(
+    270deg,
+    rgba(38, 37, 37, 0) -1.25%,
+    #6c757d 43.69%,
+    rgba(38, 37, 37, 0) 99.08%
+  );
   border-image-slice: 1;
 
   .iq-blog-image {
@@ -152,7 +157,7 @@
 
   &:after {
     position: absolute;
-    content: "";
+    content: '';
     background: var(--bs-gray-900);
     width: 1px;
     height: 65px;
@@ -199,10 +204,12 @@
   padding-bottom: 2.5rem;
   border: solid;
   border-width: 0 0 0.063em;
-  border-image-source: linear-gradient(270deg,
-      rgba(38, 37, 37, 0) -1.25%,
-      #6c757d 43.69%,
-      rgba(38, 37, 37, 0) 99.08%);
+  border-image-source: linear-gradient(
+    270deg,
+    rgba(38, 37, 37, 0) -1.25%,
+    #6c757d 43.69%,
+    rgba(38, 37, 37, 0) 99.08%
+  );
   border-image-slice: 1;
 }
 
@@ -217,7 +224,7 @@ blockquote,
 }
 
 blockquote cite {
-  font-family: "Heebo", sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-weight: bold;
 }
 

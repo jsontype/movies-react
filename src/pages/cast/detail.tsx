@@ -1,28 +1,28 @@
-import { Fragment, memo } from "react";
+import { Fragment, memo } from 'react'
 
 // react-bootstrap
-import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
+import { Col, Container, Nav, Row, Tab } from 'react-bootstrap'
 
 // router
-import Link from "next/link";
+import Link from 'next/link'
 
 // components
-import CardStyle from "../../components/cards/CardStyle";
-import Sources from "../../components/Sources";
+import CardStyle from '../../components/cards/CardStyle'
+import Sources from '../../components/Sources'
 
 // function
 import { generateImgPath } from '../../StaticData/data'
 
-import { useEnterExit } from "@/utilities/usePage";
+import { useEnterExit } from '@/utilities/usePage'
 
 const DetailPage = memo(() => {
-  const cast =
-  {
+  const cast = {
     id: '01',
     thumbnail: generateImgPath('/assets/images/cast/01.webp'),
     name: 'Debbi Bossi',
     roles: ['director', 'writer', 'actor'],
-    description: '"Many actors have left a lasting impact on the world of entertainment. They bring characters to life on screen, captivating audiences with their talent and charisma. From classic Hollywood icons like Marilyn Monroe and Humphrey Bogart to contemporary stars like Leonardo DiCaprio and Scarlett Johansson, actors have played a vital role in shaping the world of cinema. Each actor has their unique style and contribution to the art of <span class="text-primary">storytelling (2001)</span>, making',
+    description:
+      '"Many actors have left a lasting impact on the world of entertainment. They bring characters to life on screen, captivating audiences with their talent and charisma. From classic Hollywood icons like Marilyn Monroe and Humphrey Bogart to contemporary stars like Leonardo DiCaprio and Scarlett Johansson, actors have played a vital role in shaping the world of cinema. Each actor has their unique style and contribution to the art of <span class="text-primary">storytelling (2001)</span>, making',
     awards: '56 WINS & 83 NOMINATIONS',
     sites: 'IQONIC DESIGN',
     site_link: 'https://iqonic.design/',
@@ -63,38 +63,38 @@ const DetailPage = memo(() => {
     ],
     most_views: [
       {
-        id: "01",
+        id: '01',
         thumbnail: generateImgPath('/assets/images/movies/popular/01.webp'),
         title: 'CRW',
         duration: '2hr: 12mins',
         watchlistLink: '/play-list',
-        link: '/movies/detail'
+        link: '/movies/detail',
       },
       {
-        id: "02",
+        id: '02',
         thumbnail: generateImgPath('/assets/images/movies/popular/03.webp'),
         title: 'Goal',
         duration: '2hr: 30mins',
         watchlistLink: '/play-list',
-        link: '/movies/detail'
+        link: '/movies/detail',
       },
       {
-        id: "03",
+        id: '03',
         thumbnail: generateImgPath('/assets/images/movies/popular/04.webp'),
         title: 'Dandacg',
         duration: '1hr: 30mins',
         watchlistLink: '/play-list',
-        link: '/movies/detail'
+        link: '/movies/detail',
       },
       {
-        id: "04",
+        id: '04',
         thumbnail: generateImgPath('/assets/images/movies/popular/05.webp'),
         title: 'Mexcan',
         duration: '1hr: 30mins',
         watchlistLink: '/play-list',
-        link: '/movies/detail'
+        link: '/movies/detail',
       },
-    ]
+    ],
   }
 
   useEnterExit()
@@ -105,7 +105,12 @@ const DetailPage = memo(() => {
           <Row>
             <Col lg="3" md="5">
               <div className="cast-box position-relative">
-                <img src={cast.thumbnail} alt="person" className="img-fluid object-cover w-100" loading="lazy" />
+                <img
+                  src={cast.thumbnail}
+                  alt="person"
+                  className="img-fluid object-cover w-100"
+                  loading="lazy"
+                />
                 <ul className="p-0 m-0 list-unstyled widget_social_media position-absolute w-100 text-center">
                   <li className="">
                     <Link href="https://www.facebook.com/" className="position-relative">
@@ -131,7 +136,11 @@ const DetailPage = memo(() => {
               </div>
               <h5 className="mt-5 mb-4 text-white fw-500">Personal Details</h5>
               <h6 className="font-size-18 text-white fw-500">Official Sites :</h6>
-              <p><Link href={cast.site_link} target="_blank" className="text-uppercase">{cast.sites}</Link></p>
+              <p>
+                <Link href={cast.site_link} target="_blank" className="text-uppercase">
+                  {cast.sites}
+                </Link>
+              </p>
               <h6 className="font-size-18 text-white fw-500">Born :</h6>
               <div className="seperator d-flex align-items-center flex-wrap mb-3">
                 <span>{cast.dob}</span>
@@ -141,7 +150,9 @@ const DetailPage = memo(() => {
               <h6 className="font-size-18 text-white fw-500">Height :</h6>
               <p>{cast.height}</p>
               <h6 className="font-size-18 text-white fw-500">Parents & Relatives :</h6>
-              <p className="mb-0">{cast.parents} <span className="text-primary">{cast.siblings}</span>(Sibling)</p>
+              <p className="mb-0">
+                {cast.parents} <span className="text-primary">{cast.siblings}</span>(Sibling)
+              </p>
             </Col>
             <Col lg="9" md="7">
               <h4 className="fw-500">{cast.name}</h4>
@@ -150,7 +161,11 @@ const DetailPage = memo(() => {
                   return (
                     <span key={index}>
                       <span className="fw-semibold text-capitalize">{item}</span>
-                      {index < cast.roles.length - 1 ? <span className="d-inline-block circle"></span> : ''}
+                      {index < cast.roles.length - 1 ? (
+                        <span className="d-inline-block circle"></span>
+                      ) : (
+                        ''
+                      )}
                     </span>
                   )
                 })}
@@ -167,7 +182,13 @@ const DetailPage = memo(() => {
                     {cast.most_views.map((item, index) => {
                       return (
                         <Col className="mb-4" key={index}>
-                          <CardStyle title={item.title} movieTime={item.duration} watchlistLink={item.watchlistLink} link={item.link} image={item.thumbnail} />
+                          <CardStyle
+                            title={item.title}
+                            movieTime={item.duration}
+                            watchlistLink={item.watchlistLink}
+                            link={item.link}
+                            image={item.thumbnail}
+                          />
                         </Col>
                       )
                     })}
@@ -176,15 +197,51 @@ const DetailPage = memo(() => {
               </div>
               <div className="content-details trending-info">
                 <Tab.Container defaultActiveKey="first">
-                  <Nav as="ul" className="nav-underline nav-pills d-flex align-items-center text-center mb-5 gap-5">
+                  <Nav
+                    as="ul"
+                    className="nav-underline nav-pills d-flex align-items-center text-center mb-5 gap-5"
+                  >
                     <Nav.Item as="div">
-                      <Nav.Link eventKey="first" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="true">All</Nav.Link>
+                      <Nav.Link
+                        eventKey="first"
+                        id="nav-all-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-all"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-all"
+                        aria-selected="true"
+                      >
+                        All
+                      </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="div">
-                      <Nav.Link eventKey="second" id="nav-movies-tab" data-bs-toggle="tab" data-bs-target="#nav-movies" type="button" role="tab" aria-controls="nav-movies" aria-selected="true">Movies</Nav.Link>
+                      <Nav.Link
+                        eventKey="second"
+                        id="nav-movies-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-movies"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-movies"
+                        aria-selected="true"
+                      >
+                        Movies
+                      </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="div">
-                      <Nav.Link eventKey="third" id="nav-shows-tab" data-bs-toggle="tab" data-bs-target="#nav-shows" type="button" role="tab" aria-controls="nav-shows" aria-selected="true">TV Shows</Nav.Link>
+                      <Nav.Link
+                        eventKey="third"
+                        id="nav-shows-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-shows"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-shows"
+                        aria-selected="true"
+                      >
+                        TV Shows
+                      </Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content>
@@ -197,7 +254,11 @@ const DetailPage = memo(() => {
                                 return (
                                   <tr key={index}>
                                     <td className="w-15">
-                                      <img src={item.thumbnail} alt="image-icon" className="img-fluid person-img object-cover" />
+                                      <img
+                                        src={item.thumbnail}
+                                        alt="image-icon"
+                                        className="img-fluid person-img object-cover"
+                                      />
                                     </td>
                                     <td className="w-20">
                                       <div className="font-size-18 d-flex gap-4 text-white fw-500">
@@ -206,7 +267,11 @@ const DetailPage = memo(() => {
                                         <span className="fw-normal text-body">as {item.as}</span>
                                       </div>
                                     </td>
-                                    <td><span className="fw-500 font-size-18 text-white">{item.year}</span></td>
+                                    <td>
+                                      <span className="fw-500 font-size-18 text-white">
+                                        {item.year}
+                                      </span>
+                                    </td>
                                   </tr>
                                 )
                               })}
@@ -224,7 +289,11 @@ const DetailPage = memo(() => {
                                 return (
                                   <tr key={index}>
                                     <td className="w-15">
-                                      <img src={item.thumbnail} alt="image-icon" className="img-fluid person-img object-cover" />
+                                      <img
+                                        src={item.thumbnail}
+                                        alt="image-icon"
+                                        className="img-fluid person-img object-cover"
+                                      />
                                     </td>
                                     <td className="w-20">
                                       <div className="font-size-18 d-flex gap-4 text-white fw-500">
@@ -233,7 +302,11 @@ const DetailPage = memo(() => {
                                         <span className="fw-normal text-body">as {item.as}</span>
                                       </div>
                                     </td>
-                                    <td><span className="fw-500 font-size-18 text-white">{item.year}</span></td>
+                                    <td>
+                                      <span className="fw-500 font-size-18 text-white">
+                                        {item.year}
+                                      </span>
+                                    </td>
                                   </tr>
                                 )
                               })}
@@ -253,8 +326,8 @@ const DetailPage = memo(() => {
         </Container>
       </div>
     </>
-  );
-});
+  )
+})
 
-DetailPage.displayName = "DetailPage";
-export default DetailPage;
+DetailPage.displayName = 'DetailPage'
+export default DetailPage

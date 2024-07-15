@@ -1,20 +1,19 @@
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
 // Redux Selector / Action
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux'
 
 // import state selectors
 import { set_breadcrumb } from '@/store/streamit/actions'
 
 export const useEnterExit = () => {
   useEffect(() => {
-    document.body.classList.add("custom-header-relative");
+    document.body.classList.add('custom-header-relative')
     return () => {
-      document.body.classList.remove("custom-header-relative");
-    };
-  }, []);
-};
-
+      document.body.classList.remove('custom-header-relative')
+    }
+  }, [])
+}
 
 export const useBreadcrumb = (name: string = 'View All') => {
   const dispatch = useDispatch()
@@ -25,4 +24,4 @@ export const useBreadcrumb = (name: string = 'View All') => {
       dispatch(set_breadcrumb({ show: false, name: '' }))
     }
   }, [])
-};
+}

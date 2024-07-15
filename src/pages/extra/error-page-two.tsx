@@ -1,13 +1,13 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap'
 
 // next link
-import Link from "next/link";
+import Link from 'next/link'
 
 //function
-import { generateImgPath } from "../../StaticData/data";
+import { generateImgPath } from '../../StaticData/data'
 
 const ErrorPage2 = () => {
   return (
@@ -15,13 +15,11 @@ const ErrorPage2 = () => {
       <div
         className="section-padding vh-100 image-flip-rtl"
         style={{
-          backgroundImage: `url(${generateImgPath(
-            "/assets/images/pages/404-two.webp"
-          )})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          position: "relative",
-          minHeight: "500px",
+          backgroundImage: `url(${generateImgPath('/assets/images/pages/404-two.webp')})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          position: 'relative',
+          minHeight: '500px',
         }}
       >
         <Container className="h-100">
@@ -34,9 +32,7 @@ const ErrorPage2 = () => {
                 loading="lazy"
                 className="mb-5"
               />
-              <h4 className="fw-bold text-center">
-                ohhh no..! you lost in imagination.
-              </h4>
+              <h4 className="fw-bold text-center">ohhh no..! you lost in imagination.</h4>
               <p className="text-center">
                 we are sorry, but the page you are looking for doesn’t exist.
               </p>
@@ -54,8 +50,8 @@ const ErrorPage2 = () => {
         </Container>
       </div>
     </>
-  );
-};
+  )
+}
 
 ErrorPage2.layout = 'Blank'
-export default ErrorPage2;
+export default ErrorPage2

@@ -1,27 +1,24 @@
-import { Fragment, memo } from "react";
+import { Fragment, memo } from 'react'
 
 //react bootstrap
-import { Breadcrumb, Container, Row, Col } from "react-bootstrap";
+import { Breadcrumb, Container, Row, Col } from 'react-bootstrap'
 
 //function
-import { generateImgPath } from "../StaticData/data";
+import { generateImgPath } from '../StaticData/data'
 
 //react-redux
-import { useSelector } from "react-redux";
-import { getBreadcrumb } from "@/store/streamit/selectors";
+import { useSelector } from 'react-redux'
+import { getBreadcrumb } from '@/store/streamit/selectors'
 
 //img
-const imagePath = generateImgPath("/assets/images/pages/01.webp");
+const imagePath = generateImgPath('/assets/images/pages/01.webp')
 
 const BreadCrumbWidget = memo(() => {
   const breadcrumb = useSelector(getBreadcrumb)
   return (
     <>
-      {breadcrumb.show ?
-        <div
-          className="iq-breadcrumb"
-          style={{ backgroundImage: `url(${imagePath})` }}
-        >
+      {breadcrumb.show ? (
+        <div className="iq-breadcrumb" style={{ backgroundImage: `url(${imagePath})` }}>
           <Container fluid>
             <Row className="align-items-center">
               <Col sm="12">
@@ -30,7 +27,7 @@ const BreadCrumbWidget = memo(() => {
                   <Breadcrumb
                     className="main-bg"
                     listProps={{
-                      className: "text-center justify-content-center",
+                      className: 'text-center justify-content-center',
                     }}
                   >
                     <Breadcrumb.Item>Home</Breadcrumb.Item>
@@ -40,10 +37,13 @@ const BreadCrumbWidget = memo(() => {
               </Col>
             </Row>
           </Container>
-        </div> : ''}
+        </div>
+      ) : (
+        ''
+      )}
     </>
-  );
-});
+  )
+})
 
-BreadCrumbWidget.displayName = "BreadCrumbWidget";
-export default BreadCrumbWidget;
+BreadCrumbWidget.displayName = 'BreadCrumbWidget'
+export default BreadCrumbWidget

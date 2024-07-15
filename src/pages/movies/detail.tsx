@@ -1,105 +1,104 @@
-import React, { memo } from "react";
+import React, { memo } from 'react'
 
 //react-bootstrap
-import { Row, Col, Container, Nav, Tab, Form } from "react-bootstrap";
+import { Row, Col, Container, Nav, Tab, Form } from 'react-bootstrap'
 
 //react-router-dom
 import Link from 'next/link'
 
 //components
-import ReviewComponent from "@/components/ReviewComponent";
-import Sources from "@/components/Sources";
-import FsLightBox from "@/components/fslight-box";
-import RatingStar from "@/components/rating-star";
-import VideoJS from "@/components/plugins/VideoJs";
+import ReviewComponent from '@/components/ReviewComponent'
+import Sources from '@/components/Sources'
+import FsLightBox from '@/components/fslight-box'
+import RatingStar from '@/components/rating-star'
+import VideoJS from '@/components/plugins/VideoJs'
 
 //function
-import { generateImgPath } from "@/StaticData/data";
+import { generateImgPath } from '@/StaticData/data'
 
 //utilites
-import { useEnterExit } from "@/utilities/usePage";
+import { useEnterExit } from '@/utilities/usePage'
 
 //swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
 
 const MoviesDetail = memo(() => {
-
   // date, type
   const shows = {
     id: 1,
-    slug: "zombie-world",
-    thumbnail: generateImgPath("/assets/images/genre/01.webp"),
-    title: "ZOMBIE ISLAND",
+    slug: 'zombie-world',
+    thumbnail: generateImgPath('/assets/images/genre/01.webp'),
+    title: 'ZOMBIE ISLAND',
     detail:
       "Zombie Island is a 1998 direct-to-video animated comedy horror film based on Hanna-Barbera's Scooby-Doo Saturday-morning cartoons. In the film, Shaggy, Scooby, Fred, Velma, and Daphne reunite after a year-long hiatus from Mystery, Inc. to investigate a bayou island said to be haunted by the ghost of the pirate Morgan Moonscar. The film was directed by Jim Stenstrum, from a screenplay by Glenn Leopold.",
-    season_type: "2 Season",
-    certificate: "Adventure",
+    season_type: '2 Season',
+    certificate: 'Adventure',
     rating: 4.5,
     likes: 9,
-    rating_from: "Imdb",
-    geners: ["action", "adventure", "drama"],
-    tags: ["brother", "brother-relationship", "kings", "vikings"],
-    video_link: "",
-    video_type: "video",
+    rating_from: 'Imdb',
+    geners: ['action', 'adventure', 'drama'],
+    tags: ['brother', 'brother-relationship', 'kings', 'vikings'],
+    video_link: '',
+    video_type: 'video',
     is_restricted: false,
 
     cast: [
       {
-        title: "James Chinlund",
-        thumbnail: generateImgPath("/assets/images/genre/g1.webp"),
-        as: "As James",
+        title: 'James Chinlund',
+        thumbnail: generateImgPath('/assets/images/genre/g1.webp'),
+        as: 'As James',
       },
       {
-        title: "James Earl Jones",
-        thumbnail: generateImgPath("/assets/images/genre/g2.webp"),
-        as: "As Jones",
+        title: 'James Earl Jones',
+        thumbnail: generateImgPath('/assets/images/genre/g2.webp'),
+        as: 'As Jones',
       },
     ],
     crew: [
       {
-        title: "Jeff Nathanson ",
-        thumbnail: generateImgPath("/assets/images/genre/g3.webp"),
-        as: "Writing",
+        title: 'Jeff Nathanson ',
+        thumbnail: generateImgPath('/assets/images/genre/g3.webp'),
+        as: 'Writing',
       },
       {
-        title: " Irene Mecchi ",
-        thumbnail: generateImgPath("/assets/images/genre/g5.webp"),
-        as: "Writing",
+        title: ' Irene Mecchi ',
+        thumbnail: generateImgPath('/assets/images/genre/g5.webp'),
+        as: 'Writing',
       },
       {
-        title: " Karen Gilchrist ",
-        thumbnail: generateImgPath("/assets/images/genre/g4.webp"),
-        as: "Production",
+        title: ' Karen Gilchrist ',
+        thumbnail: generateImgPath('/assets/images/genre/g4.webp'),
+        as: 'Production',
       },
     ],
-    created_by_username: "Admin",
-    created_at: "Feb 2019",
-    ranking: "#1 in Series Today ",
-    date: "Nov 2020",
-  };
+    created_by_username: 'Admin',
+    created_at: 'Feb 2019',
+    ranking: '#1 in Series Today ',
+    date: 'Nov 2020',
+  }
 
-  useEnterExit();
+  useEnterExit()
 
-  const playerRef = React.useRef(null);
+  const playerRef = React.useRef(null)
 
   const videoJsOptions = {
     autoplay: false,
     controls: true,
     responsive: true,
-    techOrder: ["youtube"],
+    techOrder: ['youtube'],
     sources: [
       {
-        src: "https://www.youtube.com/watch?v=QCGq1epI9pQ",
-        type: "video/youtube",
+        src: 'https://www.youtube.com/watch?v=QCGq1epI9pQ',
+        type: 'video/youtube',
       },
     ],
     youtube: { iv_load_policy: 1 },
-  };
+  }
 
-  const handlePlayerReady = (player:any) => {
-    playerRef.current = player;
-  };
+  const handlePlayerReady = (player: any) => {
+    playerRef.current = player
+  }
 
   return (
     <>
@@ -126,35 +125,24 @@ const MoviesDetail = memo(() => {
                         {shows.title}
                       </h2>
                       <div className="slider-ratting d-flex align-items-center ms-lg-3 ms-0">
-                        <RatingStar
-                          count={4}
-                          count1={1}
-                          starColor="text-warning"
-                        />
-                        <span className="text-white ms-2">
-                          {shows.rating} (imdb)
-                        </span>
+                        <RatingStar count={4} count1={1} starColor="text-warning" />
+                        <span className="text-white ms-2">{shows.rating} (imdb)</span>
                       </div>
                     </div>
                     <ul className="p-0 mt-2 list-inline d-flex flex-wrap movie-tag">
                       {shows.geners.map((item, index) => {
                         return (
                           <li key={index} className="trending-list">
-                            <Link
-                              href="/view-all"
-                              className="text-primary text-capitalize"
-                            >
+                            <Link href="/view-all" className="text-primary text-capitalize">
                               {item}
                             </Link>
                           </li>
-                        );
+                        )
                       })}
                     </ul>
                     <div className="d-flex flex-wrap align-items-center text-white text-detail flex-wrap mb-4">
                       <span className="badge bg-secondary">Horror</span>
-                      <span className="ms-3 font-Weight-500 genres-info me-2">
-                        1hr : 48mins{" "}
-                      </span>
+                      <span className="ms-3 font-Weight-500 genres-info me-2">1hr : 48mins </span>
                       <span className="trending-year trending-year-list font-Weight-500 genres-info">
                         {shows.created_at}
                       </span>
@@ -211,10 +199,7 @@ const MoviesDetail = memo(() => {
                         </li>
                       </ul>
                       <div className="movie-detail-select">
-                        <Form.Select
-                          name="movieselect"
-                          className="form-select "
-                        >
+                        <Form.Select name="movieselect" className="form-select ">
                           <option value="1">Playlist</option>
                           <option value="2">Zombie Island</option>
                           <option value="3">Sand Dust</option>
@@ -224,20 +209,17 @@ const MoviesDetail = memo(() => {
                     </div>
                     <ul className="iq-blogtag list-unstyled d-flex flex-wrap align-items-center gap-3 p-0">
                       <li className="iq-tag-title text-primary mb-0">
-                        <i className="fa fa-tags" aria-hidden="true"></i>Tags:{" "}
+                        <i className="fa fa-tags" aria-hidden="true"></i>Tags:{' '}
                       </li>
                       {shows.tags.map((item, index) => {
                         return (
                           <li key={index}>
-                            <Link
-                              href="/view-all"
-                              className="title text-capitalize"
-                            >
+                            <Link href="/view-all" className="title text-capitalize">
                               {item}
                             </Link>
                             <span className="text-secondary">,</span>
                           </li>
-                        );
+                        )
                       })}
                     </ul>
                   </Col>
@@ -420,7 +402,7 @@ const MoviesDetail = memo(() => {
                             </Col>
                           </Row>
                         </SwiperSlide>
-                      );
+                      )
                     })}
                   </Swiper>
                 </Tab.Pane>
@@ -482,7 +464,7 @@ const MoviesDetail = memo(() => {
                             </div>
                           </Row>
                         </SwiperSlide>
-                      );
+                      )
                     })}
                   </Swiper>
                 </Tab.Pane>
@@ -492,8 +474,8 @@ const MoviesDetail = memo(() => {
         </Container>
       </div>
     </>
-  );
-});
+  )
+})
 
-MoviesDetail.displayName = "MoviesDetail";
-export default MoviesDetail;
+MoviesDetail.displayName = 'MoviesDetail'
+export default MoviesDetail

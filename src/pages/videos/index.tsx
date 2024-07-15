@@ -1,15 +1,15 @@
-import { Fragment } from "react";
+import { Fragment } from 'react'
 
 //hero-slider
-import VideoHeroSlider from "../../components/slider/VideoHeroSlider";
+import VideoHeroSlider from '../../components/slider/VideoHeroSlider'
 
 //sections
-import PopularVideos from "../../components/sections/PopularVideos";
-import SpecialsLatestVideos from "../../components/sections/Specials&LatestVideos";
-import VideosRecommendedForYou from "../../components/sections/VideosRecommendedForYou";
+import PopularVideos from '../../components/sections/PopularVideos'
+import SpecialsLatestVideos from '../../components/sections/Specials&LatestVideos'
+import VideosRecommendedForYou from '../../components/sections/VideosRecommendedForYou'
 
 //custom hook
-import { useEnterExit } from "@/utilities/usePage";
+import { useEnterExit } from '@/utilities/usePage'
 
 const VideosPage = () => {
   useEnterExit()
@@ -20,8 +20,8 @@ const VideosPage = () => {
       <SpecialsLatestVideos />
       <VideosRecommendedForYou />
     </>
-  );
-};
+  )
+}
 
-VideosPage.DisplayName = VideosPage;
-export default VideosPage;
+VideosPage.DisplayName = VideosPage
+export default VideosPage

@@ -1,48 +1,48 @@
-import { memo } from "react";
+import { memo } from 'react'
 
 //react bootstrap
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap'
 
 //components
-import ProductCard from "@/components/merchandise/product-card";
-import ProductDetailCard from "@/components/cards/ProductDetailCard";
+import ProductCard from '@/components/merchandise/product-card'
+import ProductDetailCard from '@/components/cards/ProductDetailCard'
 
 //static data
-import { newProduct, products } from "@/StaticData/shop";
+import { newProduct, products } from '@/StaticData/shop'
 
 // swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
 
 // Redux Selector / Action
-import { useSelector } from "react-redux";
-import { theme_scheme_direction } from "@/store/setting/selectors";
+import { useSelector } from 'react-redux'
+import { theme_scheme_direction } from '@/store/setting/selectors'
 
 const ProductDetail = memo(() => {
-  const themeSchemeDirection = useSelector(theme_scheme_direction);
-  const product = "believe-mask";
-  const productDetail = products.find((item) => item.slug === product);
+  const themeSchemeDirection = useSelector(theme_scheme_direction)
+  const product = 'believe-mask'
+  const productDetail = products.find(item => item.slug === product)
   return (
     <>
-       <div className="site-main">
+      <div className="site-main">
         <Container>
           <Row>
             <Col lg="12">
               {productDetail && (
-              <ProductDetailCard
-                product_name={productDetail.product_name}
-                description={productDetail.descriptio}
-                is_new={productDetail.is_new}
-                is_sale={productDetail.is_sale}
-                price={productDetail.price}
-                final_price={productDetail.final_price}
-                tags={productDetail.tags}
-                additional-info={productDetail.additional_info}
-                sku={productDetail.sku}
-                category={productDetail.category}
-                additional_info={productDetail.additional_info}
-                thumbnail={productDetail.thumbnail}
-              />
+                <ProductDetailCard
+                  product_name={productDetail.product_name}
+                  description={productDetail.descriptio}
+                  is_new={productDetail.is_new}
+                  is_sale={productDetail.is_sale}
+                  price={productDetail.price}
+                  final_price={productDetail.final_price}
+                  tags={productDetail.tags}
+                  additional-info={productDetail.additional_info}
+                  sku={productDetail.sku}
+                  category={productDetail.category}
+                  additional_info={productDetail.additional_info}
+                  thumbnail={productDetail.thumbnail}
+                />
               )}
             </Col>
           </Row>
@@ -54,12 +54,12 @@ const ProductDetail = memo(() => {
                 <h4>Related Products</h4>
               </div>
               <Swiper
-              key={String(themeSchemeDirection)}
-              dir={String(themeSchemeDirection)}
+                key={String(themeSchemeDirection)}
+                dir={String(themeSchemeDirection)}
                 slidesPerView={4}
                 navigation={{
-                  prevEl: ".swiper-button-prev",
-                  nextEl: ".swiper-button-next",
+                  prevEl: '.swiper-button-prev',
+                  nextEl: '.swiper-button-next',
                 }}
                 loop={true}
                 modules={[Navigation]}
@@ -92,7 +92,7 @@ const ProductDetail = memo(() => {
                   disableOnInteraction: true,
                 }}
               >
-                {newProduct.map((item:any, index:any) => {
+                {newProduct.map((item: any, index: any) => {
                   return (
                     <SwiperSlide tag="li" key={index}>
                       <ProductCard
@@ -107,7 +107,7 @@ const ProductDetail = memo(() => {
                         slug={item.slug}
                       />
                     </SwiperSlide>
-                  );
+                  )
                 })}
               </Swiper>
             </div>
@@ -115,8 +115,8 @@ const ProductDetail = memo(() => {
         </div>
       </div>
     </>
-  );
-});
+  )
+})
 
-ProductDetail.displayName = "ProductDetail";
-export default ProductDetail;
+ProductDetail.displayName = 'ProductDetail'
+export default ProductDetail

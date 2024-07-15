@@ -5,7 +5,7 @@
     line-height: 1rem;
     font-weight: $font-weight-medium;
     border-radius: 0.1875rem;
-    background: rgba(var(--bs-primary-rgb), .8);
+    background: rgba(var(--bs-primary-rgb), 0.8);
     border: 0.063em solid var(--bs-primary);
     transition: color 0.3s ease;
     transform: perspective(0.063em) translateZ(0);
@@ -27,7 +27,7 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: -1;
       top: 0;
@@ -67,10 +67,10 @@
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .iq-button {
     .btn {
-      padding: .75rem 1.5rem;
+      padding: 0.75rem 1.5rem;
     }
   }
 }

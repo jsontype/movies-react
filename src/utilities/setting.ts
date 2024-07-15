@@ -5,12 +5,12 @@ export const updateBodyClass = (choices, value) => {
   if (value !== '') {
     // remove class from choices
     if (choices.length > 0) {
-      choices.forEach((other) => {
+      choices.forEach(other => {
         removeClass('body', other)
-      });
+      })
     }
     if (_.isArray(value)) {
-      _.forEach(value, (val) => {
+      _.forEach(value, val => {
         addClass('body', val)
       })
     } else {
@@ -19,11 +19,11 @@ export const updateBodyClass = (choices, value) => {
   }
 }
 
-export const updateHtmlAttr = (value) => {
+export const updateHtmlAttr = value => {
   // set direction
   setAttr('html', value)
 }
-export const updateTitle = (value) => {
+export const updateTitle = value => {
   // set title
   setContent('[data-setting="app_name"]', value)
 }
@@ -31,14 +31,14 @@ export const updateTitle = (value) => {
 export const updateHtmlClass = (choices, value) => {
   // remove class from choices
   if (choices.length > 0) {
-    choices.forEach((other) => {
+    choices.forEach(other => {
       removeClass('html', other)
-    });
+    })
   }
   addClass('html', value)
 }
 
-export const updateDomValueBySetting = (setting) => {
+export const updateDomValueBySetting = setting => {
   updateHtmlAttr({ prop: 'dir', value: setting.theme_scheme_direction.value })
   updateHtmlAttr({ prop: 'data-bs-theme', value: setting.theme_color.value })
   updateTitle(setting.app_name.value)
@@ -50,32 +50,34 @@ export const updateStorage = (storage, key, value) => {
       case 'localStorage':
         sessionStorage.removeItem(key)
         localStorage.setItem(key, JSON.stringify(value))
-        break;
+        break
 
       case 'sessionStorage':
         localStorage.removeItem(key)
         sessionStorage.setItem(key, JSON.stringify(value))
-        break;
+        break
 
       default:
         localStorage.removeItem(key)
         sessionStorage.removeItem(key)
         localStorage.setItem(key, 'none')
         sessionStorage.setItem(key, 'none')
-        break;
+        break
     }
   }
 }
 
-export const getStorage = (key) => {
+export const getStorage = key => {
   if (localStorage.getItem(key) === 'none' || sessionStorage.getItem(key) === 'none') return 'none'
-  if ((localStorage.getItem(key) !== null && localStorage.getItem(key) !== '') ||
-    (sessionStorage.getItem(key) !== null && sessionStorage.getItem(key) !== '')) {
+  if (
+    (localStorage.getItem(key) !== null && localStorage.getItem(key) !== '') ||
+    (sessionStorage.getItem(key) !== null && sessionStorage.getItem(key) !== '')
+  ) {
     let value = localStorage.getItem(key)
     if (value === null) value = sessionStorage.getItem(key)
     if (value !== null) {
       try {
-        return JSON.parse(value);
+        return JSON.parse(value)
       } catch (e) {
         return value
       }

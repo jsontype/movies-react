@@ -1,4 +1,4 @@
-import { Fragment, memo } from "react";
+import { Fragment, memo } from 'react'
 
 interface ProfileCardProps {
   designation?: string
@@ -17,8 +17,8 @@ const ProfileCard = memo(({ designation, name, image }: ProfileCardProps) => {
         <h4 className="mb-0">{name}</h4>
       </div>
     </>
-  );
-});
+  )
+})
 
-ProfileCard.displayName = "ProfileCard";
-export default ProfileCard;
+ProfileCard.displayName = 'ProfileCard'
+export default ProfileCard

@@ -1,6 +1,6 @@
-import { ReactNode, memo } from "react";
-import { useDispatch } from "react-redux";
-import SettingAction from "../../../store/setting/actions";
+import { ReactNode, memo } from 'react'
+import { useDispatch } from 'react-redux'
+import SettingAction from '../../../store/setting/actions'
 
 // interface Props{
 //   value?:any
@@ -11,10 +11,10 @@ import SettingAction from "../../../store/setting/actions";
 //   label?:string
 //   className?:string
 // }
-interface Props{
+interface Props {
   btnName: string | undefined
-  className?: string 
-  value?: string 
+  className?: string
+  value?: string
   id?: string
   children?: ReactNode
   labelclassName?: string
@@ -23,35 +23,34 @@ interface Props{
   defaultChecked?: any
 }
 
-const RadioBtn = memo((props:Props) => {
-  const dispatch = useDispatch();
-  const radioCheckValue = (selector:any, value:any) => {
+const RadioBtn = memo((props: Props) => {
+  const dispatch = useDispatch()
+  const radioCheckValue = (selector: any, value: any) => {
     if (selector === value) {
-      return true;
+      return true
     }
-    return false;
-  };
+    return false
+  }
   return (
     <div className={`text-center w-100`}>
       <input
         type="radio"
         value={props.value}
-        className={"btn-check"}
+        className={'btn-check'}
         name={props.btnName}
         id={props.id}
         autoComplete="off"
         defaultChecked={radioCheckValue(props.defaultChecked, props.value)}
-        onClick={() => dispatch(SettingAction[props.btnName as keyof typeof SettingAction](props.value))}
+        onClick={() =>
+          dispatch(SettingAction[props.btnName as keyof typeof SettingAction](props.value))
+        }
       />
-      <label
-        className={"btn dir-btn cutomizer-button w-100"}
-        htmlFor={props.id}
-      >
+      <label className={'btn dir-btn cutomizer-button w-100'} htmlFor={props.id}>
         {props.children}
       </label>
     </div>
-  );
-});
+  )
+})
 
-RadioBtn.displayName = "RadioBtn";
-export default RadioBtn;
+RadioBtn.displayName = 'RadioBtn'
+export default RadioBtn

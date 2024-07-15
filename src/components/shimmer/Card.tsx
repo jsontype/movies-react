@@ -1,40 +1,33 @@
-import React, { memo, Fragment } from "react";
+import React, { memo, Fragment } from 'react'
 
 // react-bootsrap
-import { Container, Row, Col, Placeholder } from "react-bootstrap";
+import { Container, Row, Col, Placeholder } from 'react-bootstrap'
 
 // components
 // import SectionHeader from "../../sections/section-header";
 
 const shimmerCardStyle = {
-  backgroundColor: "#1e1e1e",
-  height: "11.5rem",
-  width: "100%",
-  padding: "1rem",
-};
-
-type CustomStyle = {
-  "--bs-gutter-x"?: string;
-};
-
-interface Props {
-  style?: CustomStyle;
+  backgroundColor: '#1e1e1e',
+  height: '11.5rem',
+  width: '100%',
+  padding: '1rem',
 }
 
-const CardShimmer = memo((props:Props) => {
+type CustomStyle = {
+  '--bs-gutter-x'?: string
+}
+
+interface Props {
+  style?: CustomStyle
+}
+
+const CardShimmer = memo((props: Props) => {
   return (
     <>
-      <Container fluid style={{ paddingBottom: "6.25rem" }}>
-        <Row style={{ paddingBottom: "1.5em" }}>
-          {/* <SectionHeader title={props.title} /> */}
-        </Row>
-        <Row style={{ "--bs-gutter-x": "2em", ...(props.style || {}) } as React.CSSProperties}>
-          <Col
-            sm={12}
-            md={6}
-            lg={3}
-            className="d-none d-lg-block d-md-block mb-4"
-          >
+      <Container fluid style={{ paddingBottom: '6.25rem' }}>
+        <Row style={{ paddingBottom: '1.5em' }}>{/* <SectionHeader title={props.title} /> */}</Row>
+        <Row style={{ '--bs-gutter-x': '2em', ...(props.style || {}) } as React.CSSProperties}>
+          <Col sm={12} md={6} lg={3} className="d-none d-lg-block d-md-block mb-4">
             <div style={shimmerCardStyle}>
               <Placeholder as="p" animation="glow" className="mt-3 ms-2 mb-2">
                 <Placeholder xs={8} />
@@ -43,20 +36,11 @@ const CardShimmer = memo((props:Props) => {
                 <Placeholder xs={3} />
               </Placeholder>
               <Placeholder as="p" animation="glow" className="mt-4 ms-2">
-                <Placeholder
-                  bg=" btn btn-hover"
-                  style={{ height: 30, width: 120 }}
-                />
+                <Placeholder bg=" btn btn-hover" style={{ height: 30, width: 120 }} />
               </Placeholder>
             </div>
           </Col>
-          <Col
-            as="li"
-            sm={12}
-            md={6}
-            lg={3}
-            className="d-none d-lg-block d-md-block"
-          >
+          <Col as="li" sm={12} md={6} lg={3} className="d-none d-lg-block d-md-block">
             <div style={shimmerCardStyle}>
               <Placeholder as="p" animation="glow" className="mt-3 ms-2 mb-2">
                 <Placeholder xs={8} />
@@ -65,20 +49,11 @@ const CardShimmer = memo((props:Props) => {
                 <Placeholder xs={3} />
               </Placeholder>
               <Placeholder as="p" animation="glow" className="mt-4 ms-2">
-                <Placeholder
-                  bg=" btn btn-hover"
-                  style={{ height: 30, width: 120 }}
-                />
+                <Placeholder bg=" btn btn-hover" style={{ height: 30, width: 120 }} />
               </Placeholder>
             </div>
           </Col>
-          <Col
-            as="li"
-            sm={12}
-            md={6}
-            lg={3}
-            className="d-none d-lg-block d-md-block"
-          >
+          <Col as="li" sm={12} md={6} lg={3} className="d-none d-lg-block d-md-block">
             <div style={shimmerCardStyle}>
               <Placeholder as="p" animation="glow" className="mt-3 ms-2 mb-2">
                 <Placeholder xs={8} />
@@ -87,20 +62,11 @@ const CardShimmer = memo((props:Props) => {
                 <Placeholder xs={3} />
               </Placeholder>
               <Placeholder as="p" animation="glow" className="mt-4 ms-2">
-                <Placeholder
-                  bg=" btn btn-hover"
-                  style={{ height: 30, width: 120 }}
-                />
+                <Placeholder bg=" btn btn-hover" style={{ height: 30, width: 120 }} />
               </Placeholder>
             </div>
           </Col>
-          <Col
-            as="li"
-            sm={12}
-            md={6}
-            lg={3}
-            className="d-none d-lg-block d-md-block"
-          >
+          <Col as="li" sm={12} md={6} lg={3} className="d-none d-lg-block d-md-block">
             <div style={shimmerCardStyle}>
               <Placeholder as="p" animation="glow" className="mt-3 ms-2 mb-2">
                 <Placeholder xs={8} />
@@ -109,18 +75,15 @@ const CardShimmer = memo((props:Props) => {
                 <Placeholder xs={3} />
               </Placeholder>
               <Placeholder as="p" animation="glow" className="mt-4 ms-2">
-                <Placeholder
-                  bg=" btn btn-hover"
-                  style={{ height: 30, width: 120 }}
-                />
+                <Placeholder bg=" btn btn-hover" style={{ height: 30, width: 120 }} />
               </Placeholder>
             </div>
           </Col>
         </Row>
       </Container>
     </>
-  );
-});
+  )
+})
 
-CardShimmer.displayName = "CardShimmer";
-export default CardShimmer;
+CardShimmer.displayName = 'CardShimmer'
+export default CardShimmer

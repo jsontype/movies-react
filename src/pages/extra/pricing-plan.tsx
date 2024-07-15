@@ -1,13 +1,13 @@
-import { Fragment, memo } from "react"
+import { Fragment, memo } from 'react'
 
 // react-bootstrap
-import { Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Row } from 'react-bootstrap'
 
 // next link
-import Link from "next/link";
+import Link from 'next/link'
 
 //custom hook
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const PricingPage = memo(() => {
   useBreadcrumb('Pricing Plan')
@@ -142,6 +142,5 @@ const PricingPage = memo(() => {
   )
 })
 
-PricingPage.displayName = "PricingPage"
-export default PricingPage;
-
+PricingPage.displayName = 'PricingPage'
+export default PricingPage

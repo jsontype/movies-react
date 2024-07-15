@@ -1,19 +1,19 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 // react-bootstrap
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 // components
-import CastCard from "../../components/cards/CastCard";
+import CastCard from '../../components/cards/CastCard'
 
 // data
-import { cast } from "../../StaticData/data";
+import { cast } from '../../StaticData/data'
 
 //custom hooks
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 export const CastPage = memo(() => {
   useBreadcrumb('Cast')
@@ -34,20 +34,16 @@ export const CastPage = memo(() => {
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
-                <span className="button-text">load more</span>{" "}
-                <i className="fa-solid fa-play"></i>
+              <Link href="#" className="btn text-uppercase position-relative">
+                <span className="button-text">load more</span> <i className="fa-solid fa-play"></i>
               </Link>
             </div>
           </div>
         </Container>
       </section>
     </>
-  );
-});
+  )
+})
 
-CastPage.displayName = "CastPage";
-export default CastPage;
+CastPage.displayName = 'CastPage'
+export default CastPage

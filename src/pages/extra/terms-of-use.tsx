@@ -14,10 +14,35 @@ const TermsofUse = memo(() => {
         <Container>
           <div className="title-box">
             <h4 className="mb-4">1. Description of Service and Acceptance of Terms of Use</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper consequat justo, in posuere nisi efficitur sed.</p>
-            <p>Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem</p>
-            <p className='mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim,
+              placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi
+              ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id
+              arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in.
+              Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus
+              finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero
+              mauris, dapibus non aliquet viverra, elementum eget lorem
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim,
+              placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi
+              ullamcorper consequat justo, in posuere nisi efficitur sed.
+            </p>
+            <p>
+              Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac
+              finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros
+              elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec
+              dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem
+            </p>
+            <p className="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim,
+              placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi
+              ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id
+              arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in.
+              Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus
+              finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero
+              mauris, dapibus non aliquet viverra, elementum eget lorem
+            </p>
           </div>
           <div className="title-box">
             <h4 className="mb-4">The Streamit website works best with:</h4>
@@ -30,21 +55,62 @@ const TermsofUse = memo(() => {
           </div>
           <div className="title-box">
             <h4 className="mb-4">2. Subscription Services</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper consequat justo, in posuere nisi efficitur sed.</p>
-            <p>Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper consequat justo, in posuere nisi efficitur sed.</p>
-            <p className='mb-0'>Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim,
+              placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi
+              ullamcorper consequat justo, in posuere nisi efficitur sed.
+            </p>
+            <p>
+              Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac
+              finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros
+              elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec
+              dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat
+              diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper
+              consequat justo, in posuere nisi efficitur sed.
+            </p>
+            <p className="mb-0">
+              Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac
+              finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros
+              elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec
+              dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem
+            </p>
           </div>
           <div className="title-box">
             <h4 className="mb-4">3. Third Party Payment Gateway – Financial Information</h4>
-            <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem</p>
+            <p className="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim,
+              placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi
+              ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id
+              arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in.
+              Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus
+              finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero
+              mauris, dapibus non aliquet viverra, elementum eget lorem
+            </p>
           </div>
           <div className="title-box">
             <h4 className="mb-4">4. Disclosure Children’s Privacy</h4>
-            <p className='mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem</p>
+            <p className="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim,
+              placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi
+              ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id
+              arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in.
+              Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus
+              finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero
+              mauris, dapibus non aliquet viverra, elementum eget lorem
+            </p>
           </div>
           <div className="title-box">
             <h4 className="mb-4">5. Data transfer, storage & processing globally</h4>
-            <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim, placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in. Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero mauris, dapibus non aliquet viverra, elementum eget lorem</p>
+            <p className="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl dignissim,
+              placerat diam ac, egestas ante. Morbi varius quis orci feugiat hendrerit. Morbi
+              ullamcorper consequat justo, in posuere nisi efficitur sed. Vestibulum semper dolor id
+              arcu finibus volutpat. Integer condimentum ex tellus, ac finibus metus sodales in.
+              Proin blandit congue ipsum ac dapibus. Integer blandit eros elit, vel luctus tellus
+              finibus in. Aliquam non urna ut leo vestibulum mattis ac nec dolor. Nulla libero
+              mauris, dapibus non aliquet viverra, elementum eget lorem
+            </p>
           </div>
         </Container>
       </div>

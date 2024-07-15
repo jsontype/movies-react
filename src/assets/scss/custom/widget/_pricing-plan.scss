@@ -47,12 +47,12 @@
     .btn {
       width: 100%;
       font-weight: $font-weight-normal;
-      letter-spacing: .0625rem;
+      letter-spacing: 0.0625rem;
     }
   }
 
   &::after {
-    content: "";
+    content: '';
     background: linear-gradient(180deg, var(--bs-primary) 0, rgba(var(--bs-primary-rgb), 0) 100%);
     position: absolute;
     top: -0.125em;

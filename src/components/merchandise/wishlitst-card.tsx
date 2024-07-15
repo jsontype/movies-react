@@ -1,15 +1,15 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-router-dom
 // import { Link } from "react-router-dom";
-import Link from "next/link";
+import Link from 'next/link'
 
 interface Props {
-  thumbnail?: string,
-  product_name: string,
-  price: string,
-  final_price: string,
-  stockStatus: string,
+  thumbnail?: string
+  product_name: string
+  price: string
+  final_price: string
+  stockStatus: string
 }
 
 const WishlistCard = memo((props: Props) => {
@@ -27,10 +27,7 @@ const WishlistCard = memo((props: Props) => {
           <Link href="/merchandise/product-detail">
             <img src={props.thumbnail} className="img-fluid" loading="lazy" />
           </Link>
-          <Link
-            className="product-title ms-4"
-            href="/merchandise/product-detail"
-          >
+          <Link className="product-title ms-4" href="/merchandise/product-detail">
             {props.product_name}
           </Link>
         </td>
@@ -43,18 +40,15 @@ const WishlistCard = memo((props: Props) => {
           <span className="wishlist-in-stock">{props.stockStatus}</span>
         </td>
         <td className="product-add-to-cart">
-          <Link
-            className="iq-button btn btn-hover"
-            href="/merchandise/product-detail"
-          >
-            {" "}
-            View Product{" "}
+          <Link className="iq-button btn btn-hover" href="/merchandise/product-detail">
+            {' '}
+            View Product{' '}
           </Link>
         </td>
       </tr>
     </>
-  );
-});
+  )
+})
 
 WishlistCard.displayName = 'WishlistCard'
-export default WishlistCard;
+export default WishlistCard

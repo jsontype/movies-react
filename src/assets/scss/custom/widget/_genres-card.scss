@@ -3,11 +3,12 @@
     backface-visibility: hidden;
 
     .img-box {
-      background: linear-gradient(0deg, rgba(12, 11, 17, 0.25) 0%, rgba(12, 11, 17, 0.25) 100%), linear-gradient(180deg, rgba(12, 11, 17, 0.00) 56%, rgba(12, 11, 17, 0.20) 100%);
+      background: linear-gradient(0deg, rgba(12, 11, 17, 0.25) 0%, rgba(12, 11, 17, 0.25) 100%),
+        linear-gradient(180deg, rgba(12, 11, 17, 0) 56%, rgba(12, 11, 17, 0.2) 100%);
 
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         top: 0;
         bottom: 0;
         left: 0;
@@ -40,7 +41,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 99;
 
     .iq-title {
@@ -59,10 +60,10 @@
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .geners-card {
     li.swiper-slide {
-      padding: 0 .4687rem;
+      padding: 0 0.4687rem;
     }
   }
 }

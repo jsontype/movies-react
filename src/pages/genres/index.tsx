@@ -1,19 +1,19 @@
-import { memo, Fragment } from "react";
+import { memo, Fragment } from 'react'
 
 //react-bootstrap
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 // components
-import GenersCard from "@/components/cards/GanresCard";
+import GenersCard from '@/components/cards/GanresCard'
 
 // data
-import { geners, tvShowGenres, videoGenres } from "@/StaticData/data";
+import { geners, tvShowGenres, videoGenres } from '@/StaticData/data'
 
 //custom hooks
-import { useBreadcrumb } from "@/utilities/usePage";
+import { useBreadcrumb } from '@/utilities/usePage'
 
 const GenresPage = memo(() => {
   useBreadcrumb('Genres')
@@ -38,10 +38,7 @@ const GenresPage = memo(() => {
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>
@@ -68,10 +65,7 @@ const GenresPage = memo(() => {
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>
@@ -98,10 +92,7 @@ const GenresPage = memo(() => {
           </Row>
           <div className="text-center">
             <div className="iq-button">
-              <Link
-                href="#"
-                className="btn text-uppercase position-relative"
-              >
+              <Link href="#" className="btn text-uppercase position-relative">
                 <span className="button-text">load more</span>
                 <i className="fa-solid fa-play"></i>
               </Link>
@@ -110,8 +101,8 @@ const GenresPage = memo(() => {
         </div>
       </section>
     </>
-  );
-});
+  )
+})
 
-GenresPage.displayName = "GenresPage";
-export default GenresPage;
+GenresPage.displayName = 'GenresPage'
+export default GenresPage

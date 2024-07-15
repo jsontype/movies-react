@@ -1,25 +1,20 @@
-import React, { memo } from "react";
+import React, { memo } from 'react'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //components
-import RecentPost from "./sidebar/RecentPost";
-import CategoriesWidget from "./sidebar/CategoriesWidget";
-import TagsWidget from "./sidebar/TagsWidget";
-import FollowUs from "./sidebar/FollowUs";
+import RecentPost from './sidebar/RecentPost'
+import CategoriesWidget from './sidebar/CategoriesWidget'
+import TagsWidget from './sidebar/TagsWidget'
+import FollowUs from './sidebar/FollowUs'
 
 const DetailMetaList = memo(() => {
   return (
     <>
       <div className="widget-area">
         <div id="search-2" className="widget widget_search">
-          <form
-            method="get"
-            className="search-form"
-            action="#"
-            autoComplete="off"
-          >
+          <form method="get" className="search-form" action="#" autoComplete="off">
             <div className="block-search_inside-wrapper position-relative d-flex">
               <input
                 type="search"
@@ -45,8 +40,8 @@ const DetailMetaList = memo(() => {
         </div>
       </div>
     </>
-  );
-});
+  )
+})
 
-DetailMetaList.displayName = "DetailMetaList";
-export default DetailMetaList;
+DetailMetaList.displayName = 'DetailMetaList'
+export default DetailMetaList

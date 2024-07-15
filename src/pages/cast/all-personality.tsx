@@ -87,9 +87,9 @@ const AllPersonality = memo(() => {
   useBreadcrumb('View All')
   return (
     <>
-      <div className='section-padding'>
+      <div className="section-padding">
         <Container fluid>
-          <Row >
+          <Row>
             <Col sm="12" className="my-4">
               <div className="d-flex align-items-center justify-content-between">
                 <h5 className="main-title text-capitalize mb-0">favourite-personality</h5>
@@ -101,8 +101,13 @@ const AllPersonality = memo(() => {
               {cast.map((item, index) => {
                 return (
                   <Col className="mb-4" key={index}>
-                    <div className='iq-cast'>
-                    <PersonalityCard image={item.thumbnail} title={item.name} category={item.category} categoryLink={''} />
+                    <div className="iq-cast">
+                      <PersonalityCard
+                        image={item.thumbnail}
+                        title={item.name}
+                        category={item.category}
+                        categoryLink={''}
+                      />
                     </div>
                   </Col>
                 )
@@ -115,5 +120,5 @@ const AllPersonality = memo(() => {
   )
 })
 
-AllPersonality.displayName = "AllPersonality"
+AllPersonality.displayName = 'AllPersonality'
 export default AllPersonality

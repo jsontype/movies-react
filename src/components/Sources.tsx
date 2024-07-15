@@ -1,13 +1,13 @@
 import React, { Fragment, memo } from 'react'
 
 //react-router-dom
-import Link from "next/link";
+import Link from 'next/link'
 
 const Sources = memo(() => {
   return (
     <>
-      <div className='source-list-content table-responsive'>
-        <table className='table custom-table'>
+      <div className="source-list-content table-responsive">
+        <table className="table custom-table">
           <thead>
             <tr>
               <th>Links</th>

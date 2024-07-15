@@ -34,8 +34,7 @@ header {
       li {
         > a {
           &::after {
-            background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right
-                  top, from(rgba(var(--bs-primary-rgb), 0)), to(rgba(var(--bs-primary-rgb), 0.3)));
+            background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(rgba(var(--bs-primary-rgb), 0)), to(rgba(var(--bs-primary-rgb), 0.3)));
             transform: translate3d(100%, 0, 0);
           }
 

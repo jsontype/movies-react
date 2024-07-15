@@ -1,71 +1,69 @@
-import React, { Fragment, memo, useState } from "react";
+import React, { Fragment, memo, useState } from 'react'
 
 //react bootstrap
-import {
-  Col, Container, Row, Nav, Tab, Button, Modal, Form,
-} from "react-bootstrap";
+import { Col, Container, Row, Nav, Tab, Button, Modal, Form } from 'react-bootstrap'
 
 //router
-import Link from "next/link";
+import Link from 'next/link'
 
 //utilites
-import { useEnterExit } from "../utilities/usePage";
+import { useEnterExit } from '../utilities/usePage'
 
 //function
-import { generateImgPath } from "../StaticData/data";
+import { generateImgPath } from '../StaticData/data'
 
 const PlaylistPage = memo(() => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
-  useEnterExit();
+  useEnterExit()
 
   const playlist = [
     {
-      image: generateImgPath("/assets/images/movies/playlist/01.webp"),
-      title: "Play List 1",
-      category: "Public",
-      views: "3 Views",
+      image: generateImgPath('/assets/images/movies/playlist/01.webp'),
+      title: 'Play List 1',
+      category: 'Public',
+      views: '3 Views',
     },
     {
-      image: generateImgPath("/assets/images/movies/playlist/02.webp"),
-      title: "Play List 2",
-      category: "Private",
-      views: "1 Views",
+      image: generateImgPath('/assets/images/movies/playlist/02.webp'),
+      title: 'Play List 2',
+      category: 'Private',
+      views: '1 Views',
     },
     {
-      image: generateImgPath("/assets/images/movies/playlist/03.webp"),
-      title: "Play List 3",
-      category: "Public",
-      views: "10 Views",
+      image: generateImgPath('/assets/images/movies/playlist/03.webp'),
+      title: 'Play List 3',
+      category: 'Public',
+      views: '10 Views',
     },
     {
-      image: generateImgPath("/assets/images/movies/playlist/04.webp"),
-      title: "Play List 4",
-      category: "Public",
-      views: "30 Views",
+      image: generateImgPath('/assets/images/movies/playlist/04.webp'),
+      title: 'Play List 4',
+      category: 'Public',
+      views: '30 Views',
     },
     {
-      image: generateImgPath("/assets/images/movies/playlist/05.webp"),
-      title: "Play List 5",
-      category: "Private",
-      views: "2 Views",
+      image: generateImgPath('/assets/images/movies/playlist/05.webp'),
+      title: 'Play List 5',
+      category: 'Private',
+      views: '2 Views',
     },
     {
-      image: generateImgPath("/assets/images/movies/playlist/06.webp"),
-      title: "Play List 6",
-      category: "Public",
-      views: "10 Views",
+      image: generateImgPath('/assets/images/movies/playlist/06.webp'),
+      title: 'Play List 6',
+      category: 'Public',
+      views: '10 Views',
     },
     {
-      image: generateImgPath("/assets/images/movies/playlist/07.webp"),
-      title: "Play List 7",
-      category: "Public",
-      views: "50 Views",
+      image: generateImgPath('/assets/images/movies/playlist/07.webp'),
+      title: 'Play List 7',
+      category: 'Public',
+      views: '50 Views',
     },
-  ];
+  ]
   return (
     <>
       <div className="section-padding-bottom">
@@ -82,19 +80,12 @@ const PlaylistPage = memo(() => {
                   <i className="fa-regular fa-pen-to-square"></i>
                 </div>
                 <div>
-                  <h6 className="font-size-18 text-capitalize text-white fw-500">
-                    admin
-                  </h6>
-                  <span className="font-size-14 text-white fw-500">
-                    admin@admin.com
-                  </span>
+                  <h6 className="font-size-18 text-capitalize text-white fw-500">admin</h6>
+                  <span className="font-size-14 text-white fw-500">admin@admin.com</span>
                 </div>
               </div>
               <div className="iq-button">
-                <Link
-                  href="/extra/pricing-plan"
-                  className="btn text-uppercase position-relative"
-                >
+                <Link href="/extra/pricing-plan" className="btn text-uppercase position-relative">
                   <span className="button-text">Subscription</span>
                   <i className="fa-solid fa-play"></i>
                 </Link>
@@ -107,10 +98,7 @@ const PlaylistPage = memo(() => {
             <Tab.Container defaultActiveKey="first">
               <Nav className="d-flex justify-content-center nav nav-pills tab-header">
                 <Nav className="" id="nav-tab" role="tablist">
-                  <Nav.Link
-                    eventKey="first"
-                    id="nav-playlist-tab"
-                  >
+                  <Nav.Link eventKey="first" id="nav-playlist-tab">
                     Playlist
                   </Nav.Link>
                   <Nav.Link
@@ -149,12 +137,10 @@ const PlaylistPage = memo(() => {
                 >
                   <div className="overflow-hidden animated fadeInUp">
                     <div className="d-flex align-items-center justify-content-between my-4">
-                      <h5 className="main-title text-capitalize mb-0">
-                        My playlist
-                      </h5>
+                      <h5 className="main-title text-capitalize mb-0">My playlist</h5>
                     </div>
                     <Row className="row-cols-1 row-cols-md-2 row-cols-lg-4">
-                      {playlist.map((item: any, index: any) => {
+                      {playlist.map((item, index) => {
                         return (
                           <Col className="mb-4" key={index}>
                             <div className="watchlist-warpper card-hover-style-two">
@@ -172,9 +158,7 @@ const PlaylistPage = memo(() => {
                                 </div>
                                 <div className="card-description">
                                   <h5 className="text-capitalize fw-500">
-                                    <Link href="/watchlist-detail">
-                                      {item.title}
-                                    </Link>
+                                    <Link href="/watchlist-detail">{item.title}</Link>
                                   </h5>
                                   <div className="d-flex align-items-center gap-3">
                                     <div className="d-flex align-items-center gap-1 font-size-12">
@@ -194,7 +178,7 @@ const PlaylistPage = memo(() => {
                               </div>
                             </div>
                           </Col>
-                        );
+                        )
                       })}
                     </Row>
                     <div className="text-center">
@@ -220,12 +204,10 @@ const PlaylistPage = memo(() => {
                 >
                   <div className="overflow-hidden">
                     <div className="d-flex align-items-center justify-content-between my-4">
-                      <h5 className="main-title text-capitalize mb-0">
-                        My Watchlist
-                      </h5>
+                      <h5 className="main-title text-capitalize mb-0">My Watchlist</h5>
                     </div>
                     <Row className="row-cols-1 row-cols-md-2 row-cols-lg-4">
-                      {playlist.slice(0, 4).map((item: any, index: any) => {
+                      {playlist.slice(0, 4).map((item, index) => {
                         return (
                           <Col className="mb-4" key={index}>
                             <div className="watchlist-warpper card-hover-style-two">
@@ -243,9 +225,7 @@ const PlaylistPage = memo(() => {
                                 </div>
                                 <div className="card-description">
                                   <h5 className="text-capitalize fw-500">
-                                    <Link href="/watchlist-detail">
-                                      {item.title}
-                                    </Link>
+                                    <Link href="/watchlist-detail">{item.title}</Link>
                                   </h5>
                                   <div className="d-flex align-items-center gap-3">
                                     <div className="d-flex align-items-center gap-1 font-size-12">
@@ -265,7 +245,7 @@ const PlaylistPage = memo(() => {
                               </div>
                             </div>
                           </Col>
-                        );
+                        )
                       })}
                     </Row>
                     <div className="text-center">
@@ -291,12 +271,10 @@ const PlaylistPage = memo(() => {
                 >
                   <div className="overflow-hidden">
                     <div className="d-flex align-items-center justify-content-between my-4">
-                      <h5 className="main-title text-capitalize mb-0">
-                        My Favourite
-                      </h5>
+                      <h5 className="main-title text-capitalize mb-0">My Favourite</h5>
                     </div>
                     <Row className="row-cols-1 row-cols-md-2 row-cols-lg-4">
-                      {playlist.map((item: any, index: any) => {
+                      {playlist.map((item, index) => {
                         return (
                           <Col className="mb-4" key={index}>
                             <div className="watchlist-warpper card-hover-style-two">
@@ -314,9 +292,7 @@ const PlaylistPage = memo(() => {
                                 </div>
                                 <div className="card-description">
                                   <h5 className="text-capitalize fw-500">
-                                    <Link href="/watchlist-detail">
-                                      {item.title}
-                                    </Link>
+                                    <Link href="/watchlist-detail">{item.title}</Link>
                                   </h5>
                                   <div className="d-flex align-items-center gap-3">
                                     <div className="d-flex align-items-center gap-1 font-size-12">
@@ -336,7 +312,7 @@ const PlaylistPage = memo(() => {
                               </div>
                             </div>
                           </Col>
-                        );
+                        )
                       })}
                     </Row>
                     <div className="text-center">
@@ -355,12 +331,7 @@ const PlaylistPage = memo(() => {
                 </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
-            <Modal
-              show={show}
-              onHide={handleClose}
-              size="lg"
-              contentClassName="border-0"
-            >
+            <Modal show={show} onHide={handleClose} size="lg" contentClassName="border-0">
               <Modal.Header closeButton className="border-0">
                 <div>
                   <Modal.Title as="h1" className="text-capitalize fs-5 fw-500">
@@ -374,33 +345,24 @@ const PlaylistPage = memo(() => {
               <Modal.Body>
                 <Form>
                   <Form.Group className="form-group">
-                    <Form.Label className="text-white fw-500 mb-2">
-                      Name *
-                    </Form.Label>
+                    <Form.Label className="text-white fw-500 mb-2">Name *</Form.Label>
                     <Form.Control type="text" />
                   </Form.Group>
                   <Form.Group className="form-group">
-                    <Form.Label className="text-white fw-500 mb-2">
-                      Description
-                    </Form.Label>
+                    <Form.Label className="text-white fw-500 mb-2">Description</Form.Label>
                     <textarea className="form-control" cols={5}></textarea>
                   </Form.Group>
                   <Form.Group className="form-group">
-                    <Form.Label className="text-white fw-500 mb-2">
-                      Privacy
-                    </Form.Label>
+                    <Form.Label className="text-white fw-500 mb-2">Privacy</Form.Label>
                     <Form.Select className="form-control">
                       <option>Public</option>
                       <option>Private</option>
                     </Form.Select>
                   </Form.Group>
                   <Form.Group className="form-group">
-                    <Form.Label className="text-white fw-500">
-                      Playlist Thumbnail
-                    </Form.Label>
+                    <Form.Label className="text-white fw-500">Playlist Thumbnail</Form.Label>
                     <small className="d-block my-2">
-                      Support *.webp, *webp, *.gif, *.webp. Maximun upload file
-                      size: 5mb.
+                      Support *.webp, *webp, *.gif, *.webp. Maximun upload file size: 5mb.
                     </small>
                     <Form.Control type="file" />
                   </Form.Group>
@@ -427,8 +389,8 @@ const PlaylistPage = memo(() => {
         {/*  */}
       </div>
     </>
-  );
-});
+  )
+})
 
-PlaylistPage.displayName = "PlaylistPage"
-export default PlaylistPage;
+PlaylistPage.displayName = 'PlaylistPage'
+export default PlaylistPage

@@ -2,10 +2,14 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   const style = {
-    '--header-height': '74px'
+    '--header-height': '74px',
   }
   return (
-    <Html lang="en" data-bs-theme="dark" style={{ '--header-height': '74px'} as React.CSSProperties}>
+    <Html
+      lang="en"
+      data-bs-theme="dark"
+      style={{ '--header-height': '74px' } as React.CSSProperties}
+    >
       <Head />
       <meta />
       <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -17,7 +21,8 @@ export default function Document() {
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&amp;display=swap"
-        rel="stylesheet" />
+        rel="stylesheet"
+      />
       <body>
         <Main />
         <NextScript />

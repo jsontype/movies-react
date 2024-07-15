@@ -1,14 +1,14 @@
-import { useState, Fragment, memo } from "react";
+import { useState, Fragment, memo } from 'react'
 
 //components
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 //static data
-import { spacialLatestMovie } from "../../StaticData/data";
+import { spacialLatestMovie } from '../../StaticData/data'
 
 const SpecialsLatestMovies = memo(() => {
-  const [title] = useState("Specials & Latest Movies");
+  const [title] = useState('Specials & Latest Movies')
 
   return (
     <>
@@ -17,7 +17,7 @@ const SpecialsLatestMovies = memo(() => {
         list={spacialLatestMovie}
         className="recommended-block streamit-block"
       >
-        {(data) => (
+        {data => (
           <CardStyle
             image={data.image}
             title={data.title}
@@ -28,8 +28,8 @@ const SpecialsLatestMovies = memo(() => {
         )}
       </SectionSlider>
     </>
-  );
+  )
 })
 
-SpecialsLatestMovies.displayName = 'SpecialsLatestMovies';
-export default SpecialsLatestMovies;
+SpecialsLatestMovies.displayName = 'SpecialsLatestMovies'
+export default SpecialsLatestMovies

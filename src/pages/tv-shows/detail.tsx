@@ -1,111 +1,110 @@
-import React, { Fragment, memo } from "react";
+import React, { Fragment, memo } from 'react'
 
 //react-bootstrap
-import { Row, Col, Container, Nav, Tab, Form } from "react-bootstrap";
+import { Row, Col, Container, Nav, Tab, Form } from 'react-bootstrap'
 
 // Next-Link
 import Link from 'next/link'
 
 //components
-import ReviewComponent from "@/components/ReviewComponent";
-import { Swiper, SwiperSlide } from "swiper/react";
-import RatingStar from "@/components/rating-star";
+import ReviewComponent from '@/components/ReviewComponent'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import RatingStar from '@/components/rating-star'
 
 //function
-import { generateImgPath } from "@/StaticData/data";
+import { generateImgPath } from '@/StaticData/data'
 
 //utilities
-import { useEnterExit } from "@/utilities/usePage";
+import { useEnterExit } from '@/utilities/usePage'
 
 //swiper
-import { Navigation } from "swiper";
+import { Navigation } from 'swiper'
 const ShowsDetailPage = memo(() => {
-
-  useEnterExit();
+  useEnterExit()
   // date, type
   const shows = {
     id: 1,
-    slug: "zombie-world",
-    thumbnail: generateImgPath("/assets/images/tags/07.webp"),
-    title: "Zombie World",
+    slug: 'zombie-world',
+    thumbnail: generateImgPath('/assets/images/tags/07.webp'),
+    title: 'Zombie World',
     detail:
-      "The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.",
-    season_type: "Seasons 1",
-    certificate: "Adventure",
+      'The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.',
+    season_type: 'Seasons 1',
+    certificate: 'Adventure',
     rating: 4.5,
     likes: 9,
-    rating_from: "Imdb",
-    geners: ["Comedy", "Drama"],
-    tags: ["4K Ultra", "brother", "brother-relationship", "kings", "vikings"],
-    video_link: "",
-    views: "1.2k",
-    video_type: "video",
+    rating_from: 'Imdb',
+    geners: ['Comedy', 'Drama'],
+    tags: ['4K Ultra', 'brother', 'brother-relationship', 'kings', 'vikings'],
+    video_link: '',
+    views: '1.2k',
+    video_type: 'video',
     is_restricted: false,
     episodes: [
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/01.webp"),
-        episode_no: "S01E01",
-        release_date: "October 1, 2020",
-        duration: "45min",
-        name: "Zombie World 1",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/01.webp'),
+        episode_no: 'S01E01',
+        release_date: 'October 1, 2020',
+        duration: '45min',
+        name: 'Zombie World 1',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/02.webp"),
-        episode_no: "S01E02",
-        release_date: "October 8, 2020",
-        duration: "35min",
-        name: "Zombie World 2",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/02.webp'),
+        episode_no: 'S01E02',
+        release_date: 'October 8, 2020',
+        duration: '35min',
+        name: 'Zombie World 2',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/03.webp"),
-        episode_no: "S01E03",
-        release_date: "October 15, 2020",
-        duration: "36min",
-        name: "Zombie World 3",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/03.webp'),
+        episode_no: 'S01E03',
+        release_date: 'October 15, 2020',
+        duration: '36min',
+        name: 'Zombie World 3',
       },
       {
-        thumbnail: generateImgPath("/assets/images/tv-show/episodes/04.webp"),
-        episode_no: "S01E04",
-        release_date: "October 22, 2020",
-        duration: "41min",
-        name: "Zombie World 4",
+        thumbnail: generateImgPath('/assets/images/tv-show/episodes/04.webp'),
+        episode_no: 'S01E04',
+        release_date: 'October 22, 2020',
+        duration: '41min',
+        name: 'Zombie World 4',
       },
     ],
 
     cast: [
       {
-        title: "James Chinlund",
-        thumbnail: generateImgPath("/assets/images/genre/g1.webp"),
-        as: "As James",
+        title: 'James Chinlund',
+        thumbnail: generateImgPath('/assets/images/genre/g1.webp'),
+        as: 'As James',
       },
       {
-        title: "James Earl Jones",
-        thumbnail: generateImgPath("/assets/images/genre/g2.webp"),
-        as: "As Jones",
+        title: 'James Earl Jones',
+        thumbnail: generateImgPath('/assets/images/genre/g2.webp'),
+        as: 'As Jones',
       },
     ],
     crew: [
       {
-        title: "Jeff Nathanson ",
-        thumbnail: generateImgPath("/assets/images/genre/g3.webp"),
-        as: "Writing",
+        title: 'Jeff Nathanson ',
+        thumbnail: generateImgPath('/assets/images/genre/g3.webp'),
+        as: 'Writing',
       },
       {
-        title: " Irene Mecchi ",
-        thumbnail: generateImgPath("/assets/images/genre/g5.webp"),
-        as: "Writing",
+        title: ' Irene Mecchi ',
+        thumbnail: generateImgPath('/assets/images/genre/g5.webp'),
+        as: 'Writing',
       },
       {
-        title: " Karen Gilchrist ",
-        thumbnail: generateImgPath("/assets/images/genre/g4.webp"),
-        as: "Production",
+        title: ' Karen Gilchrist ',
+        thumbnail: generateImgPath('/assets/images/genre/g4.webp'),
+        as: 'Production',
       },
     ],
-    created_by_username: "Admin",
-    created_at: "Feb 2019",
-    ranking: "#1 in Series Today ",
-    date: "Nov 2020",
-  };
+    created_by_username: 'Admin',
+    created_at: 'Feb 2019',
+    ranking: '#1 in Series Today ',
+    date: 'Nov 2020',
+  }
 
   return (
     <>
@@ -115,21 +114,19 @@ const ShowsDetailPage = memo(() => {
             className="overlay-wrapper iq-main-slider "
             style={{
               background: `url(${generateImgPath(
-                "/assets/images/tv-show/episodes/main-banner.webp"
+                '/assets/images/tv-show/episodes/main-banner.webp',
               )}`,
-              backgroundRepeat: "no-repeat",
+              backgroundRepeat: 'no-repeat',
             }}
           >
             <div className="banner-caption">
               <div className="trending-info p-0">
-                <h1 className="texture-text big-font text-uppercase mt-2">
-                  {shows.title}
-                </h1>
+                <h1 className="texture-text big-font text-uppercase mt-2">{shows.title}</h1>
                 <div className="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
                   <RatingStar count="4" count1="1" starColor="text-warning" />
                   <span className="text-white ms-4 me-1">{shows.rating}</span>
                   <img
-                    src={generateImgPath("/assets/images/movies/imdb-logo.svg")}
+                    src={generateImgPath('/assets/images/movies/imdb-logo.svg')}
                     alt="imdb-logo"
                     className="img-fluid ms-2"
                   />
@@ -138,14 +135,11 @@ const ShowsDetailPage = memo(() => {
                   {shows.geners.map((item, index) => {
                     return (
                       <li className="trending-list" key={index}>
-                        <Link
-                          href="/view-all"
-                          className="text-primary text-uppercase font-size-18"
-                        >
+                        <Link href="/view-all" className="text-primary text-uppercase font-size-18">
                           {item}
                         </Link>
                       </li>
-                    );
+                    )
                   })}
                 </ul>
                 <div className="d-flex flex-wrap align-items-center gap-3 font-size-20 mb-3 fw-500 text-white">
@@ -155,16 +149,11 @@ const ShowsDetailPage = memo(() => {
                 <p className="line-count-2 my-3">{shows.detail}</p>
               </div>
               <div className="position-relative my-4">
-                <Link
-                  href="/tv-shows/episode"
-                  className="d-flex align-items-center gap-3"
-                >
+                <Link href="/tv-shows/episode" className="d-flex align-items-center gap-3">
                   <div className="play-button">
                     <i className="fa-solid fa-play"></i>
                   </div>
-                  <h4 className="text-white fw-bold m-0">
-                    Watch latest Episode
-                  </h4>
+                  <h4 className="text-white fw-bold m-0">Watch latest Episode</h4>
                 </Link>
               </div>
               <div className="d-flex align-items-center flex-wrap gap-4 mb-4">
@@ -201,12 +190,12 @@ const ShowsDetailPage = memo(() => {
                         </Link>
                       </div>
                     </div>
-                  </li>{" "}
+                  </li>{' '}
                   <li>
                     <span>
                       <i className="fa-solid fa-heart"></i>
                     </span>
-                  </li>{" "}
+                  </li>{' '}
                   <li>
                     <span>
                       <i className="fa-solid fa-plus"></i>
@@ -224,7 +213,7 @@ const ShowsDetailPage = memo(() => {
               </div>
               <ul className="iq-blogtag list-unstyled d-flex flex-wrap align-items-center gap-3 p-0">
                 <li className="iq-tag-title text-primary mb-0">
-                  <i className="fa fa-tags" aria-hidden="true"></i> Tags:{" "}
+                  <i className="fa fa-tags" aria-hidden="true"></i> Tags:{' '}
                 </li>
                 {shows.tags.map((item, index) => {
                   return (
@@ -234,7 +223,7 @@ const ShowsDetailPage = memo(() => {
                       </Link>
                       <span className="text-secondary">,</span>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -320,9 +309,7 @@ const ShowsDetailPage = memo(() => {
                                   loading="lazy"
                                 />
                               </Link>
-                              <div className="episode-number">
-                                {item.episode_no}
-                              </div>
+                              <div className="episode-number">{item.episode_no}</div>
                               <div className="episode-play">
                                 <Link href="/tv-shows/episode">
                                   <i className="fa-solid fa-play"></i>
@@ -334,19 +321,15 @@ const ShowsDetailPage = memo(() => {
                                 <span className="border-gredient-left text-white rel-date">
                                   {item.release_date}
                                 </span>
-                                <span className="text-primary run-time">
-                                  {item.duration}
-                                </span>
+                                <span className="text-primary run-time">{item.duration}</span>
                               </div>
                               <Link href="/tv-shows/episode">
-                                <h5 className="epi-name text-white mb-0">
-                                  {item.name}
-                                </h5>
+                                <h5 className="epi-name text-white mb-0">{item.name}</h5>
                               </Link>
                             </div>
                           </div>
                         </Col>
-                      );
+                      )
                     })}
                   </Row>
                 </Tab.Pane>
@@ -419,8 +402,8 @@ const ShowsDetailPage = memo(() => {
                   <Swiper
                     slidesPerView={5}
                     navigation={{
-                      prevEl: ".swiper-button-prev",
-                      nextEl: ".swiper-button-next",
+                      prevEl: '.swiper-button-prev',
+                      nextEl: '.swiper-button-next',
                     }}
                     loop={false}
                     modules={[Navigation]}
@@ -451,7 +434,7 @@ const ShowsDetailPage = memo(() => {
                   >
                     {shows.cast.map((item, index) => {
                       return (
-                        <SwiperSlide key={index} >
+                        <SwiperSlide key={index}>
                           <Row className="cast-images m-0 align-items-center position-relative">
                             <div className="col-4 img-box p-0">
                               <img
@@ -471,7 +454,7 @@ const ShowsDetailPage = memo(() => {
                             </div>
                           </Row>
                         </SwiperSlide>
-                      );
+                      )
                     })}
                   </Swiper>
                 </Tab.Pane>
@@ -485,8 +468,8 @@ const ShowsDetailPage = memo(() => {
                   <Swiper
                     slidesPerView={5}
                     navigation={{
-                      prevEl: ".swiper-button-prev",
-                      nextEl: ".swiper-button-next",
+                      prevEl: '.swiper-button-prev',
+                      nextEl: '.swiper-button-next',
                     }}
                     loop={false}
                     modules={[Navigation]}
@@ -517,7 +500,7 @@ const ShowsDetailPage = memo(() => {
                   >
                     {shows.crew.map((item, index) => {
                       return (
-                        <SwiperSlide key={index} >
+                        <SwiperSlide key={index}>
                           <Row className="cast-images m-0 align-items-center position-relative">
                             <div className="col-4 img-box p-0">
                               <img
@@ -537,7 +520,7 @@ const ShowsDetailPage = memo(() => {
                             </div>
                           </Row>
                         </SwiperSlide>
-                      );
+                      )
                     })}
                   </Swiper>
                 </Tab.Pane>
@@ -547,8 +530,8 @@ const ShowsDetailPage = memo(() => {
         </Container>
       </div>
     </>
-  );
-});
+  )
+})
 
-ShowsDetailPage.displayName = "ShowsDetailPage";
-export default ShowsDetailPage;
+ShowsDetailPage.displayName = 'ShowsDetailPage'
+export default ShowsDetailPage

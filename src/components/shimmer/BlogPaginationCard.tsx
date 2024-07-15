@@ -1,40 +1,39 @@
-import React, { memo, Fragment } from "react";
+import React, { memo, Fragment } from 'react'
 
 // react-bootsrap
-import { Container, Row, Col, Placeholder } from "react-bootstrap";
+import { Container, Row, Col, Placeholder } from 'react-bootstrap'
 
 // components
 
 const shimmerCardStyle = {
-  backgroundColor: "#1e1e1e",
-  height: "13.5rem",
-  padding: "1rem",
-  width: "23em",
-};
-
-interface Props{
-  grid:any
+  backgroundColor: '#1e1e1e',
+  height: '13.5rem',
+  padding: '1rem',
+  width: '23em',
 }
 
+interface Props {
+  grid: any
+}
 
-const CardblogPaginationShimmer = memo((props:Props) => {
-  let height;
+const CardblogPaginationShimmer = memo((props: Props) => {
+  let height
   switch (props.grid) {
-    case "single":
-      height = "54rem";
-      break;
-    case "double":
-      height = "26.2rem";
-      break;
-    case "large-grid":
-      height = "17.2rem";
-      break;
-    case "small-grid":
-      height = "12.7rem";
-      break;
+    case 'single':
+      height = '54rem'
+      break
+    case 'double':
+      height = '26.2rem'
+      break
+    case 'large-grid':
+      height = '17.2rem'
+      break
+    case 'small-grid':
+      height = '12.7rem'
+      break
     default:
-      height = "12.7rem"; // Default height if none of the cases match
-      break;
+      height = '12.7rem' // Default height if none of the cases match
+      break
   }
 
   return (
@@ -57,8 +56,8 @@ const CardblogPaginationShimmer = memo((props:Props) => {
         </div>
       </div>
     </>
-  );
-});
+  )
+})
 
-CardblogPaginationShimmer.displayName = "CardShimmer";
-export default CardblogPaginationShimmer;
+CardblogPaginationShimmer.displayName = 'CardShimmer'
+export default CardblogPaginationShimmer

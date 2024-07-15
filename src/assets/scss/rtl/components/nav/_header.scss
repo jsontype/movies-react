@@ -22,8 +22,7 @@ header {
       }
     }
     a.show + ul li .form-group {
-      animation: scale-in-hor-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-        both;
+      animation: scale-in-hor-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
   }
 }
@@ -72,7 +71,7 @@ header {
   }
 }
 
-@include media-breakpoint-down(xl){
+@include media-breakpoint-down(xl) {
   header {
     &.header-center-home {
       .mega-menu-content {
@@ -88,5 +87,5 @@ header {
         }
       }
     }
-  }  
+  }
 }

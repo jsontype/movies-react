@@ -12,7 +12,7 @@
 
 .shop-list-checkbox {
   li {
-    margin: 0 0 1.875em .5rem !important;
+    margin: 0 0 1.875em 0.5rem !important;
     padding: 0 !important;
     position: relative;
 
@@ -20,19 +20,19 @@
       position: relative;
 
       &::before {
-        content: "\f0d7";
+        content: '\f0d7';
         position: absolute;
         top: -10px;
         left: 0;
         right: 0;
-        font-family: Font Awesome\ 5 Free;
+        font-family: Font Awesome\5 Free;
         color: var(--bs-primary);
         font-weight: 900;
       }
     }
 
     &:last-child {
-      margin: 0 0 0 .5rem !important;
+      margin: 0 0 0 0.5rem !important;
       padding: 0 !important;
     }
   }
@@ -85,7 +85,7 @@
 
       &:hover {
         color: var(--bs-primary);
-        transition: all .4s ease 0s;
+        transition: all 0.4s ease 0s;
       }
     }
   }
@@ -100,7 +100,7 @@ ul.shop_list_checkbox li {
 }
 
 .shop_list_checkbox li .shop_checkbox_label:before {
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   border: 2px solid var(--bs-gray-900);

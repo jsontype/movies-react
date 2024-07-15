@@ -6,7 +6,7 @@
       position: relative;
       transition: all 0.5s ease-in-out;
       border-radius: $border-radius;
-      background: linear-gradient(180deg, rgba(12, 11, 17, 0.00) 50%, var(--bs-black) 100%);
+      background: linear-gradient(180deg, rgba(12, 11, 17, 0) 50%, var(--bs-black) 100%);
 
       img {
         border-radius: $border-radius;
