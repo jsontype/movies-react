@@ -974,11 +974,11 @@ export const products = [
     category: ['the-madrid'],
   },
 ]
-export const filterCategory = (slug: string | undefined) =>
+export const filterCategory = (slug) =>
   category.find(item => item.slug === slug)
-export const categoryWiseProduct = (category: string) =>
+export const categoryWiseProduct = (category) =>
   products.filter(item => item.category.includes(category))
-export const tagsWiseProduct = (tag: string) => products.filter(item => item.tags.includes(tag))
+export const tagsWiseProduct = (tag) => products.filter(item => item.tags.includes(tag))
 
 export const shopBannerSlider = [
   filterCategory('activeman'),
@@ -999,7 +999,7 @@ export const shopBannerSlider = [
   filterCategory('warner-bros-films'),
 ]
 
-export const filterProduct = (slug: string) => products.find(item => item.slug === slug)
+export const filterProduct = (slug) => products.find(item => item.slug === slug)
 
 export const newProduct = [
   filterProduct('bag-pack'),

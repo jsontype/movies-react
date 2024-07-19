@@ -25,4 +25,6 @@ const CustomToggle = forwardRef(({ children, variant, onClick }: CustomTogglePro
     {children}
   </Link>
 ))
+
+CustomToggle.displayName = 'CustomToggle'
 export default CustomToggle

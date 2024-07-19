@@ -53,7 +53,7 @@ const SignUp = () => {
                   </Row>
                   <Form.Label className="list-group-item d-flex align-items-center mt-5 mb-3 text-white">
                     <Form.Check.Input className="m-0 me-2" type="checkbox" />
-                    I've read and accept the
+                    I have read and accept the
                     <Link href="/extra/terms-of-use" className="ms-1">
                       terms & conditions*
                     </Link>

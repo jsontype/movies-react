@@ -1,7 +1,11 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/view-all": "pages/view-all.js",
   "/": "pages/index.js",
-  "/movies/detail": "pages/movies/detail.js"
+  "/merchandise/shop": "pages/merchandise/shop.js",
+  "/merchandise/wishlist": "pages/merchandise/wishlist.js",
+  "/play-list": "pages/play-list.js",
+  "/extra/pricing-plan": "pages/extra/pricing-plan.js"
 }

@@ -67,4 +67,5 @@ const Sources = memo(() => {
   )
 })
 
+Sources.displayName = 'Sources'
 export default Sources

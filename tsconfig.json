@@ -31,13 +31,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/pages/form/form-validation.tsx",
-    "src/pages/special-pages/billing.tsx",
-    "src/components/DataTable.tsx",
-    "src/pages/design-system/typography.tsx",
     "src/components/custom.d.ts",
-    ".next/types/**/*.ts",
-    "src/components/blog/DetailMetaList.jsx"
-, "src/StaticData/blogs.jsx"  ],
+    ".next/types/**/*.ts", "src/utilities/setting.js",
+  ],
   "exclude": ["node_modules"]
 }

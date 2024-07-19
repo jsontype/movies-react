@@ -118,4 +118,5 @@ const TermsofUse = memo(() => {
   )
 })
 
+TermsofUse.displayName = 'TermsofUse'
 export default TermsofUse

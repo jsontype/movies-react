@@ -1,4 +1,5 @@
-import { memo, useRef, FC } from 'react'
+import React, { memo, useRef, FC, ReactNode } from 'react'
+import PropTypes from 'prop-types'
 
 // react-bootstrap
 import { Container } from 'react-bootstrap'
@@ -17,7 +18,7 @@ import { theme_scheme_direction } from '../../store/setting/selectors'
 const modules = [Autoplay, Navigation]
 
 interface SectionSliderProps {
-  children: (data: any) => React.ReactNode
+  children: (data: any) => ReactNode
   title: string
   list: any[]
   slidesPerView?: number

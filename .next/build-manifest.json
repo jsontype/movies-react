@@ -27,10 +27,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/movies/detail": [
+    "/extra/pricing-plan": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/movies/detail.js"
+      "static/chunks/pages/extra/pricing-plan.js"
+    ],
+    "/merchandise/shop": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/merchandise/shop.js"
+    ],
+    "/merchandise/wishlist": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/merchandise/wishlist.js"
+    ],
+    "/play-list": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/play-list.js"
     ]
   },
   "ampFirstPages": []

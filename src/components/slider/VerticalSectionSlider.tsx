@@ -1,9 +1,5 @@
-import { FC, Fragment, memo, useState } from 'react'
-
-//react-router-dom
+import React, { FC, Fragment, memo, useState } from 'react'
 import Link from 'next/link'
-
-//swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Thumbs } from 'swiper'
 
@@ -21,6 +17,10 @@ interface VerticalSectionSliderProps {
 
 const VerticalSectionSlider: FC<VerticalSectionSliderProps> = memo(({ sliderData }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
+
+  if (!Array.isArray(sliderData)) {
+    return null; // 혹은 로딩 스피너 또는 에러 메시지를 표시합니다.
+  }
 
   return (
     <Fragment>
@@ -142,7 +142,7 @@ const VerticalSectionSlider: FC<VerticalSectionSliderProps> = memo(({ sliderData
                         </div>
                         <p className="mt-0 mb-3 line-count-2">
                           The point of using Lorem Ipsum is that it has a more-or-less normal
-                          distribution of letters, as opposed to using 'Content here.
+                          distribution of letters, as opposed to using Content here.
                         </p>
                         <div className="iq-button">
                           <Link

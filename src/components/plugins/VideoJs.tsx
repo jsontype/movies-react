@@ -27,7 +27,7 @@ export const VideoJS = (props: { options: any; onReady: any }) => {
 
       // #NEW
       if (videoRef.current !== null) {
-        ;(videoRef.current as HTMLDivElement).appendChild(videoElement)
+        (videoRef.current as HTMLDivElement).appendChild(videoElement)
       }
 
       // #OLD

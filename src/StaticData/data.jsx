@@ -1,4 +1,4 @@
-export const generateImgPath = (path: string) => {
+export const generateImgPath = (path) => {
   return path
 }
 
