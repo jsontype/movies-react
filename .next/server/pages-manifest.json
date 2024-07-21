@@ -1,11 +1,13 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/view-all": "pages/view-all.js",
-  "/": "pages/index.js",
+  "/_document": "pages/_document.js",
   "/merchandise/shop": "pages/merchandise/shop.js",
   "/merchandise/wishlist": "pages/merchandise/wishlist.js",
-  "/play-list": "pages/play-list.js",
-  "/extra/pricing-plan": "pages/extra/pricing-plan.js"
+  "/merchandise/account": "pages/merchandise/account.js",
+  "/merchandise/checkout": "pages/merchandise/checkout.js",
+  "/blogs": "pages/blogs.js",
+  "/blogs/detail": "pages/blogs/detail.js",
+  "/merchandise/track-order": "pages/merchandise/track-order.js",
+  "/merchandise/cart": "pages/merchandise/cart.js"
 }

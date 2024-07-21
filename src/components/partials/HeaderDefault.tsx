@@ -152,8 +152,6 @@ const HeaderDefault = memo(() => {
                               <span className="d-inline-block">OTT Home</span>
                             </Link>
                           </Nav.Item>
-                          {/* ***! 1. /home, /movies, /tv-shows, /videos, /merchandis 페이지 삭제 */}
-                          {/* ***! 1. /home, /movies, /tv-shows, /videos, /merchandis 에서"만" 사용되는 콤포넌트 전부 삭제 */}
                         </ul>
                       </Collapse>
                     </Nav.Item>

@@ -12,11 +12,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -27,25 +22,45 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/extra/pricing-plan": [
+    "/blogs": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/extra/pricing-plan.js"
+      "static/chunks/pages/blogs.js"
+    ],
+    "/blogs/detail": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/blogs/detail.js"
+    ],
+    "/merchandise/account": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/merchandise/account.js"
+    ],
+    "/merchandise/cart": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/merchandise/cart.js"
+    ],
+    "/merchandise/checkout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/merchandise/checkout.js"
     ],
     "/merchandise/shop": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/merchandise/shop.js"
     ],
+    "/merchandise/track-order": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/merchandise/track-order.js"
+    ],
     "/merchandise/wishlist": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/merchandise/wishlist.js"
-    ],
-    "/play-list": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/play-list.js"
     ]
   },
   "ampFirstPages": []
