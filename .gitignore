@@ -10,8 +10,9 @@
 
 # next.js
 /.next/
+/.next
 /out/
-.next
+*.pack.gz
 
 # production
 /build
