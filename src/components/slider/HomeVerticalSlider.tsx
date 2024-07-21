@@ -204,4 +204,6 @@ const HomeVerticalSlider = memo(() => {
     </>
   )
 })
+
+HomeVerticalSlider.displayName = 'HomeVerticalSlider'
 export default HomeVerticalSlider

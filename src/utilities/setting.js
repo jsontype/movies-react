@@ -1,6 +1,6 @@
 // @ts-nocheck
 import _ from 'lodash'
-import { addClass, removeClass, setAttr } from './dom'
+import { addClass, removeClass, setAttr, setContent } from './dom'
 export const updateBodyClass = (choices, value) => {
   if (value !== '') {
     // remove class from choices

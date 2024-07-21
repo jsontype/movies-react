@@ -1,4 +1,4 @@
-import { Fragment, memo, useState } from 'react'
+import React, { memo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Link from 'next/link'
 import FsLightbox from 'fslightbox-react'

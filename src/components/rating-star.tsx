@@ -1,4 +1,4 @@
-import { memo, Fragment } from 'react'
+import React, { memo } from 'react'
 
 interface Props {
   count1?: any

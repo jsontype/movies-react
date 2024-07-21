@@ -8,11 +8,12 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "plugins": [
@@ -24,6 +25,7 @@
     }
   }, 
   "rules": {
+    "react/prop-types": "off", // TypeScript를 사용하므로 prop-types 사용하지 않음
     "react/react-in-jsx-scope": "off", // import react from 'react' 필요 여부 옵션
     "react/jsx-uses-vars": "warn", // 사용하지 않는 변수, 함수가 있으면 경고 처리
     "no-redeclare": "off",

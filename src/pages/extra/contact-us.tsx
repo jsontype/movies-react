@@ -135,7 +135,7 @@ const ContactPage = memo(() => {
             <Col lg="10">
               <div className="title-box">
                 <h3 className="fw-500">
-                  To Learn More About How Streamit Can Help You, Contact Us. We'd Be Happy To Take
+                  To Learn More About How Streamit Can Help You, Contact Us. We would Be Happy To Take
                   On The Challenge!
                 </h3>
               </div>

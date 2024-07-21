@@ -78,4 +78,5 @@ const ReviewComponent = memo(() => {
   )
 })
 
+ReviewComponent.displayName = 'ReviewComponent'
 export default ReviewComponent

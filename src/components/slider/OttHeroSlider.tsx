@@ -152,7 +152,7 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                   </div>
                 </div>
               </div>
-              <CustomButton buttonTitle="Stream Now " link="/movies/detail" linkButton="false" />
+              <CustomButton buttonTitle="Stream Now" link="/movies/detail" linkButton="false" />
             </div>
           </div>
         </div>
