@@ -1,11 +1,11 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/view-all": "pages/view-all.js",
+  "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/merchandise/shop": "pages/merchandise/shop.js",
-  "/merchandise/wishlist": "pages/merchandise/wishlist.js",
-  "/play-list": "pages/play-list.js",
+  "/extra/about-us": "pages/extra/about-us.js",
+  "/extra/coming-soon": "pages/extra/coming-soon.js",
+  "/blogs/grid/[type]": "pages/blogs/grid/[type].js",
+  "/blogs": "pages/blogs.js",
   "/extra/pricing-plan": "pages/extra/pricing-plan.js"
 }
