@@ -1,11 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/extra/about-us": "pages/extra/about-us.js",
-  "/extra/coming-soon": "pages/extra/coming-soon.js",
-  "/blogs/grid/[type]": "pages/blogs/grid/[type].js",
-  "/blogs": "pages/blogs.js",
-  "/extra/pricing-plan": "pages/extra/pricing-plan.js"
+  "/_error": "pages/_error.js",
+  "/": "pages/index.js"
 }
