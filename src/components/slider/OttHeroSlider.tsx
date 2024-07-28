@@ -69,8 +69,9 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
       <SwiperSlide className="swiper-bg" key={index}>
         <div className="block-images position-relative">
           <div className="img-box">
+            {/* ***! 1. */}
             <Image
-              src={item.large_cover_image}
+              src={item.large_cover_image !== '' ? item.large_cover_image : 'https://png.pngtree.com/png-vector/20190820/ourmid/pngtree-no-image-vector-illustration-isolated-png-image_1694547.jpg' }
               className="img-fluid"
               alt=""
               loading="lazy"
@@ -95,7 +96,7 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
       <SwiperSlide className="p-0" key={index}>
         <div className="slider--image block-images">
           <Image
-            src={item.large_cover_image}
+            src={item.large_cover_image !== '' ? item.large_cover_image : 'https://png.pngtree.com/png-vector/20190820/ourmid/pngtree-no-image-vector-illustration-isolated-png-image_1694547.jpg' }
             loading="lazy"
             alt="banner"
             width={0}

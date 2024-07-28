@@ -11,58 +11,46 @@ import GenreSlider from '@/components/sections/GenreSlider'
 const OTT = memo(() => {
   const [moviesSortByYear, setMoviesSortByYear] = useState([])
   const [moviesSortByRating, setMoviesSortByRating] = useState([])
-  // const [movies, setMovies] = useState([])
 
-  // ***! 
+  // Sort By Year
   useEffect(() => {
     fetch('https://yts.mx/api/v2/list_movies.json?sort_by=year')
-      .then(res => {
-        return res.json()
-      })
+      .then(res => res.json())
       .then(json => {
-        setMoviesSortByYear(json.data.movies)
-      })
-  }, [])
-  // useEffect(() => {
-  //   fetch('https://yts.mx/api/v2/list_movies.json?sort_by=year')
-  //     .then(res => res.json())
-  //     .then(json => {
-  //       const movies = json.data.movies;
+        const movies = json.data.movies;
         
-  //       // Check Every Image URL 
-  //       const imagePromises = movies.map(movie => 
-  //         fetch(movie.large_cover_image)
-  //           .then(res => {
-  //             if (!res.ok) {
-  //               throw new Error('Image not found');
-  //             }
-  //             return movie;
-  //           })
-  //           .catch(() => ({...movie, large_cover_image: ''}))
-  //       );
-  
-  //       // Upadte After All Promise
-  //       Promise.all(imagePromises)
-  //         .then(updatedMovies => {
-  //           setMoviesSortByYear(updatedMovies);
-  //         });
-  //     })
-  //     .catch(error => {
-  //       console.error('Error fetching movies:', error);
-  //     });
-  // }, []);  
+        // Check Every Image URL 
+        const imagePromises = movies.map(movie => 
+          fetch(movie.large_cover_image, { mode: 'no-cors' })
+            .then(res => {
+              if (res) {
+                console.log('movie.large_cover_image: ', movie.large_cover_image)
+                console.log('res: ', res)
+                console.log('res.status: ', res.status)
+                return movie;
+              } else {
+                // ***! TODO: 404 GET console.log上で404表示されるが、こちには行かない。こちに行ったら、終わりなのに。
+                console.log('movie.large_cover_image 404: ', movie.large_cover_image)
+                throw new Error('Image not found');
+              }
+            })
+            .catch(() => ({...movie, large_cover_image: ''}))
+        )
 
-  // useEffect(() => {
-  //   fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
-  //     .then(res => {
-  //       return res.json()
-  //     })
-  //     .then(json => {
-  //       setMoviesSortByRating(json.data.movies)
-  //     })
-  // }, [])
+        // Upadte After All Promise
+        Promise.all(imagePromises)
+          .then(updatedMovies => {
+            setMoviesSortByYear(updatedMovies);
+          });
+      })
+      .catch(error => {
+        console.error('Error fetching movies:', error);
+      });
+  }, []);  
+
+  // Sort By Rating
   useEffect(() => {
-    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating', { mode: 'no-cors' })
+    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
       .then(res => res.json())
       .then(json => {
         const movies = json.data.movies;
@@ -70,18 +58,15 @@ const OTT = memo(() => {
         // Check Every Image URL
         const imagePromises = movies.map(movie =>
           fetch(movie.large_cover_image, { mode: 'no-cors' })
-            .then(res => {
-              console.log('res: ', res)
-              console.log('res.status: ', res.status)
-              if (!res.ok) {
-                throw new Error(`Image not found, status code: ${res.status}`);
-              }
+          .then(res => {
+            if (res) {
               return movie;
-            })
-            .catch(error => {
-              console.error('Fetch error:', error);
-              return { ...movie, large_cover_image: '' };
-            })
+            } else {
+              // 404
+              throw new Error('Image not found');
+            }
+          })
+          .catch(() => ({...movie, large_cover_image: ''}))
         );
   
         // Update After All Promises

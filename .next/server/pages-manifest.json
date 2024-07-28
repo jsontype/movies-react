@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/play-list": "pages/play-list.js",
-  "/view-all": "pages/view-all.js"
+  "/": "pages/index.js"
 }
