@@ -10,9 +10,12 @@ import Logo from '../logo'
 
 const FooterMega = memo(() => {
   const [animationClass, setAnimationClass] = useState('animate__fadeIn')
+<<<<<<< HEAD
   const [showToast, setShowToast] = useState(false)
   const [showErrorToast, setShowErrorToast] = useState(false)
   const [email, setEmail] = useState('')
+=======
+>>>>>>> master
   const currentYear = new Date().getFullYear()
   // const location = useLocation();
 
@@ -70,12 +73,12 @@ const FooterMega = memo(() => {
                     <Logo></Logo>
                   </div>
                   <p className="mb-4 font-size-14">
-                    Email us: <span className="text-white">customer@streamit.com</span>
+                    Email us: <span className="text-white">customer@dymovies.com</span>
                   </p>
                   <p className="text-uppercase letter-spacing-1 font-size-14 mb-1">
                     customer services
                   </p>
-                  <p className="mb-0 contact text-white">+ (480) 555-0103</p>
+                  <p className="mb-0 contact text-white">+ (123) 456-7890</p>
                 </Col>
                 <Col xl={2} lg={6} className="mb-5 mb-lg-0">
                   <h4 className="footer-link-title">Quick Links</h4>
@@ -207,8 +210,13 @@ const FooterMega = memo(() => {
                     </li>
                   </ul>
                   <p className="font-size-14">
+<<<<<<< HEAD
                     © <span className="currentYear">{ currentYear }</span>{' '}
                     <span className="text-primary">STREAMIT</span>. All Rights Reserved. All videos
+=======
+                    © <span className="currentYear">{currentYear}</span>{' '}
+                    <span className="text-primary">YD.Movies</span>. All Rights Reserved. All videos
+>>>>>>> master
                     and shows on this platform are trademarks of, and all related images and content
                     are the property of, Streamit Inc. Duplication and copy of this is strictly
                     prohibited. All rights reserved.
