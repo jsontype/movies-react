@@ -109,8 +109,10 @@ const HeaderDefault = memo(() => {
                             : ''
                         }`}
                       >
-                        <span className="item-name">Home</span>
-                        <span className="menu-icon ms-2">
+                        <Link href="/" className="item-name p-0">
+                            <span>Home</span>
+                        </Link>
+                        {/* <span className="menu-icon ms-2">
                           <i
                             className="fa fa-caret-down toggledrop-desktop right-icon"
                             aria-hidden="true"
@@ -125,9 +127,9 @@ const HeaderDefault = memo(() => {
                               aria-hidden="true"
                             ></i>
                           </span>
-                        </span>
+                        </span> */}
                       </Nav.Link>
-                      <Collapse
+                      {/* <Collapse
                         className={`sub-nav justify-content-center list-unstyled ${
                           isMega ? ' mega-menu-item' : ''
                         }`}
@@ -153,7 +155,7 @@ const HeaderDefault = memo(() => {
                             </Link>
                           </Nav.Item>
                         </ul>
-                      </Collapse>
+                      </Collapse> */}
                     </Nav.Item>
                     <Nav.Item as="li">
                       <Nav.Link

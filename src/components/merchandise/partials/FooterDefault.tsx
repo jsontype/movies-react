@@ -23,11 +23,11 @@ const MerchandiseFooter = memo(() => {
                     costumer services
                   </p>
                   <h4 className="mb-0 contact text-white fw-bold">
-                    <Link href="tel:+4805550103"> + (480) 555-0103</Link>
+                    <Link href="tel:+4805550103"> + (123) 456-7890</Link>
                   </h4>
                   <span className="d-inline-block mt-4 mb-0 font-size-14">
                     {' '}
-                    Email Us: <Link href="maito:customer@streamit.com">customer@streamit.com</Link>
+                    Email Us: <Link href="maito:customer@streamit.com">customer@ydmovies.com</Link>
                   </span>
                   <div className="mt-5">
                     <p className="text-uppercase letter-spacing-1 font-size-14 mb-1">
@@ -159,7 +159,7 @@ const MerchandiseFooter = memo(() => {
               <Col md="6" className="text-md-start text-center">
                 <p className="m-0 font-size-14 text-capitalize">
                   © <span className="currentYear">{currentYear}</span>
-                  <Link href="/"> STREAMIT </Link> All rights reserved.
+                  <Link href="/"> DY.Movies </Link> All rights reserved.
                 </p>
               </Col>
               <Col md="6" className="text-md-end text-center">

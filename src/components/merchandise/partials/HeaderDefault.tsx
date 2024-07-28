@@ -326,25 +326,11 @@ const HeaderMerchandise = memo(() => {
                             onClick={() => setOpen(!open)}
                             className={`${location.pathname === '/merchandise' || location.pathname === '/' || location.pathname === '/home' || location.pathname === '/movies' || location.pathname === '/tv-shows' || location.pathname === '/videos' ? 'active' : ''}`}
                           >
-                            <span className="item-name">Home</span>
-                            <span className="menu-icon ms-2">
-                              <i
-                                className="fa fa-caret-down toggledrop-desktop right-icon"
-                                aria-hidden="true"
-                              ></i>
-                              <span className="toggle-menu">
-                                <i
-                                  className="fa fa-plus  arrow-active text-white"
-                                  aria-hidden="true"
-                                ></i>
-                                <i
-                                  className="fa fa-minus  arrow-hover text-white"
-                                  aria-hidden="true"
-                                ></i>
-                              </span>
-                            </span>
+                            <Link href="/" className="item-name p-0">
+                              <span>Home</span>
+                            </Link>
                           </Nav.Link>
-                          <Collapse in={open} className="sub-nav list-unstyled">
+                          {/* <Collapse in={open} className="sub-nav list-unstyled">
                             <ul>
                               <Nav.Item as="li">
                                 <Link
@@ -401,7 +387,7 @@ const HeaderMerchandise = memo(() => {
                                 </Link>
                               </Nav.Item>
                             </ul>
-                          </Collapse>
+                          </Collapse> */}
                         </Nav.Item>
                         <Nav.Item as="li">
                           <Nav.Link
