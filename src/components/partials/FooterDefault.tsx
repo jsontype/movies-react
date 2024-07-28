@@ -3,13 +3,17 @@ import { memo, Fragment, useState, useEffect } from 'react'
 import Link from 'next/link'
 
 // react-bootstrap
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Toast, ToastContainer } from 'react-bootstrap'
 
 // components
 import Logo from '../logo'
 
 const FooterMega = memo(() => {
   const [animationClass, setAnimationClass] = useState('animate__fadeIn')
+  const [showToast, setShowToast] = useState(false)
+  const [showErrorToast, setShowErrorToast] = useState(false)
+  const [email, setEmail] = useState('')
+  const currentYear = new Date().getFullYear()
   // const location = useLocation();
 
   const scrollToTop = () => {
@@ -22,6 +26,24 @@ const FooterMega = memo(() => {
     } else {
       setAnimationClass('animate__fadeOut')
     }
+  }
+
+  const handleSubscribe = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (email) {
+      if (emailPattern.test(email)) {
+        setShowToast(true)
+      } else {
+        setShowErrorToast(true)
+      }
+    } else {
+      setShowErrorToast(true)
+    }
+  }
+
+  const handleAppLinkClick = (event) => {
+    event.preventDefault()
+    alert('只今、準備中です')
   }
 
   useEffect(() => {
@@ -129,9 +151,11 @@ const FooterMega = memo(() => {
                         className="form-control mb-0 font-size-14"
                         placeholder="Email*"
                         aria-describedby="button-addon2"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                       <div className="iq-button">
-                        <button type="submit" className="btn btn-sm" id="button-addon2">
+                        <button type="submit" className="btn btn-sm" id="button-addon2" onClick={handleSubscribe}>
                           Subscribe
                         </button>
                       </div>
@@ -183,7 +207,7 @@ const FooterMega = memo(() => {
                     </li>
                   </ul>
                   <p className="font-size-14">
-                    © <span className="currentYear">2023</span>{' '}
+                    © <span className="currentYear">{ currentYear }</span>{' '}
                     <span className="text-primary">STREAMIT</span>. All Rights Reserved. All videos
                     and shows on this platform are trademarks of, and all related images and content
                     are the property of, Streamit Inc. Duplication and copy of this is strictly
@@ -194,7 +218,7 @@ const FooterMega = memo(() => {
                 <Col md={3}>
                   <h6 className="font-size-14 pb-1">Download Streamit Apps</h6>
                   <div className="d-flex align-items-center">
-                    <Link className="app-image" href="#">
+                    <Link className="app-image" href="#" onClick={handleAppLinkClick}>
                       <img
                         src="/assets/images/footer/google-play.webp"
                         loading="lazy"
@@ -202,7 +226,7 @@ const FooterMega = memo(() => {
                       />
                     </Link>
                     <br />
-                    <Link className="ms-3 app-image" href="#">
+                    <Link className="ms-3 app-image" href="#" onClick={handleAppLinkClick}>
                       <img src="/assets/images/footer/apple.webp" loading="lazy" alt="app-store" />
                     </Link>
                   </div>
@@ -226,6 +250,25 @@ const FooterMega = memo(() => {
           </Link>
         </div>
       </>
+      <ToastContainer position="bottom-end" className="p-3">
+        <Toast v-if="showToast" show={showToast} onClose={() => setShowToast(false)} delay={5000} autohide>
+          <Toast.Header style={{ backgroundColor: 'rgba(0, 200, 0, 0.8)', color: 'white' }}>
+            <strong className="me-auto">Subscription</strong>
+          </Toast.Header>
+          <Toast.Body style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', color: 'black' }}>
+            Thank you for subscribing with {email}.
+          </Toast.Body>
+        </Toast>
+        <Toast v-else-if="showErrorToast" show={showErrorToast} onClose={() => setShowErrorToast(false)} delay={5000} autohide>
+          <Toast.Header style={{ backgroundColor: 'rgba(255, 0, 0, 0.8)', color: 'white' }}>
+            <strong className="me-auto">Subscription Failed</strong>
+          </Toast.Header>
+          <Toast.Body style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', color: 'black' }}>
+            Please enter your email correctly.
+          </Toast.Body>
+        </Toast>
+
+      </ToastContainer>
     </>
   )
 })
