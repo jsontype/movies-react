@@ -307,7 +307,7 @@ const HeaderMerchandise = memo(() => {
                     </div>
                     <Logo />
                   </div>
-                  <Navbar
+                  {/* <Navbar
                     expand="xl"
                     className={`offcanvas mobile-offcanvas nav hover-nav horizontal-nav py-xl-0 ${show2 === true ? 'show' : ''} `}
                     style={{ visibility: `${show2 === true ? 'visible' : 'hidden'}` }}
@@ -330,64 +330,6 @@ const HeaderMerchandise = memo(() => {
                               <span>Home</span>
                             </Link>
                           </Nav.Link>
-                          {/* <Collapse in={open} className="sub-nav list-unstyled">
-                            <ul>
-                              <Nav.Item as="li">
-                                <Link
-                                  href="/"
-                                  className={`${location.pathname === '/' ? 'active' : ''} nav-link`}
-                                >
-                                  {' '}
-                                  OTT Home{' '}
-                                </Link>
-                              </Nav.Item>
-                              <Nav.Item as="li">
-                                <Link
-                                  href="/home"
-                                  className={`${location.pathname === '/home' ? 'active' : ''} nav-link`}
-                                >
-                                  {' '}
-                                  Home{' '}
-                                </Link>
-                              </Nav.Item>
-                              <Nav.Item as="li">
-                                <Link
-                                  href="/movies"
-                                  className={`${location.pathname === '/movies' ? 'active' : ''} nav-link`}
-                                >
-                                  {' '}
-                                  Movie{' '}
-                                </Link>
-                              </Nav.Item>
-                              <Nav.Item as="li">
-                                <Link
-                                  href="/tv-shows"
-                                  className={`${location.pathname === '/tv-shows' ? 'active' : ''} nav-link`}
-                                >
-                                  {' '}
-                                  TV Show{' '}
-                                </Link>
-                              </Nav.Item>
-                              <Nav.Item as="li">
-                                <Link
-                                  href="/videos"
-                                  className={`${location.pathname === '/videos' ? 'active' : ''} nav-link`}
-                                >
-                                  {' '}
-                                  Video{' '}
-                                </Link>
-                              </Nav.Item>
-                              <Nav.Item as="li">
-                                <Link
-                                  href="/merchandise"
-                                  className={`${location.pathname === '/merchandise' ? 'active' : ''} nav-link`}
-                                >
-                                  {' '}
-                                  Merchandise Store{' '}
-                                </Link>
-                              </Nav.Item>
-                            </ul>
-                          </Collapse> */}
                         </Nav.Item>
                         <Nav.Item as="li">
                           <Nav.Link
@@ -940,8 +882,7 @@ const HeaderMerchandise = memo(() => {
                         </Dropdown>
                       </ul>
                     </div>
-                    {/* Myaccount navigate link */}
-                  </Navbar>
+                  </Navbar> */}
                   <div className="right-panel">
                     <Button
                       id="navbar-toggle"

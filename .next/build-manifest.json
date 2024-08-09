@@ -26,6 +26,41 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+    ],
+    "/blogs": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/blogs.js"
+    ],
+    "/blogs/grid/[type]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/blogs/grid/[type].js"
+    ],
+    "/extra/about-us": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/extra/about-us.js"
+    ],
+    "/extra/error-page-one": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/extra/error-page-one.js"
+    ],
+    "/extra/pricing-plan": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/extra/pricing-plan.js"
+    ],
+    "/merchandise/product-detail": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/merchandise/product-detail.js"
+    ],
+    "/merchandise/shop": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/merchandise/shop.js"
     ]
   },
   "ampFirstPages": []

@@ -109,9 +109,9 @@ const HeaderDefault = memo(() => {
                             : ''
                         }`}
                       >
-                        <Link href="/" className="item-name p-0">
+                        {/* <Link href="/" className="item-name p-0">
                             <span>Home</span>
-                        </Link>
+                        </Link> */}
                         {/* <span className="menu-icon ms-2">
                           <i
                             className="fa fa-caret-down toggledrop-desktop right-icon"

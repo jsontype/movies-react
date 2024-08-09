@@ -38,10 +38,10 @@ const ErrorPage2 = () => {
               </p>
               <div className="text-center mt-4 pt-3">
                 <div className="iq-button">
-                  <Link href="/" className="btn text-uppercase position-relative">
+                  {/* <Link href="/" className="btn text-uppercase position-relative">
                     <span className="button-text">Back to home</span>
                     <i className="fa-solid fa-play"></i>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </Col>

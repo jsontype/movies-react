@@ -71,7 +71,7 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
           <div className="img-box">
             {/* ***! 1. */}
             <Image
-              src={item.large_cover_image !== '' ? item.large_cover_image : 'https://png.pngtree.com/png-vector/20190820/ourmid/pngtree-no-image-vector-illustration-isolated-png-image_1694547.jpg' }
+              src={item.large_cover_image}
               className="img-fluid"
               alt=""
               loading="lazy"

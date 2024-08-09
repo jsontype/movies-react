@@ -5,10 +5,11 @@ import OttHeroSlider from '@/components/slider/OttHeroSlider'
 
 // sections
 import TopTenMoviesToWatch from '@/components/sections/TopTenMoviesToWatch'
-// import VerticalSectionSlider from "@/components/slider/VerticalSectionSlider"
 import GenreSlider from '@/components/sections/GenreSlider'
 
 const OTT = memo(() => {
+  const NO_IMAGE_URL = '/assets/images/No_Image_Available.jpg';
+
   const [moviesSortByYear, setMoviesSortByYear] = useState([])
   const [moviesSortByRating, setMoviesSortByRating] = useState([])
 
@@ -24,17 +25,12 @@ const OTT = memo(() => {
           fetch(movie.large_cover_image, { mode: 'no-cors' })
             .then(res => {
               if (res) {
-                console.log('movie.large_cover_image: ', movie.large_cover_image)
-                console.log('res: ', res)
-                console.log('res.status: ', res.status)
                 return movie;
               } else {
-                // ***! TODO: 404 GET console.log上で404表示されるが、こちには行かない。こちに行ったら、終わりなのに。
-                console.log('movie.large_cover_image 404: ', movie.large_cover_image)
                 throw new Error('Image not found');
               }
             })
-            .catch(() => ({...movie, large_cover_image: ''}))
+            .catch(() => ({ ...movie, large_cover_image: NO_IMAGE_URL }))
         )
 
         // Upadte After All Promise
@@ -62,11 +58,10 @@ const OTT = memo(() => {
             if (res) {
               return movie;
             } else {
-              // 404
               throw new Error('Image not found');
             }
           })
-          .catch(() => ({...movie, large_cover_image: ''}))
+          .catch(() => ({ ...movie, large_cover_image: NO_IMAGE_URL }))
         );
   
         // Update After All Promises
@@ -84,7 +79,6 @@ const OTT = memo(() => {
     <>
       <OttHeroSlider moviesSortByYear={moviesSortByYear} />
       <TopTenMoviesToWatch moviesSortByRating={moviesSortByRating} />
-      {/* <VerticalSectionSlider sliderData={ottVerticleLatestMovies} /> */}
       <GenreSlider />
     </>
   )
