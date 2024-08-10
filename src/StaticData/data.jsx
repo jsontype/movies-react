@@ -54,109 +54,110 @@ export const geners = [
   },
 ]
 
-// export const tvShowGenres = [
-//   {
-//     id: 1,
-//     slug: 'action',
-//     title: 'Action',
-//     thumbnail: generateImgPath('/assets/images/genre/01.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 2,
-//     slug: 'adventure',
-//     title: 'Adventure',
-//     thumbnail: generateImgPath('/assets/images/genre/02.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 3,
-//     slug: 'animation',
-//     title: 'Animation',
-//     thumbnail: generateImgPath('/assets/images/genre/03.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 4,
-//     slug: 'comedy',
-//     title: 'Comedy',
-//     thumbnail: generateImgPath('/assets/images/genre/04.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 5,
-//     slug: 'drama',
-//     title: 'Drama',
-//     thumbnail: generateImgPath('/assets/images/genre/05.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 6,
-//     slug: 'family',
-//     title: 'Family',
-//     thumbnail: generateImgPath('/assets/images/genre/06.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 7,
-//     slug: 'fantacy',
-//     title: 'Fantacy',
-//     thumbnail: generateImgPath('/assets/images/genre/07.webp'),
-//     type: 'movie',
-//   },
-// ]
+export const tvShowGenres = [
+  {
+    id: 1,
+    slug: 'action',
+    title: 'Action',
+    thumbnail: generateImgPath('/assets/images/genre/01.webp'),
+    type: 'movie',
+  },
+  {
+    id: 2,
+    slug: 'adventure',
+    title: 'Adventure',
+    thumbnail: generateImgPath('/assets/images/genre/02.webp'),
+    type: 'movie',
+  },
+  {
+    id: 3,
+    slug: 'animation',
+    title: 'Animation',
+    thumbnail: generateImgPath('/assets/images/genre/03.webp'),
+    type: 'movie',
+  },
+  {
+    id: 4,
+    slug: 'comedy',
+    title: 'Comedy',
+    thumbnail: generateImgPath('/assets/images/genre/04.webp'),
+    type: 'movie',
+  },
+  {
+    id: 5,
+    slug: 'drama',
+    title: 'Drama',
+    thumbnail: generateImgPath('/assets/images/genre/05.webp'),
+    type: 'movie',
+  },
+  {
+    id: 6,
+    slug: 'family',
+    title: 'Family',
+    thumbnail: generateImgPath('/assets/images/genre/06.webp'),
+    type: 'movie',
+  },
+  {
+    id: 7,
+    slug: 'fantacy',
+    title: 'Fantacy',
+    thumbnail: generateImgPath('/assets/images/genre/07.webp'),
+    type: 'movie',
+  },
+]
 
-// export const videoGenres = [
-//   {
-//     id: 1,
-//     slug: 'action',
-//     title: 'Action',
-//     thumbnail: generateImgPath('/assets/images/genre/01.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 2,
-//     slug: 'adventure',
-//     title: 'Adventure',
-//     thumbnail: generateImgPath('/assets/images/genre/02.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 3,
-//     slug: 'animation',
-//     title: 'Animation',
-//     thumbnail: generateImgPath('/assets/images/genre/03.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 4,
-//     slug: 'comedy',
-//     title: 'Comedy',
-//     thumbnail: generateImgPath('/assets/images/genre/04.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 5,
-//     slug: 'drama',
-//     title: 'Drama',
-//     thumbnail: generateImgPath('/assets/images/genre/05.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 6,
-//     slug: 'family',
-//     title: 'Family',
-//     thumbnail: generateImgPath('/assets/images/genre/06.webp'),
-//     type: 'movie',
-//   },
-//   {
-//     id: 7,
-//     slug: 'fantacy',
-//     title: 'Fantacy',
-//     thumbnail: generateImgPath('/assets/images/genre/07.webp'),
-//     type: 'movie',
-//   },
-// ]
+export const videoGenres = [
+  {
+    id: 1,
+    slug: 'action',
+    title: 'Action',
+    thumbnail: generateImgPath('/assets/images/genre/01.webp'),
+    type: 'movie',
+  },
+  {
+    id: 2,
+    slug: 'adventure',
+    title: 'Adventure',
+    thumbnail: generateImgPath('/assets/images/genre/02.webp'),
+    type: 'movie',
+  },
+  {
+    id: 3,
+    slug: 'animation',
+    title: 'Animation',
+    thumbnail: generateImgPath('/assets/images/genre/03.webp'),
+    type: 'movie',
+  },
+  {
+    id: 4,
+    slug: 'comedy',
+    title: 'Comedy',
+    thumbnail: generateImgPath('/assets/images/genre/04.webp'),
+    type: 'movie',
+  },
+  {
+    id: 5,
+    slug: 'drama',
+    title: 'Drama',
+    thumbnail: generateImgPath('/assets/images/genre/05.webp'),
+    type: 'movie',
+  },
+  {
+    id: 6,
+    slug: 'family',
+    title: 'Family',
+    thumbnail: generateImgPath('/assets/images/genre/06.webp'),
+    type: 'movie',
+  },
+  {
+    id: 7,
+    slug: 'fantacy',
+    title: 'Fantacy',
+    thumbnail: generateImgPath('/assets/images/genre/07.webp'),
+    type: 'movie',
+  },
+]
+
 export const cast = [
   {
     id: 1,
@@ -601,501 +602,324 @@ export const cast = [
     also_known_as: '',
   },
 ]
-// export const movieTags = [
-//   {
-//     id: 1,
-//     slug: 'action',
-//     title: 'Action',
-//     type: 'movie',
-//   },
-//   {
-//     id: 2,
-//     slug: 'adventure',
-//     title: 'Adventure',
-//     type: 'movie',
-//   },
-//   {
-//     id: 3,
-//     slug: 'animation',
-//     title: 'Animation',
-//     type: 'movie',
-//   },
-//   {
-//     id: 4,
-//     slug: 'comedy',
-//     title: 'Comedy',
-//     type: 'movie',
-//   },
-//   {
-//     id: 5,
-//     slug: 'drama',
-//     title: 'Drama',
-//     type: 'movie',
-//   },
-//   {
-//     id: 6,
-//     slug: 'family',
-//     title: 'Family',
-//     type: 'movie',
-//   },
-//   {
-//     id: 7,
-//     slug: 'fantacy',
-//     title: 'Fantacy',
-//     type: 'movie',
-//   },
-//   {
-//     id: 8,
-//     slug: 'history',
-//     title: 'History',
-//     type: 'movie',
-//   },
-//   {
-//     id: 9,
-//     slug: 'horror',
-//     title: 'Horror',
-//     type: 'movie',
-//   },
-//   {
-//     id: 10,
-//     slug: 'mystery',
-//     title: 'Mystery',
-//     type: 'movie',
-//   },
-//   {
-//     id: 11,
-//     slug: 'recommended',
-//     title: 'Recommended',
-//     type: 'movie',
-//   },
-//   {
-//     id: 12,
-//     slug: 'sci-fi',
-//     title: 'Sci-Fi',
-//     type: 'movie',
-//   },
-//   {
-//     id: 13,
-//     slug: 'space',
-//     title: 'Space',
-//     type: 'movie',
-//   },
-//   {
-//     id: 14,
-//     slug: 'thriller',
-//     title: 'Thriller',
-//     type: 'movie',
-//   },
-// ]
 
-// export const tvShowsTags = [
-//   {
-//     id: 1,
-//     slug: '4k-ultra',
-//     title: '4K Ultra',
-//     type: 'tv-show',
-//   },
-//   {
-//     id: 2,
-//     slug: 'brother',
-//     title: 'Brother',
-//     type: 'tv-show',
-//   },
-//   {
-//     id: 3,
-//     slug: 'brother-relationship',
-//     title: 'Brother Relationship',
-//     type: 'tv-show',
-//   },
-//   {
-//     id: 4,
-//     slug: 'kings',
-//     title: 'Kings',
-//     type: 'tv-show',
-//   },
-//   {
-//     id: 5,
-//     slug: 'music',
-//     title: 'Music',
-//     type: 'tv-show',
-//   },
-//   {
-//     id: 6,
-//     slug: 'mythology',
-//     title: 'Mythology',
-//     type: 'tv-show',
-//   },
-//   {
-//     id: 7,
-//     slug: 'premieres',
-//     title: 'Premieres',
-//     type: 'tv-show',
-//   },
-//   {
-//     id: 8,
-//     slug: 'vikings',
-//     title: 'Vikings',
-//     type: 'tv-show',
-//   },
-// ]
+export const movieTags = [
+  {
+    id: 1,
+    slug: 'action',
+    title: 'Action',
+    type: 'movie',
+  },
+  {
+    id: 2,
+    slug: 'adventure',
+    title: 'Adventure',
+    type: 'movie',
+  },
+  {
+    id: 3,
+    slug: 'animation',
+    title: 'Animation',
+    type: 'movie',
+  },
+  {
+    id: 4,
+    slug: 'comedy',
+    title: 'Comedy',
+    type: 'movie',
+  },
+  {
+    id: 5,
+    slug: 'drama',
+    title: 'Drama',
+    type: 'movie',
+  },
+  {
+    id: 6,
+    slug: 'family',
+    title: 'Family',
+    type: 'movie',
+  },
+  {
+    id: 7,
+    slug: 'fantacy',
+    title: 'Fantacy',
+    type: 'movie',
+  },
+  {
+    id: 8,
+    slug: 'history',
+    title: 'History',
+    type: 'movie',
+  },
+  {
+    id: 9,
+    slug: 'horror',
+    title: 'Horror',
+    type: 'movie',
+  },
+  {
+    id: 10,
+    slug: 'mystery',
+    title: 'Mystery',
+    type: 'movie',
+  },
+  {
+    id: 11,
+    slug: 'recommended',
+    title: 'Recommended',
+    type: 'movie',
+  },
+  {
+    id: 12,
+    slug: 'sci-fi',
+    title: 'Sci-Fi',
+    type: 'movie',
+  },
+  {
+    id: 13,
+    slug: 'space',
+    title: 'Space',
+    type: 'movie',
+  },
+  {
+    id: 14,
+    slug: 'thriller',
+    title: 'Thriller',
+    type: 'movie',
+  },
+]
 
-// export const videoTags = [
-//   {
-//     id: 1,
-//     slug: 'action',
-//     title: 'Action',
-//     type: 'video',
-//   },
-//   {
-//     id: 2,
-//     slug: 'adventure',
-//     title: 'Adventure',
-//     type: 'video',
-//   },
-//   {
-//     id: 3,
-//     slug: 'animation',
-//     title: 'Animation',
-//     type: 'video',
-//   },
-//   {
-//     id: 4,
-//     slug: 'comedy',
-//     title: 'Comedy',
-//     type: 'video',
-//   },
-//   {
-//     id: 5,
-//     slug: 'crime',
-//     title: 'Crime',
-//     type: 'video',
-//   },
-//   {
-//     id: 6,
-//     slug: 'drama',
-//     title: 'Drama',
-//     type: 'video',
-//   },
-//   {
-//     id: 7,
-//     slug: 'family',
-//     title: 'Family',
-//     type: 'video',
-//   },
-//   {
-//     id: 8,
-//     slug: 'fantacy',
-//     title: 'fantacy',
-//     type: 'video',
-//   },
-//   {
-//     id: 9,
-//     slug: 'horror',
-//     title: 'Horror',
-//     type: 'video',
-//   },
-//   {
-//     id: 10,
-//     slug: 'romance',
-//     title: 'Romance',
-//     type: 'video',
-//   },
-//   {
-//     id: 11,
-//     slug: 'thriller',
-//     title: 'Thriller',
-//     type: 'video',
-//   },
-// ]
+export const tvShowsTags = [
+  {
+    id: 1,
+    slug: '4k-ultra',
+    title: '4K Ultra',
+    type: 'tv-show',
+  },
+  {
+    id: 2,
+    slug: 'brother',
+    title: 'Brother',
+    type: 'tv-show',
+  },
+  {
+    id: 3,
+    slug: 'brother-relationship',
+    title: 'Brother Relationship',
+    type: 'tv-show',
+  },
+  {
+    id: 4,
+    slug: 'kings',
+    title: 'Kings',
+    type: 'tv-show',
+  },
+  {
+    id: 5,
+    slug: 'music',
+    title: 'Music',
+    type: 'tv-show',
+  },
+  {
+    id: 6,
+    slug: 'mythology',
+    title: 'Mythology',
+    type: 'tv-show',
+  },
+  {
+    id: 7,
+    slug: 'premieres',
+    title: 'Premieres',
+    type: 'tv-show',
+  },
+  {
+    id: 8,
+    slug: 'vikings',
+    title: 'Vikings',
+    type: 'tv-show',
+  },
+]
 
-// export const sectionSliders = [
-//   {
-//     image: generateImgPath('/assets/images/movies/related/01.webp'),
-//     title: 'Giikre',
-//     movieTime: '2hr: 12mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/related/02.webp'),
-//     title: 'YoShi',
-//     movieTime: '1hr: 22mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/related/03.webp'),
-//     title: 'We Gare',
-//     movieTime: '1hr: 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/related/04.webp'),
-//     title: 'Avengers',
-//     movieTime: '1hr: 45mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/related/05.webp'),
-//     title: 'Chosfies',
-//     movieTime: '1hr: 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/related/06.webp'),
-//     title: 'Tf Oaler',
-//     movieTime: '1hr: 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/related/07.webp'),
-//     title: 'Another Danger',
-//     movieTime: '1hr: 30mins',
-//   },
-// ]
+export const videoTags = [
+  {
+    id: 1,
+    slug: 'action',
+    title: 'Action',
+    type: 'video',
+  },
+  {
+    id: 2,
+    slug: 'adventure',
+    title: 'Adventure',
+    type: 'video',
+  },
+  {
+    id: 3,
+    slug: 'animation',
+    title: 'Animation',
+    type: 'video',
+  },
+  {
+    id: 4,
+    slug: 'comedy',
+    title: 'Comedy',
+    type: 'video',
+  },
+  {
+    id: 5,
+    slug: 'crime',
+    title: 'Crime',
+    type: 'video',
+  },
+  {
+    id: 6,
+    slug: 'drama',
+    title: 'Drama',
+    type: 'video',
+  },
+  {
+    id: 7,
+    slug: 'family',
+    title: 'Family',
+    type: 'video',
+  },
+  {
+    id: 8,
+    slug: 'fantacy',
+    title: 'fantacy',
+    type: 'video',
+  },
+  {
+    id: 9,
+    slug: 'horror',
+    title: 'Horror',
+    type: 'video',
+  },
+  {
+    id: 10,
+    slug: 'romance',
+    title: 'Romance',
+    type: 'video',
+  },
+  {
+    id: 11,
+    slug: 'thriller',
+    title: 'Thriller',
+    type: 'video',
+  },
+]
 
-// export const populerSlider = [
-//   {
-//     image: generateImgPath('/assets/images/movies/popular/01.webp'),
-//     title: 'CRW',
-//     movieTime: '2hr: 12mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/popular/02.webp'),
-//     title: 'Batte Wiire',
-//     movieTime: '1hr: 22mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/popular/03.webp'),
-//     title: 'Goal',
-//     movieTime: '2hr: 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/popular/04.webp'),
-//     title: 'Dandacg',
-//     movieTime: '1hr: 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/popular/05.webp'),
-//     title: 'Mexcan',
-//     movieTime: '1hr: 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/popular/06.webp'),
-//     title: 'Oit moleld',
-//     movieTime: '1hr: 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/popular/07.webp'),
-//     title: 'Another Danger',
-//     movieTime: '1hr: 30mins',
-//   },
-// ]
-// export const verticleLatestMovies = [
-//   {
-//     image: generateImgPath('/assets/images/top-10/05.webp'),
-//     title: 'Black Queen',
-//     movieTime: '2hr: 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/top-10/06.webp'),
-//     title: 'wars of dragons',
-//     movieTime: '3hr: 00mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/top-10/07.webp'),
-//     title: 'the Escape',
-//     movieTime: '1hr: 45mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/top-10/08.webp'),
-//     title: 'X-Men',
-//     movieTime: '1hr: 22mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/top-10/09.webp'),
-//     title: 'Logan',
-//     movieTime: '1hr: 45mins',
-//   },
-// ]
+export const sectionSliders = [
+  {
+    image: generateImgPath('/assets/images/movies/related/01.webp'),
+    title: 'Giikre',
+    movieTime: '2hr: 12mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/related/02.webp'),
+    title: 'YoShi',
+    movieTime: '1hr: 22mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/related/03.webp'),
+    title: 'We Gare',
+    movieTime: '1hr: 30mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/related/04.webp'),
+    title: 'Avengers',
+    movieTime: '1hr: 45mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/related/05.webp'),
+    title: 'Chosfies',
+    movieTime: '1hr: 30mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/related/06.webp'),
+    title: 'Tf Oaler',
+    movieTime: '1hr: 30mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/related/07.webp'),
+    title: 'Another Danger',
+    movieTime: '1hr: 30mins',
+  },
+]
 
-// export const topPics = [
-//   {
-//     image: generateImgPath('/assets/images/movies/top-picks/01.webp'),
-//     title: 'Frzzen',
-//     movieTime: '2hr : 12mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/top-picks/02.webp'),
-//     title: 'The Crew',
-//     movieTime: '1hr : 22mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/top-picks/03.webp'),
-//     title: 'Cromeus',
-//     movieTime: '1hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/top-picks/04.webp'),
-//     title: 'Reodg',
-//     movieTime: '1hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/top-picks/05.webp'),
-//     title: 'guiility',
-//     movieTime: '1hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/top-picks/06.webp'),
-//     title: 'syyvcihonic',
-//     movieTime: '1hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/top-picks/07.webp'),
-//     title: 'tittanc',
-//     movieTime: '1hr : 30mins',
-//   },
-// ]
+export const latestMovie = [
+  {
+    image: generateImgPath('/assets/images/movies/latest/01.webp'),
+    title: 'mortal nories',
+    movieTime: '2hr : 12mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/latest/02.webp'),
+    title: 'advetre',
+    movieTime: '1hr : 30mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/latest/03.webp'),
+    title: 'net ailo',
+    movieTime: '2hr : 30mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/latest/04.webp'),
+    title: 'ariivaal',
+    movieTime: '2hr : 45mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/latest/05.webp'),
+    title: 'dramma',
+    movieTime: '1hr : 55mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/latest/06.webp'),
+    title: 'aune',
+    movieTime: '1hr : 25mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/latest/07.webp'),
+    title: 'everest',
+    movieTime: '1hr : 45mins',
+  },
+]
 
-// export const latestMovie = [
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/01.webp'),
-//     title: 'mortal nories',
-//     movieTime: '2hr : 12mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/02.webp'),
-//     title: 'advetre',
-//     movieTime: '1hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/03.webp'),
-//     title: 'net ailo',
-//     movieTime: '2hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/04.webp'),
-//     title: 'ariivaal',
-//     movieTime: '2hr : 45mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/05.webp'),
-//     title: 'dramma',
-//     movieTime: '1hr : 55mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/06.webp'),
-//     title: 'aune',
-//     movieTime: '1hr : 25mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/07.webp'),
-//     title: 'everest',
-//     movieTime: '1hr : 45mins',
-//   },
-// ]
-
-// export const suggested = [
-//   {
-//     image: generateImgPath('/assets/images/movies/suggested/01.webp'),
-//     title: 'choflief',
-//     movieTime: '2hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/suggested/02.webp'),
-//     title: 'lost',
-//     movieTime: '3hr : 0mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/suggested/03.webp'),
-//     title: 'red hamald',
-//     movieTime: '1hr : 45mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/suggested/04.webp'),
-//     title: 'pandap',
-//     movieTime: '2hr : 45mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/suggested/05.webp'),
-//     title: 'femllaeemll',
-//     movieTime: '1hr : 55mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/suggested/06.webp'),
-//     title: 'ragnarorr',
-//     movieTime: '2hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/suggested/07.webp'),
-//     title: 'sonil',
-//     movieTime: '2hr : 15mins',
-//   },
-// ]
-
-// export const spacialLatestMovie = [
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/01.webp'),
-//     title: 'mortal nories',
-//     movieTime: '2hr : 12mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/02.webp'),
-//     title: 'advetre',
-//     movieTime: '1hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/03.webp'),
-//     title: 'net ailo',
-//     movieTime: '2hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/04.webp'),
-//     title: 'ariivaal',
-//     movieTime: '2hr : 45mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/05.webp'),
-//     title: 'dramma',
-//     movieTime: '1hr : 55mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/06.webp'),
-//     title: 'aune',
-//     movieTime: '1hr : 25mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/latest/07.webp'),
-//     title: 'everest',
-//     movieTime: '1hr : 45mins',
-//   },
-// ]
-// export const upcommingMovie = [
-//   {
-//     image: generateImgPath('/assets/images/movies/upcoming/01.webp'),
-//     title: 'dinoosaur',
-//     movieTime: '2hr : 12mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/upcoming/02.webp'),
-//     title: 'godilla',
-//     movieTime: '1hr : 22mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/upcoming/03.webp'),
-//     title: 'batter caill',
-//     movieTime: '1hr : 55mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/upcoming/04.webp'),
-//     title: 'the co nouerllng',
-//     movieTime: '1hr : 30mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/upcoming/05.webp'),
-//     title: 'fast furious',
-//     movieTime: '2hr : 45mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/upcoming/06.webp'),
-//     title: 'spiderman',
-//     movieTime: '1hr : 45mins',
-//   },
-//   {
-//     image: generateImgPath('/assets/images/movies/upcoming/07.webp'),
-//     title: 'onepeoc',
-//     movieTime: '2hr : 30mins',
-//   },
-// ]
+export const upcommingMovie = [
+  {
+    image: generateImgPath('/assets/images/movies/upcoming/01.webp'),
+    title: 'dinoosaur',
+    movieTime: '2hr : 12mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/upcoming/02.webp'),
+    title: 'godilla',
+    movieTime: '1hr : 22mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/upcoming/03.webp'),
+    title: 'batter caill',
+    movieTime: '1hr : 55mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/upcoming/04.webp'),
+    title: 'the co nouerllng',
+    movieTime: '1hr : 30mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/upcoming/05.webp'),
+    title: 'fast furious',
+    movieTime: '2hr : 45mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/upcoming/06.webp'),
+    title: 'spiderman',
+    movieTime: '1hr : 45mins',
+  },
+  {
+    image: generateImgPath('/assets/images/movies/upcoming/07.webp'),
+    title: 'onepeoc',
+    movieTime: '2hr : 30mins',
+  },
+]
