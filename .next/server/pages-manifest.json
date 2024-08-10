@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/genres/all-genre": "pages/genres/all-genre.js",
+  "/blogs/filter/[type]": "pages/blogs/filter/[type].js",
   "/": "pages/index.js"
 }

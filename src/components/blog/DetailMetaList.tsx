@@ -9,7 +9,12 @@ import CategoriesWidget from './sidebar/CategoriesWidget'
 import TagsWidget from './sidebar/TagsWidget'
 import FollowUs from './sidebar/FollowUs'
 
+// ***! 8. あとで検索機能追加（できれば）
 const DetailMetaList = memo(() => {
+  const handleSearchClick = () => {
+    console.log('clicked')
+  }
+
   return (
     <>
       <div className="widget-area">
@@ -23,7 +28,11 @@ const DetailMetaList = memo(() => {
                 name="s"
                 defaultValue=""
               />
-              <button type="submit" className="block-search_button">
+              <button 
+                type="submit"
+                className="block-search_button"
+                onClick={handleSearchClick}
+              >
                 <i aria-hidden="true" className="fa fa-search"></i>
               </button>
             </div>

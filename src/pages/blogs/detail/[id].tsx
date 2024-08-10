@@ -1,46 +1,56 @@
-import React, { Fragment, memo } from 'react'
+import { useState, useEffect } from 'react'
 
-//react-bootstrap
+// React-bootstrap
 import { Row, Col, Container } from 'react-bootstrap'
 
-//router
+// Router
 import Link from 'next/link'
 
-//static data
-import { blogs } from '../../StaticData/blogs'
+// Components
+import DetailMetaList from '@/components/blog/DetailMetaList'
+import FormWidget from '@/components/blog/FormWidget'
 
-//components
-import DetailMetaList from '../../components/blog/DetailMetaList'
-import FormWidget from '../../components/blog/FormWidget'
-
-//custom hook
+// Custom hook
 import { useBreadcrumb } from '@/utilities/usePage'
 
-interface BlogDetail {
-  id: string
-  categories: string
-  title: string
-  userImage: string
-  username: string
-  blogDate: string
-  tags: [string]
-  longDescription: string
-}
+// URLのQuery Stringを扱う
+import { useRouter } from 'next/router'
+
+import * as SettingSelector from '@/store/media/selectors'
+import { useSelector, useDispatch } from 'react-redux'
+import { getMoviesSortByRating } from '@/store/media/actions'
+import { AnyAction } from '@reduxjs/toolkit'
+import type { MoviesType } from '@/types'
 
 const BlogDetail = () => {
-  const slug = 'the-most-anticipated-movies'
-  const blog: BlogDetail | any = blogs.find(item => item.slug === slug)
+  const router = useRouter()
+  const { id } = router.query
+  const [movieData, setMovieData] = useState<any>({})
+
+  const moviesSortByRating = useSelector(SettingSelector.moviesSortByRating)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getMoviesSortByRating() as unknown as AnyAction)
+  }, [])
+  useEffect(() => {
+    const result = moviesSortByRating.find((item: MoviesType) => item.id === Number(id))
+    setMovieData(result)
+    // ***! 1. これ見ながら完成させて
+    console.log('movieData:' , movieData)
+  }, [moviesSortByRating])
+
   useBreadcrumb('The Most Anticipated Movies')
+
   return (
     <>
-      {blog !== undefined && blog !== null ? (
+      {movieData !== undefined && movieData !== null ? (
         <div className="section-padding">
           <Container>
             <Row>
               <Col xl="8">
                 <div className="iq-blog blog-detail">
                   <Link href="" className="blog-image d-block overflow-hidden">
-                    <img src={blog.thumbnail} loading="lazy" alt="" className="img-fluid w-100" />
+                    <img src={movieData.large_cover_image} loading="lazy" alt="" className="img-fluid w-100" />
                   </Link>
                   <div className="iq-blog-box pt-4">
                     <div className="iq-blog-meta d-flex mb-3">
@@ -48,7 +58,7 @@ const BlogDetail = () => {
                         <li className="border-gredient-left">
                           <Link href="/blogs/filter/author" className="iq-user">
                             <i className="fa fa-user-o me-1" aria-hidden="true"></i>
-                            {blog.username}
+                            {movieData.title}
                           </Link>
                         </li>
                       </ul>
@@ -56,14 +66,15 @@ const BlogDetail = () => {
                         <li className="border-gredient-left">
                           <Link rel="bookmark" href="/blogs/filter/date">
                             <i className="far fa-calendar-alt me-1" aria-hidden="true"></i>
-                            {blog.blogDate}{' '}
+                            {movieData.date_uploaded}{' '}
                           </Link>
                         </li>
                       </ul>
                     </div>
                     <div>
-                      <div dangerouslySetInnerHTML={{ __html: blog.longDescription }}></div>
-                    </div>
+                      <div dangerouslySetInnerHTML={{ __html: movieData.synopsis }}></div>
+                    {/* ***! 2. Download LinkをTorrentから＃hrefで表示  */}
+                  </div>
                     <div className="iq-blog-tag">
                       <FormWidget></FormWidget>
                     </div>

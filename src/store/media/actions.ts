@@ -2,6 +2,7 @@ import { SettingMedia } from './reducers'
 import { upcommingMovie, movieTags, tvShowsTags, videoTags, cast } from '../../StaticData/data'
 
 export const {
+  movies_sort_by_rating,
   media_movies,
   upcommming_movies,
   latest_movies,
@@ -37,6 +38,18 @@ export const {
 } = SettingMedia.actions
 
 const sleepTime = 500
+export const getMoviesSortByRating =
+  () => (dispatch: (arg0: { payload: any; type: 'media/movies_sort_by_rating' }) => void) => {
+    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
+      .then(res => res.json())
+      .then(json => json.data.movies)
+      .then(result => {
+        dispatch(movies_sort_by_rating(result))
+      })
+      .catch(error => {
+        console.error('Error fetching movies:', error);
+      });
+  }
 export const getMoviesTagsAsync =
   () => (dispatch: (arg0: { payload: any; type: 'media/media_moviesTags' }) => void) => {
     // You can call api here
