@@ -2,12 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/extra/about-us": "pages/extra/about-us.js",
-  "/": "pages/index.js",
-  "/blogs": "pages/blogs.js",
-  "/merchandise/shop": "pages/merchandise/shop.js",
-  "/extra/error-page-one": "pages/extra/error-page-one.js",
-  "/extra/pricing-plan": "pages/extra/pricing-plan.js",
-  "/merchandise/product-detail": "pages/merchandise/product-detail.js",
-  "/blogs/grid/[type]": "pages/blogs/grid/[type].js"
+  "/genres/all-genre": "pages/genres/all-genre.js",
+  "/": "pages/index.js"
 }
