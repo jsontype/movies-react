@@ -19,8 +19,8 @@ export const geners = [
   },
   {
     id: 3,
-    slug: 'animation',
-    title: 'Animation',
+    slug: 'documentary',
+    title: 'Documentary',
     thumbnail: generateImgPath('/assets/images/genre/03.webp'),
     type: 'movie',
   },
@@ -47,8 +47,8 @@ export const geners = [
   },
   {
     id: 7,
-    slug: 'fantacy',
-    title: 'Fantacy',
+    slug: 'crime',
+    title: 'Crime',
     thumbnail: generateImgPath('/assets/images/genre/07.webp'),
     type: 'movie',
   },
@@ -157,6 +157,7 @@ export const videoGenres = [
     type: 'movie',
   },
 ]
+
 export const cast = [
   {
     id: 1,
@@ -601,6 +602,7 @@ export const cast = [
     also_known_as: '',
   },
 ]
+
 export const movieTags = [
   {
     id: 1,
@@ -846,109 +848,6 @@ export const sectionSliders = [
   },
 ]
 
-export const populerSlider = [
-  {
-    image: generateImgPath('/assets/images/movies/popular/01.webp'),
-    title: 'CRW',
-    movieTime: '2hr: 12mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/popular/02.webp'),
-    title: 'Batte Wiire',
-    movieTime: '1hr: 22mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/popular/03.webp'),
-    title: 'Goal',
-    movieTime: '2hr: 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/popular/04.webp'),
-    title: 'Dandacg',
-    movieTime: '1hr: 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/popular/05.webp'),
-    title: 'Mexcan',
-    movieTime: '1hr: 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/popular/06.webp'),
-    title: 'Oit moleld',
-    movieTime: '1hr: 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/popular/07.webp'),
-    title: 'Another Danger',
-    movieTime: '1hr: 30mins',
-  },
-]
-export const verticleLatestMovies = [
-  {
-    image: generateImgPath('/assets/images/top-10/05.webp'),
-    title: 'Black Queen',
-    movieTime: '2hr: 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/top-10/06.webp'),
-    title: 'wars of dragons',
-    movieTime: '3hr: 00mins',
-  },
-  {
-    image: generateImgPath('/assets/images/top-10/07.webp'),
-    title: 'the Escape',
-    movieTime: '1hr: 45mins',
-  },
-  {
-    image: generateImgPath('/assets/images/top-10/08.webp'),
-    title: 'X-Men',
-    movieTime: '1hr: 22mins',
-  },
-  {
-    image: generateImgPath('/assets/images/top-10/09.webp'),
-    title: 'Logan',
-    movieTime: '1hr: 45mins',
-  },
-]
-
-export const topPics = [
-  {
-    image: generateImgPath('/assets/images/movies/top-picks/01.webp'),
-    title: 'Frzzen',
-    movieTime: '2hr : 12mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/top-picks/02.webp'),
-    title: 'The Crew',
-    movieTime: '1hr : 22mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/top-picks/03.webp'),
-    title: 'Cromeus',
-    movieTime: '1hr : 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/top-picks/04.webp'),
-    title: 'Reodg',
-    movieTime: '1hr : 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/top-picks/05.webp'),
-    title: 'guiility',
-    movieTime: '1hr : 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/top-picks/06.webp'),
-    title: 'syyvcihonic',
-    movieTime: '1hr : 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/top-picks/07.webp'),
-    title: 'tittanc',
-    movieTime: '1hr : 30mins',
-  },
-]
-
 export const latestMovie = [
   {
     image: generateImgPath('/assets/images/movies/latest/01.webp'),
@@ -987,81 +886,6 @@ export const latestMovie = [
   },
 ]
 
-export const suggested = [
-  {
-    image: generateImgPath('/assets/images/movies/suggested/01.webp'),
-    title: 'choflief',
-    movieTime: '2hr : 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/suggested/02.webp'),
-    title: 'lost',
-    movieTime: '3hr : 0mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/suggested/03.webp'),
-    title: 'red hamald',
-    movieTime: '1hr : 45mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/suggested/04.webp'),
-    title: 'pandap',
-    movieTime: '2hr : 45mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/suggested/05.webp'),
-    title: 'femllaeemll',
-    movieTime: '1hr : 55mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/suggested/06.webp'),
-    title: 'ragnarorr',
-    movieTime: '2hr : 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/suggested/07.webp'),
-    title: 'sonil',
-    movieTime: '2hr : 15mins',
-  },
-]
-
-export const spacialLatestMovie = [
-  {
-    image: generateImgPath('/assets/images/movies/latest/01.webp'),
-    title: 'mortal nories',
-    movieTime: '2hr : 12mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/latest/02.webp'),
-    title: 'advetre',
-    movieTime: '1hr : 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/latest/03.webp'),
-    title: 'net ailo',
-    movieTime: '2hr : 30mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/latest/04.webp'),
-    title: 'ariivaal',
-    movieTime: '2hr : 45mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/latest/05.webp'),
-    title: 'dramma',
-    movieTime: '1hr : 55mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/latest/06.webp'),
-    title: 'aune',
-    movieTime: '1hr : 25mins',
-  },
-  {
-    image: generateImgPath('/assets/images/movies/latest/07.webp'),
-    title: 'everest',
-    movieTime: '1hr : 45mins',
-  },
-]
 export const upcommingMovie = [
   {
     image: generateImgPath('/assets/images/movies/upcoming/01.webp'),
