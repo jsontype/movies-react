@@ -10,6 +10,7 @@ const CategoriesWidget = memo(() => {
   return (
     <>
       <div id="categories-2" className="widget widget_categories">
+        {/* ***! 2-2. Categories */}
         <h5 className="widget-title position-relative">Categories</h5>
         <ul className="p-0 m-0 list-unstyled">
           {blogCategories.map((item, index) => {

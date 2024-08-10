@@ -27,6 +27,7 @@ interface BlogDetail {
   longDescription: string
 }
 
+// ***! 111. Blog Standerd Main
 const BlogDetail = () => {
   const slug = 'the-most-anticipated-movies'
   const blog: BlogDetail | any = blogs.find(item => item.slug === slug)
@@ -63,7 +64,8 @@ const BlogDetail = () => {
                     </div>
                     <div>
                       <div dangerouslySetInnerHTML={{ __html: blog.longDescription }}></div>
-                    </div>
+                    {/* ***! 3. Download LinkをTorrentから＃hrefで表示  */}
+                  </div>
                     <div className="iq-blog-tag">
                       <FormWidget></FormWidget>
                     </div>

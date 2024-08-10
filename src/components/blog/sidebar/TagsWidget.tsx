@@ -10,6 +10,7 @@ const TagsWidget = memo(() => {
   return (
     <>
       <div id="tag_cloud-2" className="widget">
+        {/* ***! 2-3. Tags */}
         <h5 className="widget-title position-relative">Tags</h5>
         <div className="tagcloud">
           <ul className="p-0 m-0 list-unstyled gap-2 widget_tags">

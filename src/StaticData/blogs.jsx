@@ -144,6 +144,7 @@ export const blogCategories = [
   },
 ]
 
+// ***! 111. Blog Standerd Details
 export const blogs = [
   {
     id: 1,
