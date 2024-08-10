@@ -5,6 +5,9 @@ export const SettingMedia = createSlice({
   name: 'media',
   initialState: state,
   reducers: {
+    movies_sort_by_rating: (state, action) => {
+      state.moviesSortByRating = action.payload
+    },
     media_movies: (state, action) => {
       state.movies = action.payload
     },

@@ -69,7 +69,6 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
       <SwiperSlide className="swiper-bg" key={index}>
         <div className="block-images position-relative">
           <div className="img-box">
-            {/* ***! 1. */}
             <Image
               src={item.large_cover_image}
               className="img-fluid"
@@ -166,7 +165,7 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
       <div className="iq-banner-thumb-slider">
         <div className="slider">
           <div className="position-relative slider-bg d-flex justify-content-end">
-            {/* ***! Mini Slide On Right Side - Start */}
+            {/* Mini Slide On Right Side - Start */}
             <div className="position-relative my-auto">
               <div className="horizontal_thumb_slider" data-swiper="slider-thumbs-ott">
                 <div className="banner-thumb-slider-nav">
@@ -209,9 +208,9 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                 </div>
               </div>
             </div>
-            {/* ***! Mini Slide On Right Side - End */}
+            {/* Mini Slide On Right Side - End */}
 
-            {/* ***! Hero Slide - Start */}
+            {/* Hero Slide - Start */}
             <div className="slider-images" data-swiper="slider-images-ott">
               <Swiper
                 key={String(themeSchemeDirection)}
@@ -227,7 +226,7 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                 {renderHeroSlide}
               </Swiper>
             </div>
-            {/* ***! Hero Slide - End */}
+            {/* Hero Slide - End */}
           </div>
         </div>
       </div>

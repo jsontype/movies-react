@@ -18,7 +18,7 @@ const RecentPost = memo(() => {
   return (
     <>
       <div className="widget iq-widget-blog">
-        {/* ***! 2-1. Recent Post */}
+        {/* ***! 7. Recent PostをYearで一番最初のミツ！ */}
         <h5 className="widget-title position-relative">Recent Post</h5>
         <ul className="list-inline p-0 m-0">
           {rescentPost.map((item, index) => {

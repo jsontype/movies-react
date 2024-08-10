@@ -11,6 +11,8 @@ import { blogs } from '@/StaticData/blogs'
 
 import { useRouter } from 'next/router'
 import FilterBlogBreadcrumb from '@/components/blog/FiterBlogBreadcrumb'
+
+// ***! 5. pages/blogs/filter/tags -> tagsがmoviesAll...(limitを20 → 500にしてとるやつ)みたいなstoreを作成して、そこからgenresの中身が[action, comedy]みたいになっているはずだが、そのいずれかにあっただらここに入るように実装をすること
 const Filter = memo(props => {
   const router = useRouter()
 

@@ -9,7 +9,7 @@ import CategoriesWidget from './sidebar/CategoriesWidget'
 import TagsWidget from './sidebar/TagsWidget'
 import FollowUs from './sidebar/FollowUs'
 
-// ***! 111. Blog Standerd Sub
+// ***! 8. あとで検索機能追加（できれば）
 const DetailMetaList = memo(() => {
   const handleSearchClick = () => {
     console.log('clicked')

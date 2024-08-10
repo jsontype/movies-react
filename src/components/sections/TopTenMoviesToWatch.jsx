@@ -9,13 +9,16 @@ const TopTenMoviesToWatch = memo(({ moviesSortByRating }) => {
   const topTen = moviesSortByRating.slice(0, 10).map((movie, index) => ({
     image: movie.large_cover_image,
     count: index + 1,
+    id: movie.id
   }))
+
+  const getDetaillink = (id) => `/blogs/detail/${id}`
 
   return (
     <>
       <SectionSlider title={title} list={topTen} className="top-ten-block">
         {data => (
-          <TopTenCard imagePath={data.image} countValue={data.count} link="/blogs/detail" />
+          <TopTenCard imagePath={data.image} countValue={data.count} link={getDetaillink(data.id)} />
         )}
       </SectionSlider>
     </>
