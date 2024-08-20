@@ -26,6 +26,7 @@ const BlogDetail = () => {
   const router = useRouter()
   const { id } = router.query
   const [movieData, setMovieData] = useState<any>({})
+  const [torrentUrls, setTorrentUrls] = useState<string[]>([])
 
   const moviesSortByRating = useSelector(SettingSelector.moviesSortByRating)
   const dispatch = useDispatch()
@@ -38,6 +39,21 @@ const BlogDetail = () => {
     // ***! 1. これ見ながら完成させて
     console.log('movieData:' , movieData)
   }, [moviesSortByRating])
+
+  useEffect(() => {
+    if (id) {
+      fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.data?.movie?.torrents && data.data.movie.torrents.length > 0) {
+            // 全てのTorrent URLを取得
+            const torrents = data.data.movie.torrents.map((torrent: any) => torrent.url)
+            setTorrentUrls(torrents)
+          }
+        })
+        .catch((error) => console.error('Error fetching torrent data:', error))
+    }
+  }, [id])
 
   useBreadcrumb('The Most Anticipated Movies')
 
@@ -74,6 +90,21 @@ const BlogDetail = () => {
                     <div>
                       <div dangerouslySetInnerHTML={{ __html: movieData.synopsis }}></div>
                     {/* ***! 2. Download LinkをTorrentから＃hrefで表示  */}
+                    {torrentUrls.length > 0 ? (
+                        <div className="torrent-links">
+                          <ul>
+                            {torrentUrls.map((url, index) => (
+                              <li key={index}>
+                                <Link href={url} target="_blank" rel="noopener noreferrer">
+                                  Download Link {index + 1}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : (
+                        <p>Loading torrent links...</p>
+                      )}
                   </div>
                     <div className="iq-blog-tag">
                       <FormWidget></FormWidget>
