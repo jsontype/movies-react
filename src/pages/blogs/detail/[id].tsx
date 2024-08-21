@@ -89,8 +89,8 @@ const BlogDetail = () => {
                     </div>
                     <div>
                       <div dangerouslySetInnerHTML={{ __html: movieData.synopsis }}></div>
-                    {/* ***! 2. Download LinkをTorrentから＃hrefで表示  */}
-                    {torrentUrls.length > 0 ? (
+                      {/* ***! 2. Download LinkをTorrentから＃hrefで表示  */}
+                      {torrentUrls.length > 0 ? (
                         <div className="torrent-links">
                           <ul>
                             {torrentUrls.map((url, index) => (
@@ -105,7 +105,7 @@ const BlogDetail = () => {
                       ) : (
                         <p>Loading torrent links...</p>
                       )}
-                  </div>
+                    </div>
                     <div className="iq-blog-tag">
                       <FormWidget></FormWidget>
                     </div>
