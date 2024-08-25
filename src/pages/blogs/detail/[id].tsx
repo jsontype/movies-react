@@ -25,12 +25,23 @@ import type { MoviesType } from '@/types'
 // convertRuntime import
 import { convertRuntime } from '@/components/slider/OttHeroSlider'
 
+const initMovieData = {
+  id: 0
+  title: ''
+  rating: 0
+  genres: []
+  summary: ''
+  duration: ''
+  large_cover_image: ''
+  runtime: 0
+}
+
 const BlogDetail = () => {
   const router = useRouter()
   const { id } = router.query
-  const [movieData, setMovieData] = useState({})
-  const [movieDataPrev, setMovieDataPrev] = useState({})
-  const [movieDataNext, setMovieDataNext] = useState({})
+  const [movieData, setMovieData] = useState(initMovieData)
+  const [movieDataPrev, setMovieDataPrev] = useState(initMovieData)
+  const [movieDataNext, setMovieDataNext] = useState(initMovieData)
   const [torrentUrls, setTorrentUrls] = useState<string[]>([])
 
   const moviesSortByRating = useSelector(SettingSelector.moviesSortByRating)
