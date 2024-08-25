@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 // components
 import CardBlogList from '@/components/cards/CardBlogList'
-import DetailMetaList from '@/components/blog/DetailMetaList'
 
 // static data
 import { blogs } from '@/StaticData/blogs'

@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/components/custom.d.ts",
-    ".next/types/**/*.ts", "src/utilities/setting.js",
+    ".next/types/**/*.ts", "src/utilities/setting.js", "src/components/blog/sidebar/TagsWidget.jsx", "src/components/blog/DetailMetaList.jsx",
   ],
   "exclude": ["node_modules"]
 }
