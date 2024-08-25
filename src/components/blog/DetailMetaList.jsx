@@ -4,9 +4,9 @@ import { memo, useState } from 'react'
 import TagsWidget from './sidebar/TagsWidget'
 import FollowUs from './sidebar/FollowUs'
 
-// ***! TODO: movieDataなんでエラー？
-const DetailMetaList = memo(({ movieData }: any) => {
-  const [searchText, setSearchText] = useState<string>('')
+// ***! TODO: movieData なんでエラー？
+const DetailMetaList = memo(({ movieData }) => {
+  const [searchText, setSearchText] = useState('')
 
   const handleSearchClick = () => {
     console.log('clicked')

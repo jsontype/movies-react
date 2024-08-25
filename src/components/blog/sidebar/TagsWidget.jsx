@@ -13,7 +13,7 @@ const TagsWidget = memo(({ movieData }) => {
         <h5 className="widget-title position-relative">Genres</h5>
         <div className="tagcloud">
           <ul className="p-0 m-0 list-unstyled gap-2 widget_tags">
-            {genres && genres.map((item: string, index: number) => {
+            {genres && genres.map((item, index) => {
               return (
                 <li key={index}>
                   {/* ***! TODO: Genreごとのページと連携 */}
@@ -28,7 +28,7 @@ const TagsWidget = memo(({ movieData }) => {
       </div>
     </>
   )
-}) as any
+})
 
 TagsWidget.displayName = 'TagsWidget'
 export default TagsWidget
