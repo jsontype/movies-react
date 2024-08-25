@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux'
 import { getBreadcrumb } from '@/store/streamit/selectors'
 
 //img
-const imagePath = generateImgPath('/assets/images/pages/01.webp')
+const imagePath = generateImgPath('/assets/images/pages/01.png')
 
 const BreadCrumbWidget = memo(() => {
   const breadcrumb = useSelector(getBreadcrumb)

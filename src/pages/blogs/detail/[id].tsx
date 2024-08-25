@@ -94,7 +94,7 @@ const BlogDetail = () => {
                       <div dangerouslySetInnerHTML={{ __html: movieData.synopsis }}></div>
                       {/* Download LinkをTorrentから＃hrefで表示 */}
                       {torrentUrls.length > 0 ? (
-                        <div className="torrent-links">
+                        <div className="torrent-links mt-4">
                           <ul>
                             {torrentUrls.map((url, index) => (
                               <li key={index}>
@@ -116,7 +116,7 @@ const BlogDetail = () => {
                 </div>
               </Col>
               <Col lg="4" className="mt-5 mt-xl-0">
-                <DetailMetaList />
+                <DetailMetaList movieData={movieData} />
               </Col>
             </Row>
           </Container>

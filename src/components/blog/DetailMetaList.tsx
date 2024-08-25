@@ -1,16 +1,12 @@
-import React, { memo } from 'react'
-
-//router
+import { memo } from 'react'
 import Link from 'next/link'
 
 //components
-import RecentPost from './sidebar/RecentPost'
-import CategoriesWidget from './sidebar/CategoriesWidget'
 import TagsWidget from './sidebar/TagsWidget'
 import FollowUs from './sidebar/FollowUs'
 
 // ***! 8. あとで検索機能追加（できれば）
-const DetailMetaList = memo(() => {
+const DetailMetaList = memo(({ movieData }) => {
   const handleSearchClick = () => {
     console.log('clicked')
   }
@@ -38,15 +34,13 @@ const DetailMetaList = memo(() => {
             </div>
           </form>
         </div>
-        <RecentPost />
-        <CategoriesWidget />
-        <TagsWidget />
+        <TagsWidget movieData={movieData} />
         <FollowUs />
-        <div className="widget text-center">
-          <Link href="/merchandise/shop">
-            <img src="/assets/images/blog/blog1.webp" />
+        {/* <div className="widget text-center">
+          <Link href="#">
+            <img src={movieData.background_image_original} />
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   )
