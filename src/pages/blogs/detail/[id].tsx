@@ -23,7 +23,7 @@ import { AnyAction } from '@reduxjs/toolkit'
 import type { MoviesType } from '@/types'
 
 // convertRuntime import
-import { convertRuntime } from '@/components/slider/OttHeroSlider.tsx'
+import { convertRuntime } from '@/components/slider/OttHeroSlider'
 
 const BlogDetail = () => {
   const router = useRouter()
@@ -115,7 +115,7 @@ const BlogDetail = () => {
 
                       {/* Synopsis */}
                       <div>
-                        <div className="mt-4">・ Movie's Synopsis</div>
+                        <div className="mt-4">・ Movie Synopsis</div>
                         <span className="mx-2" dangerouslySetInnerHTML={{ __html: movieData.synopsis }}></span>
                         <span>{movieData.synopsis === '' && 'No Data'}</span>
                       </div>
