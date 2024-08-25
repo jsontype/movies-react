@@ -7,7 +7,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { useRouter } from 'next/router'
 
 // Components
-import DetailMetaList from '@/components/blog/DetailMetaList'
 // import CardBlogGrid from '@/components/cards/CardBlogGrid';
 import CardBlogList from '@/components/cards/CardBlogList'
 import SidebarBreadcrumb from '@/components/blog/SidebarBreadcrumb'
@@ -54,9 +53,6 @@ const LeftSidebarPage = memo(() => {
                   // </CardBlogGrid>
                 )
               })}
-            </Col>
-            <Col lg="4" sm="12">
-              <DetailMetaList></DetailMetaList>
             </Col>
           </Row>
         </Container>

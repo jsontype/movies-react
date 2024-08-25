@@ -1,16 +1,15 @@
-import React, { Fragment, memo } from 'react'
+import { memo } from 'react'
 
-//react bootstrap
+// react bootstrap
 import { Container, Row, Col } from 'react-bootstrap'
 
-//components
+// components
 import CardBlogList from '../../components/cards/CardBlogList'
-import DetailMetaList from '../../components/blog/DetailMetaList'
 
-//static data
+// static data
 import { blogs } from '../../StaticData/blogs'
 
-//custom hook
+// custom hook
 import { useBreadcrumb } from '@/utilities/usePage'
 
 const BLogs = memo(() => {
@@ -35,9 +34,6 @@ const BLogs = memo(() => {
                   />
                 )
               })}
-            </Col>
-            <Col lg="4" sm="12">
-              <DetailMetaList></DetailMetaList>
             </Col>
           </Row>
         </Container>

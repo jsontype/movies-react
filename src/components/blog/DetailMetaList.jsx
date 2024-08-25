@@ -1,32 +1,41 @@
-import React, { memo } from 'react'
-
-//router
-import Link from 'next/link'
+import { useState } from 'react'
 
 //components
-import RecentPost from './sidebar/RecentPost'
-import CategoriesWidget from './sidebar/CategoriesWidget'
 import TagsWidget from './sidebar/TagsWidget'
 import FollowUs from './sidebar/FollowUs'
 
-// ***! 8. あとで検索機能追加（できれば）
-const DetailMetaList = memo(() => {
+// ***! TODO: movieData なんでエラー？
+const DetailMetaList = ({ movieData }) => {
+  const [searchText, setSearchText] = useState('')
+
   const handleSearchClick = () => {
     console.log('clicked')
+  }
+
+  // ***! TODO. 検索機能
+  const onSubmit = (e) => {
+    e.preventDefault()
+    alert(`TODO: ${searchText}を生かして、検索機能を作成する`)
+  }
+
+  const onChange = (e) => {
+    setSearchText(e.target.value)
   }
 
   return (
     <>
       <div className="widget-area">
         <div id="search-2" className="widget widget_search">
-          <form method="get" className="search-form" action="#" autoComplete="off">
+          <form method="get" className="search-form" autoComplete="off" onSubmit={onSubmit}>
             <div className="block-search_inside-wrapper position-relative d-flex">
               <input
-                type="search"
+                type="search"        
                 className="form-control"
                 placeholder="Search"
                 name="s"
                 defaultValue=""
+                value={searchText}
+                onChange={onChange}
               />
               <button 
                 type="submit"
@@ -38,19 +47,17 @@ const DetailMetaList = memo(() => {
             </div>
           </form>
         </div>
-        <RecentPost />
-        <CategoriesWidget />
-        <TagsWidget />
+        <TagsWidget movieData={movieData} />
         <FollowUs />
-        <div className="widget text-center">
-          <Link href="/merchandise/shop">
-            <img src="/assets/images/blog/blog1.webp" />
+        {/* <div className="widget text-center">
+          <Link href="#">
+            <img src={movieData.background_image_original} />
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   )
-})
+}
 
 DetailMetaList.displayName = 'DetailMetaList'
 export default DetailMetaList

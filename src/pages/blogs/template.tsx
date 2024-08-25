@@ -1,17 +1,15 @@
 import React, { memo, Fragment } from 'react'
 
-//react-bootstrap
+// react-bootstrap
 import { Col, Container, Row } from 'react-bootstrap'
 
-//router
+// router
 import Link from 'next/link'
 
-//static data
+// static data
 import { blogs } from '../../StaticData/blogs'
 
-//components
-import FormWidget from '../../components/blog/FormWidget'
-import DetailMetaList from '../../components/blog/DetailMetaList'
+// components
 
 //custom hook
 import { useBreadcrumb } from '@/utilities/usePage'
@@ -239,10 +237,6 @@ const TemplatePage = memo(() => {
                     </div>
                   </div>
                 </div>
-                <FormWidget nextLink="/blogs/detail" prevLink="/blogs/single/gallery" />
-              </Col>
-              <Col lg="4" md="12" sm="12">
-                <DetailMetaList />
               </Col>
             </Row>
           </Container>

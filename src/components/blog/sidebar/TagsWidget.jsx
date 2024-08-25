@@ -1,24 +1,24 @@
-import React, { Fragment, memo } from 'react'
+import { memo } from 'react'
 
-//react-router-dom
+// react-router-dom
 import Link from 'next/link'
 
-//static data
-import { blogTags } from '../../../StaticData/blogs'
+// ***! TODO: movieDataなんでエラー？
+const TagsWidget = memo(({ movieData }) => {
+  const genres = movieData.genres
 
-const TagsWidget = memo(() => {
   return (
     <>
       <div id="tag_cloud-2" className="widget">
-        {/* ***! 6. Genreごとのページと連携 */}
-        <h5 className="widget-title position-relative">Tags</h5>
+        <h5 className="widget-title position-relative">Genres</h5>
         <div className="tagcloud">
           <ul className="p-0 m-0 list-unstyled gap-2 widget_tags">
-            {blogTags.map((tags, index) => {
+            {genres && genres.map((item, index) => {
               return (
                 <li key={index}>
+                  {/* ***! TODO: Genreごとのページと連携 */}
                   <Link href="/blogs/filter/tags" className="position-relative">
-                    {tags.name}
+                    {item}
                   </Link>
                 </li>
               )
@@ -28,7 +28,7 @@ const TagsWidget = memo(() => {
       </div>
     </>
   )
-}) as any
+})
 
 TagsWidget.displayName = 'TagsWidget'
 export default TagsWidget

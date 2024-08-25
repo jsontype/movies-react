@@ -1,39 +1,45 @@
-import React, { Fragment, memo } from 'react'
+import { memo, useState } from 'react'
 
-//react-bootstrap
+// react-bootstrap
 import { Button, Col, Form, Row } from 'react-bootstrap'
 
-//react-router-dom
-import Link from 'next/link'
-
 interface Props {
-  prevLink?: string
-  nextLink?: string
+  prevMovie: any
+  nextMovie: any
 }
 
-const FormWidget = memo((props: Props) => {
+const FormWidget = memo(({ prevMovie, nextMovie }: Props) => {
+  const [commentText, setCommentText] = useState<string>('')
+
+  // ***! TODO. コメント機能
+  const onClick = () => {
+    alert(`TODO: ${commentText}を生かして、コメント機能を作成する`)
+  }
+
+  const onChange = (e) => {
+    setCommentText(e.target.value)
+  }
+
   return (
     <>
       <Row className="blog-nav">
         <Col lg="6" className="blog-prev-post mb-5 mb-lg-0 border-end">
-          <Link href={props.prevLink ? `${props.prevLink}` : '/blogs/template'}>
+          <a href={`/blogs/detail/${prevMovie.id}`}>
             <div className="blog-arrow font-size-14 fw-normal mb-3">
               <i className="fas fa-arrow-left"></i>
               <span className="previous fw-medium fst-italic"> Previous Post</span>
             </div>
-            <span className="fw-semibold text-white">Why Amy Adams Always Dreamed of Working </span>
-          </Link>
+            <span className="fw-semibold text-white">{ prevMovie.title }</span>
+          </a>
         </Col>
         <Col lg="6" className="blog-next-post text-start text-lg-end">
-          <Link href={props.nextLink ? `${props.nextLink}` : '/blogs/single/audio'}>
+          <a href={`/blogs/detail/${nextMovie.id}`}>
             <div className="blog-arrow font-size-14 fw-normal mb-3">
               <span className="next fw-medium fst-italic"> Next Post</span>
               <i className="fas fa-arrow-right"></i>
             </div>
-            <span className="fw-semibold text-white">
-              Gillian Anderson Shares the Photos From The Crown
-            </span>
-          </Link>
+            <span className="fw-semibold text-white">{ nextMovie.title }</span>
+          </a>
         </Col>
       </Row>
       <Form>
@@ -44,23 +50,23 @@ const FormWidget = memo((props: Props) => {
         </p>
         <Row>
           <Col md="12">
-            <Form.Group>
-              <textarea
-                className="form-control"
-                name="comment"
-                cols={5}
-                rows={8}
-                required
-                placeholder="Comment"
-              ></textarea>
-            </Form.Group>
+            <textarea
+              className="form-control"
+              name="comment"
+              cols={5}
+              rows={8}
+              required
+              placeholder="Comment"
+              onChange={onChange}
+            ></textarea>
           </Col>
           <Col md="12">
             <div className="form-submit mt-4">
               <div className="iq-button">
                 <Button
                   name="submit"
-                  type="submit"
+                  type="button"
+                  onClick={onClick}
                   id="submit"
                   className="btn text-uppercase position-relative"
                 >

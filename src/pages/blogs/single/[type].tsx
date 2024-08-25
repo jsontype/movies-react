@@ -1,21 +1,19 @@
 import { memo, useRef } from 'react'
 
-//react-bootstrap
+// react-bootstrap
 import { Col, Container, Row } from 'react-bootstrap'
 
-//router
+// router
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-//static Data
+// static Data
 import { blogs } from '@/StaticData/blogs'
 
-//components
-import FormWidget from '@/components/blog/FormWidget'
-import DetailMetaList from '@/components/blog/DetailMetaList'
+// components
 import SingleBlogBreadcrumb from '@/components/blog/SingleBlogBreadcrumb'
 
-//function
+// function
 import { generateImgPath } from '@/StaticData/data'
 
 const Single = memo(props => {
@@ -159,15 +157,9 @@ const Single = memo(props => {
                   {blog && (
                     <div dangerouslySetInnerHTML={{ __html: blog.longDescription ?? '' }}></div>
                   )}
-                  <div className="iq-blog-tag">
-                    <FormWidget nextLink={type && type[0]} prevLink={type && type[1]} />
-                  </div>
                 </div>
               </div>
               <div></div>
-            </Col>
-            <Col xl="4" className="mt-5 mt-xl-0">
-              <DetailMetaList />
             </Col>
           </Row>
         </Container>
