@@ -28,9 +28,9 @@ import { convertRuntime } from '@/components/slider/OttHeroSlider'
 const BlogDetail = () => {
   const router = useRouter()
   const { id } = router.query
-  const [movieData, setMovieData] = useState<any>({})
-  const [movieDataPrev, setMovieDataPrev] = useState<any>({})
-  const [movieDataNext, setMovieDataNext] = useState<any>({})
+  const [movieData, setMovieData] = useState({})
+  const [movieDataPrev, setMovieDataPrev] = useState({})
+  const [movieDataNext, setMovieDataNext] = useState({})
   const [torrentUrls, setTorrentUrls] = useState<string[]>([])
 
   const moviesSortByRating = useSelector(SettingSelector.moviesSortByRating)
