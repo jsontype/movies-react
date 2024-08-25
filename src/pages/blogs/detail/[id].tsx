@@ -26,13 +26,13 @@ import type { MoviesType } from '@/types'
 import { convertRuntime } from '@/components/slider/OttHeroSlider'
 
 const initMovieData = {
-  id: 0
-  title: ''
-  rating: 0
-  genres: []
-  summary: ''
-  duration: ''
-  large_cover_image: ''
+  id: 0,
+  title: '',
+  rating: 0,
+  genres: [],
+  summary: '',
+  duration: '',
+  large_cover_image: '',
   runtime: 0
 }
 
