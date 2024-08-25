@@ -1,11 +1,11 @@
-import { memo, useState } from 'react'
+import { useState } from 'react'
 
 //components
 import TagsWidget from './sidebar/TagsWidget'
 import FollowUs from './sidebar/FollowUs'
 
 // ***! TODO: movieData なんでエラー？
-const DetailMetaList = memo(({ movieData }) => {
+const DetailMetaList = ({ movieData }) => {
   const [searchText, setSearchText] = useState('')
 
   const handleSearchClick = () => {
@@ -57,7 +57,7 @@ const DetailMetaList = memo(({ movieData }) => {
       </div>
     </>
   )
-})
+}
 
 DetailMetaList.displayName = 'DetailMetaList'
 export default DetailMetaList

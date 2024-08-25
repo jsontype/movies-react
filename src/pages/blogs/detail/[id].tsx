@@ -49,7 +49,7 @@ const initMovieData = {
   url: "",
   year: 0,
   yt_trailer_code: ""  
-}
+} as any
 
 const BlogDetail = () => {
   const router = useRouter()
@@ -126,7 +126,6 @@ const BlogDetail = () => {
                         <li className="border-gredient-left">
                           <Link rel="bookmark" href="/blogs/filter/date">
                             <i className="far fa-calendar-alt me-1" aria-hidden="true"></i>
-                            {movieData.date_uploaded}{' '}
                           </Link>
                         </li>
                       </ul>
