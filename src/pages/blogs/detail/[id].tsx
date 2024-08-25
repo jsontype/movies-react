@@ -26,14 +26,29 @@ import type { MoviesType } from '@/types'
 import { convertRuntime } from '@/components/slider/OttHeroSlider'
 
 const initMovieData = {
-  id: 0,
-  title: '',
-  rating: 0,
+  background_image: "",
+  background_image_original: "",
+  description_full: "",
   genres: [],
-  summary: '',
-  duration: '',
-  large_cover_image: '',
-  runtime: 0
+  id: 0,
+  imdb_code: "",
+  language: "",
+  large_cover_image: "",
+  mpa_rating: "",
+  rating: 0,
+  runtime: 0,
+  slug: "",
+  small_cover_image: "",
+  state: "",
+  summary: "",
+  synopsis: "",
+  title: "",
+  title_english: "",
+  title_long: "",
+  torrents: [],
+  url: "",
+  year: 0,
+  yt_trailer_code: ""  
 }
 
 const BlogDetail = () => {
@@ -64,7 +79,7 @@ const BlogDetail = () => {
     setMovieData(result)
     setMovieDataPrev(resultPrev)
     setMovieDataNext(resultNext)
-    // console.log('movieData:' , movieData)
+    console.log('movieData:' , movieData)
     // console.log('movieDataPrev:' , movieDataPrev)
     // console.log('movieDataNext:' , movieDataNext)
   }, [moviesSortByRating, moviesSortByYear])
