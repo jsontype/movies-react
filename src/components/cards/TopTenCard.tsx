@@ -1,4 +1,4 @@
-import { FC, memo } from 'react'
+import { memo } from 'react'
 import Link from 'next/link'
 
 interface TopTenCardProps {

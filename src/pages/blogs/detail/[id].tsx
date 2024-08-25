@@ -18,7 +18,7 @@ import { useRouter } from 'next/router'
 
 import * as SettingSelector from '@/store/media/selectors'
 import { useSelector, useDispatch } from 'react-redux'
-import { getMoviesSortByRating } from '@/store/media/actions'
+import { getMoviesSortByRating, getMoviesSortByYear } from '@/store/media/actions'
 import { AnyAction } from '@reduxjs/toolkit'
 import type { MoviesType } from '@/types'
 
@@ -29,12 +29,15 @@ const BlogDetail = () => {
   const [torrentUrls, setTorrentUrls] = useState<string[]>([])
 
   const moviesSortByRating = useSelector(SettingSelector.moviesSortByRating)
+  const moviesSortByYear = useSelector(SettingSelector.moviesSortByYear)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getMoviesSortByRating() as unknown as AnyAction)
+    dispatch(getMoviesSortByYear() as unknown as AnyAction)
   }, [])
   useEffect(() => {
-    const result = moviesSortByRating.find((item: MoviesType) => item.id === Number(id))
+    const moviesAll = moviesSortByRating.concat(moviesSortByYear)
+    const result = moviesAll.find((item: MoviesType) => item.id === Number(id))
     setMovieData(result)
     // ***! 1. これ見ながら完成させて
     console.log('movieData:' , movieData)
@@ -89,7 +92,7 @@ const BlogDetail = () => {
                     </div>
                     <div>
                       <div dangerouslySetInnerHTML={{ __html: movieData.synopsis }}></div>
-                      {/* ***! 2. Download LinkをTorrentから＃hrefで表示  */}
+                      {/* Download LinkをTorrentから＃hrefで表示 */}
                       {torrentUrls.length > 0 ? (
                         <div className="torrent-links">
                           <ul>

@@ -12,13 +12,11 @@ const TopTenMoviesToWatch = memo(({ moviesSortByRating }) => {
     id: movie.id
   }))
 
-  const getDetaillink = (id) => `/blogs/detail/${id}`
-
   return (
     <>
       <SectionSlider title={title} list={topTen} className="top-ten-block">
         {data => (
-          <TopTenCard imagePath={data.image} countValue={data.count} link={getDetaillink(data.id)} />
+          <TopTenCard imagePath={data.image} countValue={data.count} link={`/blogs/detail/${data.id}`} />
         )}
       </SectionSlider>
     </>

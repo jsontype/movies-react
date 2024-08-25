@@ -1,8 +1,9 @@
 import { SettingMedia } from './reducers'
-import { upcommingMovie, movieTags, tvShowsTags, videoTags, cast } from '../../StaticData/data'
+import { movieTags, tvShowsTags, videoTags, cast } from '../../StaticData/data'
 
 export const {
   movies_sort_by_rating,
+  movies_sort_by_year,
   media_movies,
   upcommming_movies,
   latest_movies,
@@ -50,6 +51,18 @@ export const getMoviesSortByRating =
         console.error('Error fetching movies:', error);
       });
   }
+export const getMoviesSortByYear =
+() => (dispatch: (arg0: { payload: any; type: 'media/movies_sort_by_year' }) => void) => {
+  fetch('https://yts.mx/api/v2/list_movies.json?sort_by=year')
+    .then(res => res.json())
+    .then(json => json.data.movies)
+    .then(result => {
+      dispatch(movies_sort_by_year(result))
+    })
+    .catch(error => {
+      console.error('Error fetching movies:', error);
+    });
+}  
 export const getMoviesTagsAsync =
   () => (dispatch: (arg0: { payload: any; type: 'media/media_moviesTags' }) => void) => {
     // You can call api here

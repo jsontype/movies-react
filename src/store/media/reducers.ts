@@ -8,6 +8,9 @@ export const SettingMedia = createSlice({
     movies_sort_by_rating: (state, action) => {
       state.moviesSortByRating = action.payload
     },
+    movies_sort_by_year: (state, action) => {
+      state.moviesSortByYear = action.payload
+    },
     media_movies: (state, action) => {
       state.movies = action.payload
     },

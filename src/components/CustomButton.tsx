@@ -2,18 +2,19 @@ import { memo } from 'react'
 import Link from 'next/link'
 
 interface CustomButtonProps {
-  linkButton: string
   link: string
+  linkButton: string
   buttonTitle: string
 }
 
-const CustomButton = memo(({ linkButton, link, buttonTitle }: CustomButtonProps) => {
+const CustomButton = memo(({ link, linkButton, buttonTitle }: CustomButtonProps) => {
   return (
     <>
       {linkButton === 'true' && (
-        <div className="iq-button link-button">
-          <Link href={link} className="btn text-capitalize position-relative">
+        <div className="iq-button">
+          <Link href={link} className="btn text-uppercase position-relative">
             <span className="button-text">{buttonTitle}</span>
+            <i className="fa-solid fa-search"></i>
           </Link>
         </div>
       )}

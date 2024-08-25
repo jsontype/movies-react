@@ -1,6 +1,7 @@
 export const state = {
   // movies
   moviesSortByRating: [],
+  moviesSortByYear: [],
   movies: [],
   upcommmingMovies: [],
   latestMovies: [],

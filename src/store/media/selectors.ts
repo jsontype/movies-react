@@ -1,4 +1,5 @@
 export const moviesSortByRating = (state: any) => state.media.moviesSortByRating
+export const moviesSortByYear = (state: any) => state.media.moviesSortByYear
 export const MediaMovies = (state: any) => state.media.MediaMovie
 export const movieTags = (state: any) => state.media.moviestags
 export const tvShowsTags = (state: any) => state.media.tvShowsTags
