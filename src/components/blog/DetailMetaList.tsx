@@ -1,28 +1,41 @@
-import { memo } from 'react'
-import Link from 'next/link'
+import { memo, useState } from 'react'
 
 //components
 import TagsWidget from './sidebar/TagsWidget'
 import FollowUs from './sidebar/FollowUs'
 
-// ***! 8. あとで検索機能追加（できれば）
-const DetailMetaList = memo(({ movieData }) => {
+// ***! TODO: movieDataなんでエラー？
+const DetailMetaList = memo(({ movieData }: any) => {
+  const [searchText, setSearchText] = useState<string>('')
+
   const handleSearchClick = () => {
     console.log('clicked')
+  }
+
+  // ***! TODO. 検索機能
+  const onSubmit = (e) => {
+    e.preventDefault()
+    alert(`TODO: ${searchText}を生かして、検索機能を作成する`)
+  }
+
+  const onChange = (e) => {
+    setSearchText(e.target.value)
   }
 
   return (
     <>
       <div className="widget-area">
         <div id="search-2" className="widget widget_search">
-          <form method="get" className="search-form" action="#" autoComplete="off">
+          <form method="get" className="search-form" autoComplete="off" onSubmit={onSubmit}>
             <div className="block-search_inside-wrapper position-relative d-flex">
               <input
-                type="search"
+                type="search"        
                 className="form-control"
                 placeholder="Search"
                 name="s"
                 defaultValue=""
+                value={searchText}
+                onChange={onChange}
               />
               <button 
                 type="submit"

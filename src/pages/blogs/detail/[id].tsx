@@ -22,26 +22,41 @@ import { getMoviesSortByRating, getMoviesSortByYear } from '@/store/media/action
 import { AnyAction } from '@reduxjs/toolkit'
 import type { MoviesType } from '@/types'
 
+// convertRuntime import
+import { convertRuntime } from '@/components/slider/OttHeroSlider.tsx'
+
 const BlogDetail = () => {
   const router = useRouter()
   const { id } = router.query
   const [movieData, setMovieData] = useState<any>({})
+  const [movieDataPrev, setMovieDataPrev] = useState<any>({})
+  const [movieDataNext, setMovieDataNext] = useState<any>({})
   const [torrentUrls, setTorrentUrls] = useState<string[]>([])
 
   const moviesSortByRating = useSelector(SettingSelector.moviesSortByRating)
   const moviesSortByYear = useSelector(SettingSelector.moviesSortByYear)
   const dispatch = useDispatch()
+
   useEffect(() => {
     dispatch(getMoviesSortByRating() as unknown as AnyAction)
     dispatch(getMoviesSortByYear() as unknown as AnyAction)
   }, [])
+
   useEffect(() => {
     const moviesAll = moviesSortByRating.concat(moviesSortByYear)
+    const moviesAllIndex = moviesAll.findIndex((item: MoviesType) => item.id === Number(id));
+    console.log(1111, moviesAllIndex)
+
     const result = moviesAll.find((item: MoviesType) => item.id === Number(id))
+    const resultPrev = moviesAllIndex > 0 ? moviesAll[moviesAllIndex - 1] : moviesAll[moviesAll.length - 1];
+    const resultNext = moviesAllIndex < moviesAll.length - 1 ? moviesAll[moviesAllIndex + 1] : moviesAll[0];
     setMovieData(result)
-    // ***! 1. これ見ながら完成させて
-    console.log('movieData:' , movieData)
-  }, [moviesSortByRating])
+    setMovieDataPrev(resultPrev)
+    setMovieDataNext(resultNext)
+    // console.log('movieData:' , movieData)
+    // console.log('movieDataPrev:' , movieDataPrev)
+    // console.log('movieDataNext:' , movieDataNext)
+  }, [moviesSortByRating, moviesSortByYear])
 
   useEffect(() => {
     if (id) {
@@ -91,7 +106,20 @@ const BlogDetail = () => {
                       </ul>
                     </div>
                     <div>
-                      <div dangerouslySetInnerHTML={{ __html: movieData.synopsis }}></div>
+                      {/* Rating, Genres, Runtime */}
+                      <div className="gap-3 RightAnimate-three">
+                        <div>・ Rating: <span className={movieData.rating >= 9 ? 'text-info' : movieData.rating >= 7 ? 'text-warning' : 'text-primary'}>{movieData && movieData.rating}/10</span></div>
+                        <div>・ Genres: {movieData.genres && movieData.genres.join(', ')}</div>
+                        <div>・ Runtime: {movieData && movieData.runtime ? convertRuntime(movieData.runtime) : 'No Data'}</div>
+                      </div>
+
+                      {/* Synopsis */}
+                      <div>
+                        <div className="mt-4">・ Movie's Synopsis</div>
+                        <span className="mx-2" dangerouslySetInnerHTML={{ __html: movieData.synopsis }}></span>
+                        <span>{movieData.synopsis === '' && 'No Data'}</span>
+                      </div>
+                      
                       {/* Download LinkをTorrentから＃hrefで表示 */}
                       {torrentUrls.length > 0 ? (
                         <div className="torrent-links mt-4">
@@ -110,7 +138,7 @@ const BlogDetail = () => {
                       )}
                     </div>
                     <div className="iq-blog-tag">
-                      <FormWidget></FormWidget>
+                      <FormWidget prevMovie={movieDataPrev} nextMovie={movieDataNext}></FormWidget>
                     </div>
                   </div>
                 </div>

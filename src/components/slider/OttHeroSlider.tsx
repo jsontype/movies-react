@@ -34,7 +34,7 @@ interface MoviesType {
   ]
 }
 
-const convertRuntime = (minutes: number): string => {
+export const convertRuntime = (minutes: number): string => {
   const hours = Math.floor(minutes / 60)
   const remainingMinutes = minutes % 60
   return `${hours}hr ${remainingMinutes} minutes`
@@ -137,7 +137,6 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                     </ul>
                     <span className="text-white ms-2 font-size-14 fw-500">{item.rating}/10</span>
                   </div>
-                  <span className="font-size-14 fw-500">{item.duration}</span>
                   <div className="text-primary font-size-14 fw-500 text-capitalize">
                     genres:{' '}
                     <Link href="/view-all" className="text-decoration-none ms-1">
