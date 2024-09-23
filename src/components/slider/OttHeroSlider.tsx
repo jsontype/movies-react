@@ -44,6 +44,20 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
   const themeSchemeDirection = useSelector(theme_scheme_direction)
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
   const [_render, setRender] = useState(true)
+  const [isSmallScreen, setIsSmallScreen] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [swiperInstance, setSwiperInstance] = useState<SwiperCore | null>(null)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 991)
+    }
+
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     setRender(false)
@@ -63,6 +77,18 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
   }, [thumbsSwiper, moviesSortByYear])
 
   console.log('movies: ', moviesSortByYear)
+
+  const handlePrevClick = () => {
+    const prevIndex = (currentIndex - 1 + moviesSortByYear.length) % moviesSortByYear.length;
+    setCurrentIndex(prevIndex);
+    swiperInstance.slideTo(prevIndex);
+  }
+
+  const handleNextClick = () => {
+    const nextIndex = (currentIndex + 1) % moviesSortByYear.length;
+    setCurrentIndex(nextIndex);
+    swiperInstance.slideTo(nextIndex);
+  }
 
   const renderMiniSlide = moviesSortByYear.map((item, index) => {
     return (
@@ -127,7 +153,9 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                 <h1 className="texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate-two">
                   {item.title}
                 </h1>
-                <p className="line-count-3 RightAnimate-two">{item.summary}</p>
+                {!isSmallScreen && (
+                  <p className="line-count-3 RightAnimate-two">{item.summary}</p>
+                )}
                 <div className="d-flex flex-wrap align-items-center gap-3 RightAnimate-three">
                   <div className="slider-ratting d-flex align-items-center">
                     <ul className="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
@@ -152,6 +180,18 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                 </div>
               </div>
               <CustomButton buttonTitle="Show Detail" link={`/blogs/detail/${item.id}`} linkButton="true" />
+              {isSmallScreen && (
+                <div className="mt-3">
+                  <div className="d-flex justify-content-start ms-1">
+                    <div className="slider-prev swiper-button me-3" onClick={handlePrevClick}>
+                      <i className="iconly-Arrow-Left-2 icli"></i>
+                    </div>
+                    <div className="slider-next swiper-button" onClick={handleNextClick}>
+                      <i className="iconly-Arrow-Right-2 icli"></i>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -172,6 +212,7 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                     key={String(themeSchemeDirection)}
                     dir={String(themeSchemeDirection)}
                     tag="ul"
+                    onSwiper={setSwiperInstance}
                     thumbs={{
                       swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
                     }}
