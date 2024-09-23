@@ -58,7 +58,7 @@ const HeaderDefault = memo(() => {
           <Container fluid className="navbar-inner">
             <div className="d-flex align-items-center justify-content-between w-100 landing-header">
               <div className="d-flex gap-3 gap-xl-0 align-items-center">
-                <div>
+                {/* <div>
                   <button
                     type="button"
                     data-bs-toggle="offcanvas"
@@ -74,7 +74,7 @@ const HeaderDefault = memo(() => {
                       ></path>
                     </svg>
                   </button>
-                </div>
+                </div> */}
                 <Logo></Logo>
               </div>
               <Navbar
@@ -157,7 +157,7 @@ const HeaderDefault = memo(() => {
                         </ul>
                       </Collapse> */}
                     </Nav.Item>
-                    <Nav.Item as="li">
+                    {/* <Nav.Item as="li">
                       <Nav.Link
                         aria-expanded={open2}
                         href=""
@@ -290,8 +290,8 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                         </ul>
                       </Collapse>
-                    </Nav.Item>
-                    <Nav.Item as="li">
+                    </Nav.Item> */}
+                    {/* <Nav.Item as="li">
                       <Nav.Link
                         aria-expanded={open4}
                         href=""
@@ -581,8 +581,8 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                         </ul>
                       </Collapse>
-                    </Nav.Item>
-                    <Nav.Item as="li">
+                    </Nav.Item> */}
+                    {/* <Nav.Item as="li">
                       <Nav.Link
                         aria-expanded={open8}
                         href=""
@@ -682,7 +682,7 @@ const HeaderDefault = memo(() => {
                           </Nav.Item>
                         </ul>
                       </Collapse>
-                    </Nav.Item>
+                    </Nav.Item> */}
                   </ul>
                 </Container>
               </Navbar>

@@ -71,7 +71,7 @@ const BlogDetail = () => {
   useEffect(() => {
     const moviesAll = moviesSortByRating.concat(moviesSortByYear)
     const moviesAllIndex = moviesAll.findIndex((item: MoviesType) => item.id === Number(id));
-    console.log(1111, moviesAllIndex)
+    // console.log(1111, moviesAllIndex)
 
     const result = moviesAll.find((item: MoviesType) => item.id === Number(id))
     const resultPrev = moviesAllIndex > 0 ? moviesAll[moviesAllIndex - 1] : moviesAll[moviesAll.length - 1];
