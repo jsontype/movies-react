@@ -33,7 +33,6 @@ const DetailMetaList = ({ movieData }) => {
                 className="form-control"
                 placeholder="Search"
                 name="s"
-                defaultValue=""
                 value={searchText}
                 onChange={onChange}
               />
