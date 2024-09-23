@@ -77,7 +77,7 @@ const FooterMega = memo(() => {
                   </p>
                   <p className="mb-0 contact text-white">+ (123) 456-7890</p>
                 </Col>
-                <Col xl={2} lg={6} className="mb-5 mb-lg-0">
+                {/* <Col xl={2} lg={6} className="mb-5 mb-lg-0">
                   <h4 className="footer-link-title">Quick Links</h4>
                   <ul className="list-unstyled footer-menu">
                     <li className="mb-3">
@@ -101,8 +101,8 @@ const FooterMega = memo(() => {
                       </Link>
                     </li>
                   </ul>
-                </Col>
-                <Col xl={2} lg={6} className="mb-5 mb-lg-0">
+                </Col> */}
+                {/* <Col xl={2} lg={6} className="mb-5 mb-lg-0">
                   <h4 className="footer-link-title">Movies to watch</h4>
                   <ul className="list-unstyled footer-menu">
                     <li className="mb-3">
@@ -121,8 +121,8 @@ const FooterMega = memo(() => {
                       </Link>
                     </li>
                   </ul>
-                </Col>
-                <Col xl={2} lg={6} className="mb-5 mb-lg-0">
+                </Col> */}
+                {/* <Col xl={2} lg={6} className="mb-5 mb-lg-0">
                   <h4 className="footer-link-title">About company</h4>
                   <ul className="list-unstyled footer-menu">
                     <li className="mb-3">
@@ -141,8 +141,8 @@ const FooterMega = memo(() => {
                       </Link>
                     </li>
                   </ul>
-                </Col>
-                <Col xl={3} lg={6}>
+                </Col> */}
+                <Col xl={3} lg={6} className="mb-5 mb-lg-0 ms-auto d-flex flex-column align-items-end">
                   <h4 className="footer-link-title">Subscribe Newsletter</h4>
                   <div className="mailchimp mailchimp-dark">
                     <div className="input-group mb-3 mt-4">
