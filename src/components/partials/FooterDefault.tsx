@@ -142,10 +142,10 @@ const FooterMega = memo(() => {
                     </li>
                   </ul>
                 </Col> */}
-                <Col xl={3} lg={6} className="mb-5 mb-lg-0 ms-auto d-flex flex-column align-items-end">
+                <Col xl={3} lg={6} className=" mb-5 mb-lg-0 ms-auto d-flex flex-column">
                   <h4 className="footer-link-title">Subscribe Newsletter</h4>
                   <div className="mailchimp mailchimp-dark">
-                    <div className="input-group mb-3 mt-4">
+                    <div className="input-group mb-3 mt-2">
                       <input
                         type="text"
                         className="form-control mb-0 font-size-14"
@@ -161,7 +161,7 @@ const FooterMega = memo(() => {
                       </div>
                     </div>
                   </div>
-                  <div className="d-flex align-items-center mt-5">
+                  <div className="d-flex align-items-center mt-2">
                     <span className="font-size-14 me-2">Follow Us:</span>
                     <ul className="p-0 m-0 list-unstyled widget_social_media">
                       <li className="">
