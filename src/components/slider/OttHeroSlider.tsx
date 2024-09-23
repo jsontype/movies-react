@@ -181,14 +181,16 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
               </div>
               <CustomButton buttonTitle="Show Detail" link={`/blogs/detail/${item.id}`} linkButton="true" />
               {isSmallScreen && (
-                <div className="mt-3 d-flex justify-content-start ms-1">
-                <div className="slider-prev-custom swiper-button me-3" onClick={handlePrevClick}>
-                  <i className="iconly-Arrow-Left-2 icli"></i>
+                <div className="mt-3">
+                  <div className="d-flex justify-content-start ms-1">
+                    <div className="slider-prev swiper-button me-3" onClick={handlePrevClick}>
+                      <i className="d-flex iconly-Arrow-Left-2 icli align-items-center justify-content-center py-2 fs-6"></i>
+                    </div>
+                    <div className="slider-next swiper-button" onClick={handleNextClick}>
+                      <i className="d-flex iconly-Arrow-Right-2 icli align-items-center justify-content-center py-2 fs-6"></i>
+                    </div>
+                  </div>
                 </div>
-                <div className="slider-next-custom swiper-button" onClick={handleNextClick}>
-                  <i className="iconly-Arrow-Right-2 icli"></i>
-                </div>
-              </div>
               )}
             </div>
           </div>
@@ -238,10 +240,10 @@ const OttHeroSlider = ({ moviesSortByYear }: MoviesType) => {
                     {renderMiniSlide}
                   </Swiper>
                   <div className="slider-prev swiper-button">
-                    <i className="iconly-Arrow-Left-2 icli"></i>
+                    <i className="iconly-Arrow-Left-2 icli fs-6"></i>
                   </div>
                   <div className="slider-next swiper-button">
-                    <i className="iconly-Arrow-Right-2 icli"></i>
+                    <i className="iconly-Arrow-Right-2 icli fs-6"></i>
                   </div>
                 </div>
               </div>
