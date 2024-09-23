@@ -404,3 +404,15 @@
 .icon-send:before {
   content: '\e001';
 }
+
+.slider-prev-custom, .slider-next-custom {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-prev-custom .icli, .slider-next-custom .icli {
+  font-size: 20px;
+}
